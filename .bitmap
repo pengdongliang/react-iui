@@ -9,5 +9,17 @@
  */
 
 {
+    "envs/admin-env": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/envs/admin-env",
+        "config": {
+            "teambit.envs/env": {},
+            "teambit.envs/envs": {
+                "env": "teambit.envs/env"
+            }
+        }
+    },
     "$schema-version": "16.0.0"
 }

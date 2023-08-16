@@ -10,13 +10,13 @@ module.exports = {
     'default-param-last': 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [0, {
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }],
     // 关闭airbnb对于jsx必须写在jsx文件中的设置
     'react/prop-types': 'off',
     // 关闭airbnb对于必须添加prop-types的校验
     'react/destructuring-assignment': [1, 'always', {
-      ignoreClassFields: false
+      ignoreClassFields: false,
     }],
     'react/jsx-one-expression-per-line': 'off',
     // 关闭要求一个表达式必须换行的要求，和Prettier冲突了
@@ -25,7 +25,7 @@ module.exports = {
     // 'comma-dangle': ['error', 'never'], // 末尾逗号
     'react/jsx-first-prop-new-line': [1, 'multiline-multiprop'],
     'react/prefer-stateless-function': [0, {
-      ignorePureComponents: true
+      ignorePureComponents: true,
     }],
     'jsx-a11y/no-static-element-interactions': 'off',
     // 关闭非交互元素加事件必须加 role
@@ -35,7 +35,7 @@ module.exports = {
     // 用位操作符
     'react/jsx-indent': [2, 2],
     'react/jsx-no-undef': [2, {
-      allowGlobals: true
+      allowGlobals: true,
     }],
     'jsx-control-statements/jsx-use-if-tag': 0,
     'react/no-array-index-key': 0,
@@ -49,24 +49,24 @@ module.exports = {
     // quotes: [2, 'single'],
     // @fixable 必须使用 === 或 !==，禁止使用 == 或 !=，与 null 比较时除外
     eqeqeq: ['warn', 'always', {
-      null: 'ignore'
+      null: 'ignore',
     }],
     'no-use-before-define': ['off', {
-      functions: false
+      functions: false,
     }],
     // 'no-use-before-define': ['error', { functions: false }],
     'prettier/prettier': ['error', {
-      parser: 'typescript'
+      parser: 'typescript',
     }],
     semi: ['error', 'never'],
     // 末尾分号
     quotes: ['error', 'single'],
     'arrow-body-style': 0,
     'import/no-unresolved': [0, {
-      ignore: ['antd']
+      ignore: ['antd'],
     }],
     'no-console': ['error', {
-      allow: ['error', 'info']
+      allow: ['error', 'info'],
     }],
     'no-unused-vars': 0,
     'no-restricted-exports': 0,
@@ -76,6 +76,36 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-unused-vars': 'error'
-  }
-};
+    '@typescript-eslint/no-unused-vars': 'error',
+    'consistent-return': ['off'], // 不要求 return 语句要么总是指定返回的值
+    'no-unused-expressions': ['off'],
+    'no-return-assign': ['off'], // 禁止在返回语句中赋值
+    'comma-dangle': [2, 'only-multiline'],
+    'jsx-a11y/alt-text': 1,
+    'no-underscore-dangle': 0,
+    'import/no-cycle': 0,
+    '@next/next/no-img-element': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'no-nested-ternary': 0,
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', ['internal', 'parent', 'sibling', 'index'], 'unknown'],
+        pathGroups: [
+          {
+            pattern: '@teambit/**',
+            group: 'external',
+            position: 'after',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          orderImportKind: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
+  },
+}

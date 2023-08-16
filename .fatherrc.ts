@@ -7,5 +7,5 @@ export default defineConfig({
   umd: {
     output: 'dist',
   },
-  alias: { '@': resolve(__dirname, './src') },
+  alias: { '@': resolve(__dirname, './src'), '~': resolve(__dirname, '.') },
 });

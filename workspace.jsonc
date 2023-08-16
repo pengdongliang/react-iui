@@ -23,11 +23,11 @@
      * scope - scope name only, e.g. 'compilation'.
      * owner - owner name in bit.dev, e.g. 'teambit'.
      **/
-    "defaultDirectory": "{scope}/{name}",
+    "defaultDirectory": "src/{name}",
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "my-scope"
+    "defaultScope": "yooco.react-iui"
   },
   /**
    * main configuration for component dependency resolution.
