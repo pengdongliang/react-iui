@@ -6,9 +6,9 @@ React业务组件
 [![NPM version][react-dom-image]][react-dom-url]
 [![NPM version][ant-design-image]][ant-design-url]
 
-[antd-schema-form-image]: https://img.shields.io/npm/v/react-antd-iui.svg?style=flat
+[antd-schema-form-image]: https://img.shields.io/npm/v/react-iui.svg?style=flat
 
-[antd-schema-form-url]: https://npmjs.org/package/react-antd-iui
+[antd-schema-form-url]: https://www.npmjs.com/package/react-iui
 
 [react-image]: https://img.shields.io/badge/react-%3E=18.2.0-red.svg
 
