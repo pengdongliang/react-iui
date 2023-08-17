@@ -47,6 +47,10 @@
       "prettier --write"
     ]
   },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.24.3",
   "dependencies": {
     "@babel/runtime": "^7.20.7",
     "@emotion/react": "^11.10.5",
@@ -65,6 +69,9 @@
     "@storybook/manager-webpack4": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/react": "^14.0.0",
+    "@types/node": "^20.5.0",
+    "@types/jest": "^29.5.3",
     "@types/react": "^18.0.26",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",

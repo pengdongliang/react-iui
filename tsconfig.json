@@ -1,4 +1,9 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "types": [
+    "node",
+    "jest"
+  ],
   "compilerOptions": {
     "jsxImportSource": "@emotion/react",
     "jsx": "react-jsx",
@@ -42,7 +47,9 @@
     "noUnusedParameters": false, // 未使用的参数
     "preserveWatchOutput": true,
     "preserveSymlinks": true,
-    "noImplicitReturns": false
+    "noImplicitReturns": false,
+    "declaration": false,
+    "declarationMap": false
   },
   "rules": {
     "member-access": false,

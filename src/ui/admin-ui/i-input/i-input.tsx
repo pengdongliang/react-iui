@@ -11,10 +11,8 @@ export type IInputRef = InputRef
 /**
  * IInput
  */
-const IInput = React.forwardRef<IInputRef, IInputProps>((props, ref) => {
+export const IInput = React.forwardRef<IInputRef, IInputProps>((props, ref) => {
   const removeInputSpacesEvent = useRemoveInputSpaces(props)
 
   return <Input {...props} {...removeInputSpacesEvent} ref={ref} />
 })
-
-export default IInput

@@ -1,18 +1,78 @@
 {
-  // add your compiler options here
-  "extends": ['../../../../tsconfig.json'],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "types": [
+    "node",
+    "jest"
+  ],
   "compilerOptions": {
-    // "target": "es2017",
-    // "module": "es2015",
-    // "moduleResolution": "node",
-    // "lib": ["es2017", "dom"],
-    // "experimentalDecorators": true,
-    // "esModuleInterop": true,
-    // "outDir": "dist",
-    // "sourceMap": true,
-    // "emitDecoratorMetadata": true,
-    // "allowJs": true,
-    // "baseUrl": ".",
-    // "jsx": "react"
-  }
+    "jsxImportSource": "@emotion/react",
+    "jsx": "react-jsx",
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
+    },
+    "target": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    // true 无.d.ts false 有
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "downlevelIteration": true,
+    "noFallthroughCasesInSwitch": true,
+    "composite": false,
+    "inlineSources": false,
+    "noUnusedLocals": false,  // 未使用的局部变量
+    "noUnusedParameters": false, // 未使用的参数
+    "preserveWatchOutput": true,
+    "preserveSymlinks": true,
+    "noImplicitReturns": false,
+    "declaration": false,
+    "declarationMap": false
+  },
+  "rules": {
+    "member-access": false,
+    "ordered-imports": false,
+    "quotemark": false,
+    "no-console": false,
+    "semicolon": false,
+    "jsx-no-lambda": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts"
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "es",
+    "lib",
+    "build"
+  ]
 }

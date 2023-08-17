@@ -10,16 +10,16 @@
 
 {
     "envs/admin-env": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/envs/admin-env",
-        "config": {
-            "teambit.envs/env": {},
-            "teambit.envs/envs": {
-                "env": "teambit.envs/env"
-            }
-        }
+        "rootDir": "src/envs/admin-env"
+    },
+    "ui/admin-ui/i-input": {
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/admin-ui/i-input"
     },
     "$schema-version": "16.0.0"
 }

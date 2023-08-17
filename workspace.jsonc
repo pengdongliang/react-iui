@@ -10,7 +10,7 @@
     /**
      * the name of the component workspace. used for development purposes.
      **/
-    "name": "my-workspace-name",
+    "name": "react-iui",
     /**
      * set the icon to be shown on the Bit server.
      **/
@@ -60,5 +60,10 @@
        **/
       // "teambit.react/react": { }
     }
+  },
+  "teambit.generator/generator": {
+    "envs": [
+      "yooco.react-iui/envs/admin-env"
+    ]
   }
 }

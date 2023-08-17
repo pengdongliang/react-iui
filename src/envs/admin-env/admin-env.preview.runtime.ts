@@ -10,10 +10,10 @@ export class AdminEnvPreviewMain {
 
   static dependencies = [ReactAspect]
 
-  static async provider([react]: [ReactPreview]) {
+  static async provider([_react]: [ReactPreview]) {
     const adminEnvPreviewMain = new AdminEnvPreviewMain()
     // uncomment the line below to register a new provider to wrap all compositions using this environment with a custom theme.
-    // react.registerProvider([ThemeCompositions]);
+    // _react.registerProvider([ThemeCompositions]);
 
     return adminEnvPreviewMain
   }

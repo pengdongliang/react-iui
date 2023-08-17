@@ -1,10 +1,6 @@
 import { resolve } from 'path'
 
-import {
-  WebpackConfigTransformer,
-  WebpackConfigMutator,
-  WebpackConfigTransformContext,
-} from '@teambit/webpack'
+import { WebpackConfigTransformer, WebpackConfigMutator, WebpackConfigTransformContext } from '@teambit/webpack'
 
 /**
  * Transformation to apply for both preview and dev server
@@ -12,10 +8,7 @@ import {
  * @param _context
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function commonTransformation(
-  config: WebpackConfigMutator,
-  _context: WebpackConfigTransformContext
-) {
+function commonTransformation(config: WebpackConfigMutator, _context: WebpackConfigTransformContext) {
   // Merge config with the webpack.config.js file if you choose to import a module export format config.
   // config.merge([webpackConfig]);
   config.addAliases({
