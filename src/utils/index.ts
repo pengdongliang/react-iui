@@ -1,5 +1,5 @@
-import dayjs from 'dayjs'
 import type { DatePickerProps } from 'antd'
+import dayjs from 'dayjs'
 
 /**
  * 获取最近几天日期快捷操作配置
@@ -69,7 +69,7 @@ export function smallHumpToLowerLine(str: string): string {
  * @param str {string} 字符串
  */
 export function lowerLineToSmallHump(str: string): string {
-  return str.replace(/([^_])_+([^_])/g, ($0, $1, $2) => {
+  return str.replace(/([^_])_+([^_])/g, (_$0, $1, $2) => {
     return $1 + $2.toUpperCase()
   })
 }
@@ -85,11 +85,7 @@ export function filterRequestParams(
 ): Record<string, any> {
   let newParamsData = {}
   if (params) {
-    if (
-      filterRequestValue &&
-      Object.prototype.toString.call(params).match(/^\[object\s(.*)\]$/)[1] ===
-        'Object'
-    ) {
+    if (filterRequestValue && Object.prototype.toString.call(params).match(/^\[object\s(.*)\]$/)[1] === 'Object') {
       Object.entries(params).forEach(([key, value]) => {
         if (typeof filterRequestValue === 'function') {
           const newValue = filterRequestValue(key, value)

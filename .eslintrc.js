@@ -54,7 +54,6 @@ module.exports = {
     'no-use-before-define': ['off', {
       functions: false,
     }],
-    // 'no-use-before-define': ['error', { functions: false }],
     'prettier/prettier': ['error', {
       parser: 'typescript',
     }],
@@ -76,7 +75,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 0,
     'consistent-return': ['off'], // 不要求 return 语句要么总是指定返回的值
     'no-unused-expressions': ['off'],
     'no-return-assign': ['off'], // 禁止在返回语句中赋值
@@ -87,6 +86,7 @@ module.exports = {
     '@next/next/no-img-element': 0,
     'jsx-a11y/anchor-is-valid': 0,
     'no-nested-ternary': 0,
+    '@typescript-eslint/no-unused-vars': ['error', { 'varsIgnorePattern': '^_', 'argsIgnorePattern': '^_' }],
     'import/order': [
       'error',
       {

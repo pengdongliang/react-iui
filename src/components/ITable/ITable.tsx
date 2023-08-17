@@ -1,36 +1,28 @@
-import React, {
-  useCallback,
-  useContext,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
 import { useDeepCompareEffect, useUpdateEffect } from 'ahooks'
-import { Space, Table } from 'antd'
+import type { AntdTableOptions, Params as AntdTableParams } from 'ahooks/es/useAntdTable/types'
 import type { TableProps, FormInstance } from 'antd'
+import { Space, Table } from 'antd'
 import type { GetRowKey } from 'rc-table/es/interface'
-import type {
-  AntdTableOptions,
-  Params as AntdTableParams,
-} from 'ahooks/es/useAntdTable/types'
+import React, { useCallback, useContext, useImperativeHandle, useMemo, useRef, useState } from 'react'
+
 import type { PaginationConfigType } from './config'
 import { defaultPaginationConfig } from './config'
+import useDefaultItableConfig from './hooks/useDefaultItableConfig'
+import useITablePaginationConfig from './hooks/useITablePaginationConfig'
 import useITableParamsData, {
   ITableRequestFieldsType,
   UseITableParamsDataResultType,
 } from './hooks/useITableParamsData'
-import useITablePaginationConfig from './hooks/useITablePaginationConfig'
 import useSimpleITable from './hooks/useSimpleITable'
-import useDefaultItableConfig from './hooks/useDefaultItableConfig'
-import IForm from '../IForm/index'
-import type { UseTableFormType } from '../IForm/index'
 import useTableColumns, { ITableColumnTypes } from './hooks/useTableColumns'
-import { TableContainerStyled } from '@/components/ITable/styled'
 import type { EitherOr, RecordType, RefType } from './types/global'
+import type { UseTableFormType } from '../IForm/index'
+import IForm from '../IForm/index'
+
 import { IFormRef } from '@/components/IForm/IForm'
-import type { ConfigProviderProps, UseRequestOptionsType } from '@/index'
+import { TableContainerStyled } from '@/components/ITable/styled'
 import { ConfigContext } from '@/configProvider'
+import type { ConfigProviderProps, UseRequestOptionsType } from '@/index'
 import { RequestHandlerArgs } from '@/index'
 
 /** ITable Instance */
@@ -109,19 +101,12 @@ export type ItableQueryType = {
 /**
  * 获取数据参数类型
  */
-export type QueryTypeEitherOr = EitherOr<
-  ItableQueryType,
-  'getTableDataApi',
-  'getTableData'
->
+export type QueryTypeEitherOr = EitherOr<ItableQueryType, 'getTableDataApi', 'getTableData'>
 
 /**
  * 表格options
  */
-export type UseAntdTableOptionsType = AntdTableOptions<
-  UseAntdRowItemType,
-  AntdTableParams
->
+export type UseAntdTableOptionsType = AntdTableOptions<UseAntdRowItemType, AntdTableParams>
 
 export interface InitParamsType {
   [k: string]: any
@@ -135,8 +120,7 @@ export type ITableRef = React.Ref<ITableInstance>
 /**
  * 表格props类型初始
  */
-export interface ITableProps<T = RecordType>
-  extends Omit<TableProps<T>, 'columns'> {
+export interface ITableProps<T = RecordType> extends Omit<TableProps<T>, 'columns'> {
   /** 扩展后的columns */
   columns?: ITableColumnTypes<T>
   /** useAntd使用的options */
@@ -176,14 +160,9 @@ export interface ITableProps<T = RecordType>
   /** 过滤请求参数值, 默认过滤`undefined和""` */
   filterRequestValue?: UseRequestOptionsType['filterRequestValue']
   /** 传入getTableDataApi时使用的自定义请求options */
-  requestOptions?: (args: {
-    params: Record<string, any>
-  }) => Partial<UseRequestOptionsType>
+  requestOptions?: (args: { params: Record<string, any> }) => Partial<UseRequestOptionsType>
   /** 回调方法处理请求返回的数据 */
-  responseDataHandler?: (
-    data: Record<string, any>[],
-    res?: Record<string, any>
-  ) => Record<string, any>[]
+  responseDataHandler?: (data: Record<string, any>[], res?: Record<string, any>) => Record<string, any>[]
   /** 禁用内置的表单和按钮 */
   disabled?: boolean
 }
@@ -193,172 +172,156 @@ export interface ITableProps<T = RecordType>
  */
 export type ITablePropsEitherOr = QueryTypeEitherOr & ITableProps
 
-const ITable = React.forwardRef(
-  (props: ITablePropsEitherOr, ref: ITableRef) => {
-    const {
-      columns,
-      useAntdTableOptions,
-      initPaginationConfig = defaultPaginationConfig,
-      initParams,
-      blockAutoRequestFlag,
-      simpleTableFlag,
-      showSearchBar = true,
-      useTableForm,
-      editableConfig,
-      serialNumber = true,
-      pagination: paginationProps,
-      disabled,
-    } = props
-    const [editingRowKey, setEditingRowKey] = useState('')
-    const iFormRef: IFormRef = useRef(null)
-    const { setITable } = useContext<ConfigProviderProps>(ConfigContext)
-    /** 分页 */
-    const { paginationConfig } = useITablePaginationConfig(initPaginationConfig)
-    /** 数据处理 */
-    const defaultParams = useMemo(
-      () => [{ ...paginationConfig }, { ...initParams }],
-      [paginationConfig, initParams]
-    )
-    const onBefore = (params: AntdTableParams) => {
-      if (
-        editingRowKey &&
-        (editableConfig as Exclude<EditableConfigType, boolean>)?.editRowFlag
-      ) {
-        setEditingRowKey('')
-      }
-      if (typeof useAntdTableOptions?.onBefore === 'function') {
-        useAntdTableOptions?.onBefore(params)
-      }
+const ITable = React.forwardRef((props: ITablePropsEitherOr, ref: ITableRef) => {
+  const {
+    columns,
+    useAntdTableOptions,
+    initPaginationConfig = defaultPaginationConfig,
+    initParams,
+    blockAutoRequestFlag,
+    simpleTableFlag,
+    showSearchBar = true,
+    useTableForm,
+    editableConfig,
+    serialNumber = true,
+    pagination: paginationProps,
+    disabled,
+  } = props
+  const [editingRowKey, setEditingRowKey] = useState('')
+  const iFormRef: IFormRef = useRef(null)
+  const { setITable } = useContext<ConfigProviderProps>(ConfigContext)
+  /** 分页 */
+  const { paginationConfig } = useITablePaginationConfig(initPaginationConfig)
+  /** 数据处理 */
+  const defaultParams = useMemo(() => [{ ...paginationConfig }, { ...initParams }], [paginationConfig, initParams])
+  const onBefore = (params: AntdTableParams) => {
+    if (editingRowKey && (editableConfig as Exclude<EditableConfigType, boolean>)?.editRowFlag) {
+      setEditingRowKey('')
     }
-    const realUseAntdTableOptions = {
-      onBefore,
-      ...useAntdTableOptions,
-      defaultParams,
-      manual: blockAutoRequestFlag,
-      ...(showSearchBar && useTableForm
-        ? { form: iFormRef?.current?.formRef }
-        : {}),
-    } as UseAntdTableOptionsType
-    const useTableParamsData = useITableParamsData({
-      ...props,
-      useAntdTableOptions: realUseAntdTableOptions,
-    })
-    const { tableProps } = useTableParamsData
-    const run = useCallback(
-      (args = {}) => {
-        const { current, pageSize } = paginationConfig
-        useTableParamsData.run({ current, pageSize }, { ...args })
-      },
-      [paginationConfig, useTableParamsData]
-    )
+    if (typeof useAntdTableOptions?.onBefore === 'function') {
+      useAntdTableOptions?.onBefore(params)
+    }
+  }
+  const realUseAntdTableOptions = {
+    onBefore,
+    ...useAntdTableOptions,
+    defaultParams,
+    manual: blockAutoRequestFlag,
+    ...(showSearchBar && useTableForm ? { form: iFormRef?.current?.formRef } : {}),
+  } as UseAntdTableOptionsType
+  const useTableParamsData = useITableParamsData({
+    ...props,
+    useAntdTableOptions: realUseAntdTableOptions,
+  })
+  const { tableProps } = useTableParamsData
+  const run = useCallback(
+    (args = {}) => {
+      const { current, pageSize } = paginationConfig
+      useTableParamsData.run({ current, pageSize }, { ...args })
+    },
+    [paginationConfig, useTableParamsData]
+  )
 
-    const realDisabled = useMemo(
-      () => disabled || useTableParamsData?.loading,
-      [disabled, useTableParamsData?.loading]
-    )
+  const realDisabled = useMemo(() => disabled || useTableParamsData?.loading, [disabled, useTableParamsData?.loading])
 
-    useUpdateEffect(() => {
-      if (blockAutoRequestFlag === 'auto') run(initParams)
-    }, [initParams])
+  useUpdateEffect(() => {
+    if (blockAutoRequestFlag === 'auto') run(initParams)
+  }, [initParams])
 
-    /** 简单表格 */
-    const useSimpleITableData = useSimpleITable({
-      blockAutoRequestFlag,
-      simpleTableFlag,
-      tableProps,
-      propsDataSource: props?.dataSource as RecordType[],
-      paginationProps,
-    })
-    /** 默认antd表格配置 */
-    const defaultItableConfig = useDefaultItableConfig(props)
+  /** 简单表格 */
+  const useSimpleITableData = useSimpleITable({
+    blockAutoRequestFlag,
+    simpleTableFlag,
+    tableProps,
+    propsDataSource: props?.dataSource as RecordType[],
+    paginationProps,
+  })
+  /** 默认antd表格配置 */
+  const defaultItableConfig = useDefaultItableConfig(props)
 
-    let rowKey = props.rowKey || defaultItableConfig.rowKey
-    if (typeof rowKey === 'function') rowKey = ''
+  let rowKey = props.rowKey || defaultItableConfig.rowKey
+  if (typeof rowKey === 'function') rowKey = ''
 
-    /** 处理表格columns */
-    const { realColumns, components, hasColumnEditable } = useTableColumns({
-      columns,
-      editableConfig,
-      serialNumber,
-      disabled: realDisabled,
-    })
+  /** 处理表格columns */
+  const { realColumns, components, hasColumnEditable } = useTableColumns({
+    columns,
+    editableConfig,
+    serialNumber,
+    disabled: realDisabled,
+  })
 
-    /** 是否编辑表格 */
-    const editableData = useMemo(() => {
-      if (!editableConfig && !hasColumnEditable) return {}
-      return {
-        components,
-        rowClassName: () => 'itable-editable-row',
-      }
-    }, [editableConfig, components, hasColumnEditable])
+  /** 是否编辑表格 */
+  const editableData = useMemo(() => {
+    if (!editableConfig && !hasColumnEditable) return {}
+    return {
+      components,
+      rowClassName: () => 'itable-editable-row',
+    }
+  }, [editableConfig, components, hasColumnEditable])
 
-    const ItableContextData: ItableContextType = useMemo(
-      () => ({
-        iFormRef,
-        rowKey,
-        editingRowKey,
-        setEditingRowKey,
-      }),
-      [rowKey, editingRowKey]
-    )
-    const iTableInstance = useMemo<ITableInstance>(() => {
-      return {
+  const ItableContextData: ItableContextType = useMemo(
+    () => ({
+      iFormRef,
+      rowKey,
+      editingRowKey,
+      setEditingRowKey,
+    }),
+    [rowKey, editingRowKey]
+  )
+  const iTableInstance = useMemo<ITableInstance>(() => {
+    return {
+      ...useTableParamsData,
+      run,
+      iFormRef: iFormRef?.current?.formRef,
+      dataSource:
+        Array.isArray(useTableParamsData?.data?.list) && useTableParamsData?.data?.list?.length
+          ? useTableParamsData?.data?.list
+          : useSimpleITableData?.dataSource,
+    }
+  }, [run, useSimpleITableData?.dataSource, useTableParamsData])
+
+  useImperativeHandle(ref, () => iTableInstance)
+
+  useDeepCompareEffect(() => {
+    if (typeof setITable === 'function') {
+      setITable({
         ...useTableParamsData,
         run,
-        iFormRef: iFormRef?.current?.formRef,
-        dataSource:
-          Array.isArray(useTableParamsData?.data?.list) &&
-          useTableParamsData?.data?.list?.length
-            ? useTableParamsData?.data?.list
-            : useSimpleITableData?.dataSource,
-      }
-    }, [run, useSimpleITableData?.dataSource, useTableParamsData])
+        dataSource: iTableInstance?.dataSource,
+      })
+    }
+  }, [setITable, useSimpleITableData?.dataSource, iTableInstance?.dataSource])
 
-    useImperativeHandle(ref, () => iTableInstance)
-
-    useDeepCompareEffect(() => {
-      if (typeof setITable === 'function') {
-        setITable({
-          ...useTableParamsData,
-          run,
-          dataSource: iTableInstance?.dataSource,
-        })
-      }
-    }, [setITable, useSimpleITableData?.dataSource, iTableInstance?.dataSource])
-
-    return (
-      <ItableContext.Provider value={ItableContextData}>
-        <Space direction="vertical" style={{ display: 'flex' }} size={6}>
-          {showSearchBar && useTableForm ? (
-            <IForm
-              {...useTableParamsData?.search}
-              initParams={initParams}
-              useTableForm={useTableForm}
-              columns={columns}
-              disabled={realDisabled}
-              ref={iFormRef}
-              className="iForm_container"
-            />
-          ) : null}
-          <TableContainerStyled>
-            {props.children ? (
-              <div className="iTable_before_cotainer">{props.children}</div>
-            ) : null}
-            <Table
-              {...defaultItableConfig}
-              {...editableData}
-              {...props}
-              {...tableProps}
-              {...useSimpleITableData}
-              columns={realColumns}
-              className="iTable_container"
-            />
-          </TableContainerStyled>
-        </Space>
-      </ItableContext.Provider>
-    )
-  }
-)
+  return (
+    <ItableContext.Provider value={ItableContextData}>
+      <Space direction="vertical" style={{ display: 'flex' }} size={6}>
+        {showSearchBar && useTableForm ? (
+          <IForm
+            {...useTableParamsData?.search}
+            initParams={initParams}
+            useTableForm={useTableForm}
+            columns={columns}
+            disabled={realDisabled}
+            ref={iFormRef}
+            className="iForm_container"
+          />
+        ) : null}
+        <TableContainerStyled>
+          {props.children ? <div className="iTable_before_cotainer">{props.children}</div> : null}
+          <Table
+            {...defaultItableConfig}
+            {...editableData}
+            {...props}
+            {...tableProps}
+            {...useSimpleITableData}
+            columns={realColumns}
+            className="iTable_container"
+          />
+        </TableContainerStyled>
+      </Space>
+    </ItableContext.Provider>
+  )
+})
 
 ITable.displayName = 'ITable'
 

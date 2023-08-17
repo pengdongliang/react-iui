@@ -37,11 +37,12 @@
     "downlevelIteration": true,
     "noFallthroughCasesInSwitch": true,
     "composite": false,
-    //    "declarationMap": true,
     "inlineSources": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true
+    "noUnusedLocals": false,  // 未使用的局部变量
+    "noUnusedParameters": false, // 未使用的参数
+    "preserveWatchOutput": true,
+    "preserveSymlinks": true,
+    "noImplicitReturns": false
   },
   "rules": {
     "member-access": false,
