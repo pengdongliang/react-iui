@@ -1,10 +1,4 @@
-export {
-  ITable,
-  ItableContext,
-  IForm,
-  IInput,
-  useITableInstance,
-} from './components'
+export { ITable, ItableContext, IForm, IInput, useITableInstance } from './components'
 
 export type {
   IFormItemType,
@@ -49,12 +43,7 @@ export { default as ConfigProvider } from './configProvider'
 export type { ConfigProviderProps } from './configProvider'
 export * from 'ahooks'
 export { useRequest as useAHooksRequest } from 'ahooks'
-export {
-  useExport,
-  useTableDelete,
-  useRequest,
-  useRemoveInputSpaces,
-} from './hooks'
+export { useExport, useTableDelete, useRequest, useRemoveInputSpaces } from './hooks'
 export type {
   UseExportProps,
   DeleteHandlerArgs,
