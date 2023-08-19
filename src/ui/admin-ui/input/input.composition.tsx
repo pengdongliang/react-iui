@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { IInput } from './i-input'
+import { IInput } from './input'
 
 export const BasicIInput = () => {
   return <IInput />

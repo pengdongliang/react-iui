@@ -9,17 +9,35 @@
  */
 
 {
+    "admin-ui/input": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/admin-ui/input",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "envs/admin-env": {
         "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/envs/admin-env"
     },
-    "ui/admin-ui/i-input": {
-        "scope": "yooco.react-iui",
-        "version": "0.0.1",
+    "hooks/use-remove-input-spaces": {
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
-        "rootDir": "src/ui/admin-ui/i-input"
+        "rootDir": "src/hooks/ui/input/useRemoveInputSpaces",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
     },
     "$schema-version": "16.0.0"
 }
