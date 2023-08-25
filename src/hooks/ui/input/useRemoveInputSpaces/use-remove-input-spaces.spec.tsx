@@ -1,11 +1,8 @@
-import { renderHook, act } from '@testing-library/react-hooks'
+import { IInput } from '@yooco/react-iui.admin-ui.input'
 
-import { useRemoveInputSpaces } from './use-remove-input-spaces'
+import { render } from '@testing-library/react'
 
-it('should increment counter', () => {
-  const { result } = renderHook(() => useRemoveInputSpaces())
-  act(() => {
-    result.current.increment()
-  })
-  expect(result.current.count).toBe(1)
+it('should render successfully', () => {
+  const { baseElement } = render(<IInput />)
+  expect(baseElement).toBeTruthy()
 })

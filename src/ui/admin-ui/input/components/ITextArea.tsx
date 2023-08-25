@@ -1,8 +1,8 @@
+import type { UseRemoveInputSpacesProps } from '@yooco/react-iui.hooks.use-remove-input-spaces'
+import { useRemoveInputSpaces } from '@yooco/react-iui.hooks.use-remove-input-spaces'
 import { Input } from 'antd'
 import type { TextAreaRef, TextAreaProps } from 'antd/es/input/TextArea'
 import React from 'react'
-
-import useRemoveInputSpaces, { UseRemoveInputSpacesProps } from '../hooks/useRemoveInputSpaces'
 
 export type ITextAreaProps = TextAreaProps & UseRemoveInputSpacesProps
 

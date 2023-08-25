@@ -1,9 +1,16 @@
 import React from 'react'
 
 import { BasicIInput } from './input.composition'
-import { render } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 
 it('should render successfully', () => {
-  const { baseElement } = render(<BasicIInput />)
-  expect(baseElement).toBeTruthy()
+  render(<BasicIInput value="  123  " />)
+  screen.debug()
+  const item = screen.getByDisplayValue('  123  ')
+
+  fireEvent.blur(item)
+
+  expect(item).toHaveValue('123')
+
+  screen.debug()
 })
