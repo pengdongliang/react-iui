@@ -1,6 +1,17 @@
-import { IInput } from '@yooco/react-iui.admin-ui.input'
+import { Input, Form } from 'antd'
 import React from 'react'
 
+import { useRemoveInputSpaces } from './use-remove-input-spaces'
+
 export const BasicuseRemoveInputSpaces = () => {
-  return <IInput />
+  const [form] = Form.useForm()
+  const removeInputSpacesEvent = useRemoveInputSpaces({})
+
+  return (
+    <Form form={form}>
+      <Form.Item name="input">
+        <Input {...removeInputSpacesEvent} />
+      </Form.Item>
+    </Form>
+  )
 }

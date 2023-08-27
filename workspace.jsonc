@@ -37,11 +37,22 @@
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
     "packageManager": "teambit.dependencies/pnpm",
-    "rootComponents": true,
     "policy": {
-      "dependencies": {},
+      "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@teambit/defender.eslint-linter": "^1.0.7",
+        "@teambit/defender.jest-tester": "^1.0.2",
+        "@teambit/defender.prettier-formatter": "^1.0.2",
+        "@teambit/dependencies.modules.packages-excluder": "^1.0.2",
+        "@teambit/preview.react-preview": "^1.0.2",
+        "@teambit/react.mounter": "^1.0.1",
+        "@teambit/react.react-env": "^1.0.6",
+        "@teambit/typescript.typescript-compiler": "^2.0.6"
+      },
       "peerDependencies": {}
-    }
+    },
+    "linkCoreAspects": true,
+    "rootComponents": true
   },
   /**
    * workspace variants allow to set different subsets of configuration for components in your
@@ -63,7 +74,7 @@
   },
   "teambit.generator/generator": {
     "envs": [
-      "yooco.react-iui/envs/admin-env"
+       "yooco.react-iui/envs/admin-env"
     ]
   }
 }

@@ -11,13 +11,20 @@ Increments the state of `count` by 1 each time `increment` is called
 
 ### Component usage
 
-In this example clicking the button calls `increment` which increments the `count` by 1
+```tsx
+const removeInputSpacesEvent = useRemoveInputSpaces({})
 
-```js
-import { useRemoveInputSpaces } from './use-remove-input-spaces';
+return (
+  <Form form={form}>
+    <Form.Item name="input">
+      <Input {...removeInputSpacesEvent} />
+    </Form.Item>
+  </Form>
+)
+```
 
-const { count, increment } = useRemoveInputSpaces();
+import { BasicuseRemoveInputSpaces } from './use-remove-input-spaces.composition';
 
-<h1>The count is {count}</h1>
-<button onClick={increment}>increment</button>
+```tsx live
+<BasicuseRemoveInputSpaces />
 ```

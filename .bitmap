@@ -15,9 +15,9 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input",
         "config": {
-            "teambit.react/react": {},
+            "yooco.react-iui/envs/admin-env": {},
             "teambit.envs/envs": {
-                "env": "teambit.react/react"
+                "env": "yooco.react-iui/envs/admin-env"
             }
         }
     },
@@ -33,9 +33,9 @@
         "mainFile": "index.ts",
         "rootDir": "src/hooks/ui/input/useRemoveInputSpaces",
         "config": {
-            "teambit.react/react": {},
+            "yooco.react-iui/envs/admin-env": {},
             "teambit.envs/envs": {
-                "env": "teambit.react/react"
+                "env": "yooco.react-iui/envs/admin-env"
             }
         }
     },

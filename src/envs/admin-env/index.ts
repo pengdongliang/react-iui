@@ -1,5 +1,4 @@
-import { AdminEnvAspect } from './admin-env.aspect'
+import { AdminEnv } from './admin-env.bit-env'
 
-export type { AdminEnvMain } from './admin-env.main.runtime'
-export default AdminEnvAspect
-export { AdminEnvAspect }
+export { AdminEnv }
+export default AdminEnv
