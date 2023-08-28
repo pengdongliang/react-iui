@@ -1,30 +1,35 @@
 /**
- * this env extends react-env version 1.0.6.
+ * This env extends react-env version 1.0.6.
  * to inspect its config @see https://bit.cloud/teambit/react/react-env?version=1.0.6
- * */
+ *
+ */
+
 import { Pipeline } from '@teambit/builder'
 import { Compiler } from '@teambit/compiler'
-import { ESLintLinter, EslintTask, EslintConfigWriter } from '@teambit/defender.eslint-linter'
-import { JestTester, JestTask } from '@teambit/defender.jest-tester'
-import { PrettierFormatter, PrettierConfigWriter } from '@teambit/defender.prettier-formatter'
-import { EnvHandler } from '@teambit/envs'
+import { ESLintLinter, EslintConfigWriter, EslintTask } from '@teambit/defender.eslint-linter'
+import { JestTask, JestTester } from '@teambit/defender.jest-tester'
+import { PrettierConfigWriter, PrettierFormatter } from '@teambit/defender.prettier-formatter'
+import { DependenciesEnv, EnvHandler } from '@teambit/envs'
 import { Preview } from '@teambit/preview'
-import { ReactPreview } from '@teambit/preview.react-preview'
-import { ReactEnv } from '@teambit/react.react-env'
 import { Tester } from '@teambit/tester'
 import {
   TypescriptCompiler,
-  resolveTypes,
-  TypescriptTask,
   TypescriptConfigWriter,
+  TypescriptTask,
+  resolveTypes,
 } from '@teambit/typescript.typescript-compiler'
 import { ConfigWriterList } from '@teambit/workspace-config-files'
+import { ESLint as ESLintLib } from 'eslint'
 
 import hostDependencies from './preview/host-dependencies'
-// import { webpackTransformer } from './config/webpack.config';
+import { ReactPreview } from '@teambit/preview.react-preview'
+import { ReactEnv } from '@teambit/react.react-env'
 
-export class AdminEnv extends ReactEnv {
-  /* a shorthand name for the env */
+// Import { webpackTransformer } from './config/webpack.config';
+import pkg from '~/package.json'
+
+export class AdminEnv extends ReactEnv implements DependenciesEnv {
+  /* A shorthand name for the env */
   name = 'admin-env'
 
   protected tsconfigPath = require.resolve('./config/tsconfig.json')
@@ -58,55 +63,61 @@ export class AdminEnv extends ReactEnv {
 
   protected previewMounter = require.resolve('./preview/mounter')
 
-  /* the compiler to use during development */
+  /* The compiler to use during development */
   compiler(): EnvHandler<Compiler> {
     /**
      * @see https://bit.dev/reference/typescript/using-typescript
-     * */
+     *
+     */
     return TypescriptCompiler.from({
       tsconfig: this.tsconfigPath,
       types: resolveTypes(__dirname, [this.tsTypesPath]),
     })
   }
 
-  /* the test runner to use during development */
+  /* The test runner to use during development */
   tester(): EnvHandler<Tester> {
     /**
      * @see https://bit.dev/reference/jest/using-jest
-     * */
+     *
+     */
     return JestTester.from({
       config: this.jestConfigPath,
     })
   }
 
-  /* the linter to use during development */
+  /* The linter to use during development */
   linter() {
     /**
      * @see https://bit.dev/reference/eslint/using-eslint
-     * */
+     *
+     */
     return ESLintLinter.from({
       tsconfig: this.tsconfigPath,
       configPath: this.eslintConfigPath,
       pluginsPath: __dirname,
       extensions: this.eslintExtensions,
+      eslint: ESLintLib,
     })
   }
 
   /**
-   * the formatter to use during development
+   * The formatter to use during development
    * (source files are not formatted as part of the components' build)
-   * */
+   *
+   */
   formatter() {
     /**
      * @see https://bit.dev/reference/prettier/using-prettier
-     * */
+     *
+     */
     return PrettierFormatter.from({
       configPath: this.prettierConfigPath,
     })
   }
 
   /**
-   * generates the component previews during development and during build
+   * Generates the component previews during development and during build
    */
   preview(): EnvHandler<Preview> {
     /**
@@ -115,12 +126,12 @@ export class AdminEnv extends ReactEnv {
     return ReactPreview.from({
       mounter: this.previewMounter,
       hostDependencies,
-      // transformers: [webpackTransformer],
+      // Transformers: [webpackTransformer],
     })
   }
 
   /**
-   * a set of processes to be performed before a component is snapped, during its build phase
+   * A set of processes to be performed before a component is snapped, during its build phase
    * @see https://bit.dev/docs/react-env/build-pipelines
    */
   build() {
@@ -134,6 +145,7 @@ export class AdminEnv extends ReactEnv {
         configPath: this.eslintConfigPath,
         pluginsPath: __dirname,
         extensions: this.eslintExtensions,
+        eslint: ESLintLib,
       }),
       JestTask.from({
         config: this.jestConfigPath,
@@ -155,6 +167,14 @@ export class AdminEnv extends ReactEnv {
         configPath: this.prettierConfigPath,
       }),
     ])
+  }
+
+  async getDependencies() {
+    return {
+      dependencies: pkg.dependencies,
+      devDependencies: pkg.devDependencies,
+      peerDependencies: pkg.peerDependencies,
+    }
   }
 }
 

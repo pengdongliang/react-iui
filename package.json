@@ -12,7 +12,7 @@
     "prepublishOnly": "father doctor && npm run build",
     "postinstall": "bit import && bit compile && bit link",
     "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|md)\"",
-    "clean": "rm ./dist ./es ./lib ./node_modules -rf",
+    "clean": "bash ./clear.bash",
     "build:npm": "npm run clean && npm run build",
     "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
     "build-storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook"
@@ -79,7 +79,6 @@
     "babel-plugin-import": "^1.13.6",
     "dayjs": "^1.11.9",
     "eslint": "^8.31.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^4.2.1",

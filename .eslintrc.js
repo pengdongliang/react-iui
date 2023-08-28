@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['eslint:all', 'react-app', 'airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
-  plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  extends: ['eslint:all', 'react-app', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
+  plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   rules: {
     camelcase: 0,

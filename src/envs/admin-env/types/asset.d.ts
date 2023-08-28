@@ -1,5 +1,5 @@
 /**
- * this file is copied into your components' build output.
+ * This file is copied into your components' build output.
  */
 
 declare module '*.png' {

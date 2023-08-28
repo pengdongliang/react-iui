@@ -1,8 +1,8 @@
-/**
- * @see https://bit.dev/reference/prettier/prettier-config
- */
-const { prettierConfig } = require('@teambit/react.react-env');
+const { prettierConfig } = require('@teambit/react.react-env')
+
+const defaultPrettierConfig = require('../../../../.prettierrc.js')
 
 module.exports = {
   ...prettierConfig,
-};
+  ...defaultPrettierConfig,
+}
