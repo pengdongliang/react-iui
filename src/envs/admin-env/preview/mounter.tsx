@@ -1,6 +1,5 @@
-import React from 'react'
-
 import { createMounter } from '@teambit/react.mounter'
+import React from 'react'
 
 /**
  * Provide your component compositions (preview) with the context they need to run.

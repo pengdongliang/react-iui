@@ -1,44 +1,37 @@
-export { default as ITable, ItableContext, useITableInstance } from './ITable'
-export type {
-  ItableContextType,
-  EditArgumentsType,
-  EditableConfigType,
-  UseAntdRowItemType,
-  UseAntdTablePaginationType,
-  ItableQueryType,
-  QueryTypeEitherOr,
-  UseAntdTableOptionsType,
-  InitParamsType,
-  ITableProps,
-  ITablePropsEitherOr,
-  ITableRef,
-  ITableInstance,
-  PaginationConfigType,
-  ITableRequestParamsType,
-  ITableRequestFieldsType,
-  UseITableParamsDataResultType,
-  EditableType,
-  ITableColumnTypes,
-  ITableColumnObjTypes,
-  SortConfigType,
-} from './ITable'
-
+export type { IFormItemType, IFormProps, IFormRef, UseTableFormType } from './IForm'
 export { default as IForm } from './IForm'
-export type {
-  IFormItemType,
-  UseTableFormType,
-  IFormProps,
-  IFormRef,
-} from './IForm'
-
-export { default as IInput } from './IInput'
 export type {
   IInputProps,
   IInputRef,
-  ITextAreaProps,
-  ITextAreaRef,
-  ISearchProps,
-  ISearchRef,
   IPasswordProps,
   IPasswordRef,
+  ISearchProps,
+  ISearchRef,
+  ITextAreaProps,
+  ITextAreaRef,
 } from './IInput'
+export { default as IInput } from './IInput'
+export type {
+  EditableConfigType,
+  EditableType,
+  EditArgumentsType,
+  InitParamsType,
+  ITableColumnObjTypes,
+  ITableColumnTypes,
+  ItableContextType,
+  ITableInstance,
+  ITableProps,
+  ITablePropsEitherOr,
+  ItableQueryType,
+  ITableRef,
+  ITableRequestFieldsType,
+  ITableRequestParamsType,
+  PaginationConfigType,
+  QueryTypeEitherOr,
+  SortConfigType,
+  UseAntdRowItemType,
+  UseAntdTableOptionsType,
+  UseAntdTablePaginationType,
+  UseITableParamsDataResultType,
+} from './ITable'
+export { default as ITable, ItableContext, useITableInstance } from './ITable'

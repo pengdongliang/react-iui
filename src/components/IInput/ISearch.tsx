@@ -1,10 +1,9 @@
-import React from 'react'
-import { Input } from 'antd'
 import type { InputRef } from 'antd'
+import { Input } from 'antd'
 import type { SearchProps } from 'antd/es/input'
-import useRemoveInputSpaces, {
-  UseRemoveInputSpacesProps,
-} from './hooks/useRemoveInputSpaces'
+import React from 'react'
+
+import useRemoveInputSpaces, { UseRemoveInputSpacesProps } from './hooks/useRemoveInputSpaces'
 
 export type ISearchProps = SearchProps & UseRemoveInputSpacesProps
 

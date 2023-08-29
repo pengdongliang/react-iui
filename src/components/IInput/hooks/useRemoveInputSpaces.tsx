@@ -1,9 +1,8 @@
-import { Form } from 'antd'
 import type { InputProps } from 'antd'
+import { Form } from 'antd'
 import React, { useCallback, useMemo } from 'react'
 
-export interface UseRemoveInputSpacesProps
-  extends Partial<Pick<InputProps, 'onBlur' | 'onPressEnter' | 'id'>> {
+export interface UseRemoveInputSpacesProps extends Partial<Pick<InputProps, 'onBlur' | 'onPressEnter' | 'id'>> {
   /** 替换正则, 默认/(^\s*)|(\s*$)/g */
   regex?: RegExp | false
   /** form表单name, 默认取Input id */
@@ -18,17 +17,10 @@ export interface UseRemoveInputSpacesProps
  * 去除input内容首尾空格, 支持失去焦点和回车
  * Antd Form直接使用, 未在Form里的Input通过onChange处理
  */
-export default function useRemoveInputSpaces<
-  T extends UseRemoveInputSpacesProps = UseRemoveInputSpacesProps
->(props: T): T {
-  const {
-    onBlur,
-    onPressEnter,
-    id,
-    formName,
-    regex = /(^\s*)|(\s*$)/g,
-    pressEnterFlag = true,
-  } = props
+export default function useRemoveInputSpaces<T extends UseRemoveInputSpacesProps = UseRemoveInputSpacesProps>(
+  props: T
+): T {
+  const { onBlur, onPressEnter, id, formName, regex = /(^\s*)|(\s*$)/g, pressEnterFlag = true } = props
   const form = Form?.useFormInstance()
   const name = formName ?? id
   const isFormItem = !!(form && name)

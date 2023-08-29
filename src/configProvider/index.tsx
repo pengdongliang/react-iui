@@ -1,10 +1,11 @@
-import React, { useMemo, useState } from 'react'
 import { ConfigProvider as AntdConfigProvider } from 'antd'
 import { ConfigProviderProps as AntdConfigProviderProps } from 'antd/es/config-provider'
-import { defaultITableRequestFields } from '@/components/ITable/hooks/useITableParamsData'
-import type { ITableRequestFieldsType } from '@/components/ITable/hooks/useITableParamsData'
-import { ResponseHandlerType } from '@/hooks/useRequest'
+import React, { useMemo, useState } from 'react'
+
 import { ITableInstance } from '@/components/ITable'
+import type { ITableRequestFieldsType } from '@/components/ITable/hooks/useITableParamsData'
+import { defaultITableRequestFields } from '@/components/ITable/hooks/useITableParamsData'
+import { ResponseHandlerType } from '@/hooks/useRequest'
 
 export interface ConfigProviderProps {
   /** 是否使用use-http请求 */
@@ -28,16 +29,8 @@ export const ConfigContext = React.createContext<ConfigProviderProps>({})
  * @param props
  * @constructor
  */
-const ConfigProvider: React.FC<React.PropsWithChildren<ConfigProviderProps>> = (
-  props
-) => {
-  const {
-    children,
-    isUseHttp,
-    iTableRequestFields,
-    antdContextOptions,
-    responseHandler,
-  } = props
+const ConfigProvider: React.FC<React.PropsWithChildren<ConfigProviderProps>> = (props) => {
+  const { children, isUseHttp, iTableRequestFields, antdContextOptions, responseHandler } = props
 
   const [iTable, setITable] = useState<ITableInstance>()
 
@@ -50,20 +43,12 @@ const ConfigProvider: React.FC<React.PropsWithChildren<ConfigProviderProps>> = (
       setITable,
       iTable,
     }),
-    [
-      isUseHttp,
-      iTableRequestFields,
-      antdContextOptions,
-      responseHandler,
-      iTable,
-    ]
+    [isUseHttp, iTableRequestFields, antdContextOptions, responseHandler, iTable]
   )
 
   return (
     <AntdConfigProvider {...antdContextOptions}>
-      <ConfigContext.Provider value={configContextData}>
-        {children}
-      </ConfigContext.Provider>
+      <ConfigContext.Provider value={configContextData}>{children}</ConfigContext.Provider>
     </AntdConfigProvider>
   )
 }

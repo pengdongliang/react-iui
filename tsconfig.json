@@ -1,15 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@teambit/react.react-env/config/tsconfig.json"],
+  "extends": [
+    "@teambit/react.react-env/config/tsconfig.json"
+  ],
   "types": [
     "node",
     "jest"
   ],
   "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
     "jsxImportSource": "@emotion/react",
     "jsx": "react-jsx",
     "strict": true,
-    "declaration": true,
     "skipLibCheck": true,
     "baseUrl": "./",
     "esModuleInterop": true,
@@ -43,14 +46,13 @@
     "downlevelIteration": true,
     "noFallthroughCasesInSwitch": true,
     "composite": false,
-    "inlineSources": false,
-    "noUnusedLocals": false,  // 未使用的局部变量
-    "noUnusedParameters": false, // 未使用的参数
+    "noUnusedLocals": false,
+    // 未使用的局部变量
+    "noUnusedParameters": false,
+    // 未使用的参数
     "preserveWatchOutput": true,
     "preserveSymlinks": true,
-    "noImplicitReturns": false,
-    "declaration": false,
-    "declarationMap": false
+    "noImplicitReturns": false
   },
   "rules": {
     "member-access": false,

@@ -1,7 +1,2 @@
+export type { IFormItemType, IFormProps, IFormRef, UseTableFormType } from './IForm'
 export { default } from './IForm'
-export type {
-  IFormItemType,
-  UseTableFormType,
-  IFormProps,
-  IFormRef,
-} from './IForm'

@@ -1,10 +1,12 @@
-import { ComponentStory } from '@storybook/react'
-import zhCN from 'antd/locale/zh_CN'
-import { App, Button, message, Space } from 'antd'
-import { Provider as HttpProvider } from 'use-http'
-import { ITable } from '@/index'
-import ConfigProvider from '@/configProvider'
 import 'dayjs/locale/zh-cn'
+
+import { ComponentStory } from '@storybook/react'
+import { App, Button, message, Space } from 'antd'
+import zhCN from 'antd/locale/zh_CN'
+import { Provider as HttpProvider } from 'use-http'
+
+import ConfigProvider from '@/configProvider'
+import { ITable } from '@/index'
 
 export const Template: ComponentStory<typeof ITable> = (args) => {
   const apiOptions: any = {
@@ -45,10 +47,7 @@ export const Template: ComponentStory<typeof ITable> = (args) => {
 
   return (
     <HttpProvider url="https://randomuser.me" options={apiOptions}>
-      <ConfigProvider
-        responseHandler={{ successFunc: () => true }}
-        antdContextOptions={{ locale: zhCN }}
-      >
+      <ConfigProvider responseHandler={{ successFunc: () => true }} antdContextOptions={{ locale: zhCN }}>
         <App>
           <ITable {...args}>
             <Space>

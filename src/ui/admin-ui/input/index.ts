@@ -6,10 +6,10 @@ import { ITextArea } from './components/ITextArea'
 import type { IInputProps, IInputRef } from './input'
 import { IInput as InternalInput } from './input'
 
-export type { IInputProps, IInputRef } from './input'
-export type { ITextAreaProps, ITextAreaRef } from './components/ITextArea'
-export type { ISearchProps, ISearchRef } from './components/ISearch'
 export type { IPasswordProps, IPasswordRef } from './components/IPassword'
+export type { ISearchProps, ISearchRef } from './components/ISearch'
+export type { ITextAreaProps, ITextAreaRef } from './components/ITextArea'
+export type { IInputProps, IInputRef } from './input'
 
 type CompoundedComponent = React.ForwardRefExoticComponent<IInputProps & React.RefAttributes<IInputRef>> & {
   Group: typeof Input.Group

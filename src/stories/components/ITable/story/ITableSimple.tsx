@@ -1,5 +1,6 @@
-import { Template } from '../template'
 import { tableData } from '@/stories/components/ITable/const'
+
+import { Template } from '../template'
 
 const ITableSimple = Template.bind({})
 

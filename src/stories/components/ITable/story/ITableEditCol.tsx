@@ -1,4 +1,5 @@
 import { message } from 'antd'
+
 import { Template } from '@/stories/components/ITable/template'
 
 const ITableEditCol = Template.bind({})

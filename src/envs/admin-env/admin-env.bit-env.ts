@@ -6,27 +6,26 @@
 
 import { Pipeline } from '@teambit/builder'
 import { Compiler } from '@teambit/compiler'
-import { ESLintLinter, EslintConfigWriter, EslintTask } from '@teambit/defender.eslint-linter'
+import { EslintConfigWriter, ESLintLinter, EslintTask } from '@teambit/defender.eslint-linter'
 import { JestTask, JestTester } from '@teambit/defender.jest-tester'
 import { PrettierConfigWriter, PrettierFormatter } from '@teambit/defender.prettier-formatter'
 import { DependenciesEnv, EnvHandler } from '@teambit/envs'
 import { Preview } from '@teambit/preview'
+import { ReactPreview } from '@teambit/preview.react-preview'
+import { ReactEnv } from '@teambit/react.react-env'
 import { Tester } from '@teambit/tester'
 import {
+  resolveTypes,
   TypescriptCompiler,
   TypescriptConfigWriter,
   TypescriptTask,
-  resolveTypes,
 } from '@teambit/typescript.typescript-compiler'
 import { ConfigWriterList } from '@teambit/workspace-config-files'
 import { ESLint as ESLintLib } from 'eslint'
-
-import hostDependencies from './preview/host-dependencies'
-import { ReactPreview } from '@teambit/preview.react-preview'
-import { ReactEnv } from '@teambit/react.react-env'
+import typescript from 'typescript'
 
 // Import { webpackTransformer } from './config/webpack.config';
-import pkg from '~/package.json'
+import hostDependencies from './preview/host-dependencies'
 
 export class AdminEnv extends ReactEnv implements DependenciesEnv {
   /* A shorthand name for the env */
@@ -72,6 +71,7 @@ export class AdminEnv extends ReactEnv implements DependenciesEnv {
     return TypescriptCompiler.from({
       tsconfig: this.tsconfigPath,
       types: resolveTypes(__dirname, [this.tsTypesPath]),
+      typescript,
     })
   }
 
@@ -139,6 +139,7 @@ export class AdminEnv extends ReactEnv implements DependenciesEnv {
       TypescriptTask.from({
         tsconfig: this.tsconfigPath,
         types: resolveTypes(__dirname, [this.tsTypesPath]),
+        typescript,
       }),
       EslintTask.from({
         tsconfig: this.tsconfigPath,
@@ -167,14 +168,6 @@ export class AdminEnv extends ReactEnv implements DependenciesEnv {
         configPath: this.prettierConfigPath,
       }),
     ])
-  }
-
-  async getDependencies() {
-    return {
-      dependencies: pkg.dependencies,
-      devDependencies: pkg.devDependencies,
-      peerDependencies: pkg.peerDependencies,
-    }
   }
 }
 

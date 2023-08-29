@@ -1,5 +1,7 @@
 import { useContext } from 'react'
+
 import { ConfigContext } from '@/configProvider'
+
 import { ITableInstance } from '../ITable'
 
 /**

@@ -1,6 +1,7 @@
-import React, { HTMLAttributes, useMemo } from 'react'
 import { Form } from 'antd'
 import { FormInstance } from 'antd/es/form'
+import React, { HTMLAttributes, useMemo } from 'react'
+
 import { ITableColumnObjTypes } from '@/components/ITable/hooks/useTableColumns'
 
 export type EditableContextType = {
@@ -13,6 +14,7 @@ interface EditableRowPropsType extends ITableColumnObjTypes {
   index: number
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const EditableRow: React.FC<EditableRowPropsType> = ({ index, ...props }) => {
   const { formProps, ...restProps } = props
   const [form] = Form.useForm()

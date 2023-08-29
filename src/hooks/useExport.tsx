@@ -1,8 +1,10 @@
-import { useCallback } from 'react'
 import { message } from 'antd'
+import { useCallback } from 'react'
+
 import { exportBlob } from '@/utils'
-import { useRequest } from './index'
+
 import type { IRequestProps } from './index'
+import { useRequest } from './index'
 
 /**
  * 导出运行函数参数类型
@@ -33,14 +35,7 @@ function useExport(props?: UseExportProps) {
 
   const exportHandler = useCallback(
     async (args?: ExportHandlerArgs) => {
-      const {
-        api,
-        method = 'get',
-        params,
-        body,
-        callback,
-        fileName,
-      } = { ...props, ...args }
+      const { api, method = 'get', params, body, callback, fileName } = { ...props, ...args }
       if (!api) {
         throw new Error('请求地址不能为空')
       }

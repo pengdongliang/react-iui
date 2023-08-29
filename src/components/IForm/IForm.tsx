@@ -1,9 +1,11 @@
-import React, { useEffect, useImperativeHandle, useMemo, useState } from 'react'
+import type { ButtonProps, FormInstance, FormItemProps, FormProps } from 'antd'
 import { Button, Col, Form, Row, Select, Space } from 'antd'
-import type { ButtonProps, FormProps, FormItemProps, FormInstance } from 'antd'
-import type { RecordType } from '../ITable/types/global'
-import { ITableColumnTypes, InitParamsType } from '../index'
+import React, { useEffect, useImperativeHandle, useMemo, useState } from 'react'
+
 import { IInput } from '@/components'
+
+import { InitParamsType, ITableColumnTypes } from '../index'
+import type { RecordType } from '../ITable/types/global'
 
 const { Option } = Select
 
@@ -98,26 +100,14 @@ const IForm = React.forwardRef((props: IFormProps, ref: IFormRef) => {
     } else if (itemName) {
       switch (itemName) {
         case 'input':
-          itemNode = (
-            <IInput onPressEnter={submit} allowClear {...i?.itemProps} />
-          )
+          itemNode = <IInput onPressEnter={submit} allowClear {...i?.itemProps} />
           break
         case 'select':
           itemNode = (
             <Select allowClear {...i?.itemProps}>
-              {i?.itemProps?.options.map(
-                (
-                  p: { label: string; value: string | number },
-                  index: number
-                ) => (
-                  <Option
-                    {...i?.optionProps}
-                    value={p?.value}
-                    title={p?.label}
-                    key={`${index}_${p?.value}`}
-                  />
-                )
-              )}
+              {i?.itemProps?.options.map((p: { label: string; value: string | number }, index: number) => (
+                <Option {...i?.optionProps} value={p?.value} title={p?.label} key={`${index}_${p?.value}`} />
+              ))}
             </Select>
           )
           break
@@ -155,8 +145,7 @@ const IForm = React.forwardRef((props: IFormProps, ref: IFormRef) => {
       {...useTableForm?.formProps}
       form={form}
       initialValues={initialValues}
-      className={className}
-    >
+      className={className}>
       <Space direction="vertical">
         <Row gutter={24}>
           {formItemNode}

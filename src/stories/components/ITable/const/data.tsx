@@ -1,4 +1,5 @@
 import { Button, DatePicker, Typography } from 'antd'
+
 import { ITableProps, RecordType } from '@/index'
 import { getInRecentDaysQuickAction } from '@/utils'
 
@@ -36,8 +37,7 @@ export const tableData = [
       salt: 'XbIQ5rMM',
       md5: 'c47a938093fdc7aa542d40e7a2488394',
       sha1: '493b49df25bb2c45befb61bc7c27dd884eadf159',
-      sha256:
-        'e61cf68c5919890a84070ca0202d6bfea174f6a2232a740c6226a17ee9a161fc',
+      sha256: 'e61cf68c5919890a84070ca0202d6bfea174f6a2232a740c6226a17ee9a161fc',
     },
     dob: {
       date: '1984-03-30T10:28:11.898Z',
@@ -90,8 +90,7 @@ export const tableData = [
       salt: 'tkmH9mq6',
       md5: '1d6007c7b23e5d74950be1d423e009a2',
       sha1: 'f4dc74cbd33027553edfa0783fcb61a4bb1461d0',
-      sha256:
-        'fa6b04498530ddc8e277202f44a98b9d75cc4ef2a034466b4009d48089746671',
+      sha256: 'fa6b04498530ddc8e277202f44a98b9d75cc4ef2a034466b4009d48089746671',
     },
     dob: {
       date: '1968-01-11T01:25:19.395Z',
@@ -144,8 +143,7 @@ export const tableData = [
       salt: '5BjEJESH',
       md5: 'e72396cdedc483a89333dcae79250c10',
       sha1: 'ca108a4cfbe0e0bf7386ce1f5474a1b4972c1fe5',
-      sha256:
-        '58c5be0084595c5e09768327b766eac11b9f8cd9f021203d37277e4eb75a3a86',
+      sha256: '58c5be0084595c5e09768327b766eac11b9f8cd9f021203d37277e4eb75a3a86',
     },
     dob: {
       date: '1946-05-13T11:40:39.931Z',
@@ -198,8 +196,7 @@ export const tableData = [
       salt: '9Ibz6tjR',
       md5: '38ab620314b9e12e5d2660a9989388d7',
       sha1: 'd3e0e9c362da36861f7361f3d8721ee57ba438fd',
-      sha256:
-        '9eb36a7aec53f19ae45e8255c6886df381960b9ce95e9b319d0396927bae3fa3',
+      sha256: '9eb36a7aec53f19ae45e8255c6886df381960b9ce95e9b319d0396927bae3fa3',
     },
     dob: {
       date: '1967-03-01T12:51:45.288Z',

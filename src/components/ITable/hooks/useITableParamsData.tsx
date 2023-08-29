@@ -1,15 +1,13 @@
 import { useAntdTable } from 'ahooks'
-import { useContext, useState } from 'react'
 import { AntdTableResult } from 'ahooks/lib/useAntdTable/types'
-import type { UseAntdRowItemType, ITablePropsEitherOr } from '../ITable'
-import { UseAntdTablePaginationType } from '../ITable'
+import { useContext, useState } from 'react'
+
 import { ConfigContext } from '@/configProvider'
 import { useRequest } from '@/index'
-import {
-  filterRequestParams,
-  lowerLineToSmallHump,
-  smallHumpToLowerLine,
-} from '@/utils'
+import { filterRequestParams, lowerLineToSmallHump, smallHumpToLowerLine } from '@/utils'
+
+import type { ITablePropsEitherOr, UseAntdRowItemType } from '../ITable'
+import { UseAntdTablePaginationType } from '../ITable'
 
 /**
  * 表格请求接口方法类型
@@ -40,8 +38,7 @@ export interface ITableRequestFieldsType {
 /**
  * 数据钩子返回的类型
  */
-export interface UseITableParamsDataResultType
-  extends AntdTableResult<any, any> {
+export interface UseITableParamsDataResultType extends AntdTableResult<any, any> {
   /** 请求的所有参数对象 */
   queryParams: Record<string, any>
   /** 请求的所有url参数 */
@@ -63,9 +60,7 @@ export const defaultITableRequestFields: Readonly<ITableRequestFieldsType> = {
  * iTable表格请求方式的数据
  * @param props
  */
-function useITableParamsData(
-  props: ITablePropsEitherOr
-): UseITableParamsDataResultType {
+function useITableParamsData(props: ITablePropsEitherOr): UseITableParamsDataResultType {
   const {
     getTableData,
     getTableDataApi,
@@ -115,10 +110,7 @@ function useITableParamsData(
             if (typeof orderFieldName === 'function') {
               fieldName = orderFieldName(field)
             } else {
-              fieldName =
-                orderFieldName === 'lowerLine'
-                  ? smallHumpToLowerLine(field)
-                  : lowerLineToSmallHump(field)
+              fieldName = orderFieldName === 'lowerLine' ? smallHumpToLowerLine(field) : lowerLineToSmallHump(field)
             }
           }
         } catch (err) {
@@ -177,12 +169,9 @@ function useITableParamsData(
     }
   }
 
-  const tableParamsData = useAntdTable(
-    getTableDataPromise as ITableRequestParamsType,
-    {
-      ...useAntdTableOptions,
-    }
-  )
+  const tableParamsData = useAntdTable(getTableDataPromise as ITableRequestParamsType, {
+    ...useAntdTableOptions,
+  })
 
   return { ...tableParamsData, queryParams, urlSearchParams }
 }

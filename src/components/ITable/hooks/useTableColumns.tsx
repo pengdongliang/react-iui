@@ -1,12 +1,13 @@
-import { useMemo, useState } from 'react'
-import { Tooltip } from 'antd'
 import type { TooltipProps } from 'antd'
-import { ColumnGroupType, ColumnType } from 'antd/es/table/interface'
-import { FormItemProps } from 'antd/es/form/FormItem'
+import { Tooltip } from 'antd'
 import { FormProps } from 'antd/es/form'
-import type { EditableConfigType, EditArgumentsType } from '../ITable'
-import EditableRow from '../components/EditableRow'
+import { FormItemProps } from 'antd/es/form/FormItem'
+import { ColumnGroupType, ColumnType } from 'antd/es/table/interface'
+import { useMemo, useState } from 'react'
+
 import EditableCell from '../components/EditableCell'
+import EditableRow from '../components/EditableRow'
+import type { EditableConfigType, EditArgumentsType } from '../ITable'
 import type { RecordType } from '../types/global'
 
 /** 排序配置 */
@@ -29,9 +30,7 @@ export type EditableType =
 /**
  * ITable表格columns属性类型
  */
-export interface ITableColumnObjTypes<T = RecordType>
-  extends Partial<ColumnGroupType<T>>,
-    Partial<ColumnType<T>> {
+export interface ITableColumnObjTypes<T = RecordType> extends Partial<ColumnGroupType<T>>, Partial<ColumnType<T>> {
   /** 当前单元格是否可以编辑 */
   editable?: EditableType
   /** 当前单元格是否可以自定义显示Tooltip */
@@ -76,28 +75,19 @@ function useTableColumns(props: UseTableColumnsPropsType): {
   const [hasColumnEditable, setHasColumnEditable] = useState(false)
 
   const realColumns: ITableColumnTypes = useMemo(() => {
-    const { onChange, editRowFlag } =
-      (editableConfig as Exclude<EditableConfigType, boolean>) ?? {}
+    const { onChange, editRowFlag } = (editableConfig as Exclude<EditableConfigType, boolean>) ?? {}
     const mapCol = columns?.map((col) => {
       const { editable, tooltip, dataIndex, render } = col
       let newCol = { key: dataIndex, ...col }
       if (tooltip) {
         const tooltipProps =
-          Object.prototype.toString
-            .call(tooltip)
-            .match(/^\[object\s(.*)\]$/)[1] === 'Object'
+          Object.prototype.toString.call(tooltip).match(/^\[object\s(.*)\]$/)[1] === 'Object'
             ? (tooltip as TooltipProps)
             : {}
         newCol = {
           ...newCol,
           render: (text, record, index) => (
-            <Tooltip
-              placement="topLeft"
-              destroyTooltipOnHide
-              title={text}
-              color="orange"
-              {...tooltipProps}
-            >
+            <Tooltip placement="topLeft" destroyTooltipOnHide title={text} color="orange" {...tooltipProps}>
               <div
                 style={{
                   overflow: 'hidden',
@@ -112,18 +102,14 @@ function useTableColumns(props: UseTableColumnsPropsType): {
                       e.currentTarget.style.pointerEvents = 'none' // 阻止鼠标事件
                     }
                   }
-                }}
-              >
+                }}>
                 {render ? render(text, record, index) : text}
               </div>
             </Tooltip>
           ),
         }
       }
-      if (
-        (!editable && dataIndex !== 'opt') ||
-        (!editRowFlag && dataIndex === 'opt')
-      ) {
+      if ((!editable && dataIndex !== 'opt') || (!editRowFlag && dataIndex === 'opt')) {
         return newCol
       }
       if (editable && !hasColumnEditable) {
@@ -148,11 +134,7 @@ function useTableColumns(props: UseTableColumnsPropsType): {
         },
       }
     })
-    if (
-      Array.isArray(mapCol) &&
-      mapCol.length &&
-      (serialNumber === 0 || serialNumber)
-    ) {
+    if (Array.isArray(mapCol) && mapCol.length && (serialNumber === 0 || serialNumber)) {
       mapCol.unshift({
         title: '序号',
         dataIndex: 'serial$number',
@@ -165,13 +147,7 @@ function useTableColumns(props: UseTableColumnsPropsType): {
       })
     }
     return mapCol
-  }, [
-    columns,
-    disabled,
-    editableConfig,
-    hasColumnEditable,
-    serialNumber,
-  ]) as ITableColumnTypes
+  }, [columns, disabled, editableConfig, hasColumnEditable, serialNumber]) as ITableColumnTypes
 
   const components = useMemo(() => {
     return hasColumnEditable

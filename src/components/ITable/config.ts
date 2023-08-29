@@ -1,5 +1,5 @@
-import type { RecordType } from './types/global'
 import { ITableProps } from './index'
+import type { RecordType } from './types/global'
 
 /**
  * 分页类型

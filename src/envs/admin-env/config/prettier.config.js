@@ -1,6 +1,8 @@
 const { prettierConfig } = require('@teambit/react.react-env')
 
-const defaultPrettierConfig = require('../../../../.prettierrc.js')
+const { resolve } = require('path')
+
+const defaultPrettierConfig = resolve('~/.prettierrc.js')
 
 module.exports = {
   ...prettierConfig,

@@ -46,7 +46,10 @@ export const useRemoveInputSpaces = <T extends UseRemoveInputSpacesProps = UseRe
   )
 
   const handleEnter = useCallback(
-    (e) => (pressEnterFlag ? handleTrim(e) : onPressEnter?.(e)),
+    (e: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLInputElement, Element>) =>
+      pressEnterFlag
+        ? handleTrim(e as React.FocusEvent<HTMLInputElement, Element>)
+        : onPressEnter?.(e as React.KeyboardEvent<HTMLInputElement>),
     [handleTrim, onPressEnter, pressEnterFlag]
   )
 

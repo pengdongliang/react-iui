@@ -22,18 +22,9 @@ export interface UseSimpleITablePropsType {
  * @param props
  */
 function useSimpleITable(props: UseSimpleITablePropsType) {
-  const {
-    blockAutoRequestFlag,
-    simpleTableFlag,
-    tableProps,
-    propsDataSource,
-    paginationProps,
-  } = props
+  const { blockAutoRequestFlag, simpleTableFlag, tableProps, propsDataSource, paginationProps } = props
   const simpleDataSource =
-    blockAutoRequestFlag &&
-    simpleTableFlag &&
-    Array.isArray(propsDataSource) &&
-    propsDataSource.length
+    blockAutoRequestFlag && simpleTableFlag && Array.isArray(propsDataSource) && propsDataSource.length
       ? propsDataSource
       : tableProps?.dataSource
   const simplePagination: UseSimpleITablePropsType['paginationProps'] =
@@ -41,10 +32,8 @@ function useSimpleITable(props: UseSimpleITablePropsType) {
       ? false
       : {
           showQuickJumper: true,
-          showTotal: (total, range) => `共${total}页`,
-          ...(Object.prototype.toString
-            .call(paginationProps)
-            .match(/^\[object\s(.*)\]$/)[1] === 'Object'
+          showTotal: (total) => `共${total}页`,
+          ...(Object.prototype.toString.call(paginationProps).match(/^\[object\s(.*)\]$/)[1] === 'Object'
             ? paginationProps
             : {}),
           ...tableProps?.pagination,

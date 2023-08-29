@@ -1,7 +1,11 @@
 module.exports = {
-  extends: ['eslint:all', 'react-app', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
-  plugins: ['@typescript-eslint'],
+  extends: ['eslint:all', 'airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort'],
   parser: '@typescript-eslint/parser',
+  env: { 'es6': true },
+  parserOptions: {
+    'sourceType': 'module',
+  },
   rules: {
     camelcase: 0,
     'import/no-extraneous-dependencies': 0,
@@ -86,25 +90,12 @@ module.exports = {
     '@next/next/no-img-element': 0,
     'jsx-a11y/anchor-is-valid': 0,
     'no-nested-ternary': 0,
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', ['internal', 'parent', 'sibling', 'index'], 'unknown'],
-        pathGroups: [
-          {
-            pattern: '@teambit/**',
-            group: 'external',
-            position: 'after',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['builtin'],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          orderImportKind: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
+    'class-methods-use-this': 0,
+    '@typescript-eslint/no-var-requires': 0,
   },
 }

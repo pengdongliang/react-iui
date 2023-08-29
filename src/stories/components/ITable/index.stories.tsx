@@ -1,4 +1,5 @@
 import { ComponentMeta } from '@storybook/react'
+
 import { IForm, ITable } from '@/index'
 import { columns, useTableForm } from '@/stories/components/ITable/const/data'
 
@@ -23,16 +24,9 @@ export default {
     rowKey: (record) => `${JSON.stringify(record?.id)}${record?.email}`,
     requestOptions: ({ params }) => ({ params }),
     // filterRequestValue: (key, value) => value,
-    responseDataHandler: (data, res) => data,
+    responseDataHandler: (data) => data,
     useTableForm,
   },
 } as ComponentMeta<typeof ITable>
 
-export {
-  ITableDemos,
-  ITableSimple,
-  ITableSorter,
-  ITableEditRow,
-  ITableEditCol,
-  ITableExpandable,
-} from './story'
+export { ITableDemos, ITableEditCol, ITableEditRow, ITableExpandable, ITableSimple, ITableSorter } from './story'

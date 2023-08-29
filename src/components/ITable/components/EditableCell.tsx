@@ -1,23 +1,14 @@
-import React, {
-  HTMLAttributes,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
 import { Divider, Form, InputRef, Space, Typography } from 'antd'
-import { EditableContext } from './EditableRow'
-import type { EditableContextType } from './EditableRow'
-import type {
-  EditableType,
-  ITableColumnObjTypes,
-} from '../hooks/useTableColumns'
-import { ItableContext } from '../ITable'
-import type { ItableContextType } from '../ITable'
-import type { RecordType } from '../types/global'
+import React, { HTMLAttributes, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
+
 import { IInput } from '@/components'
+
+import type { EditableType, ITableColumnObjTypes } from '../hooks/useTableColumns'
+import type { ItableContextType } from '../ITable'
+import { ItableContext } from '../ITable'
+import type { RecordType } from '../types/global'
+import type { EditableContextType } from './EditableRow'
+import { EditableContext } from './EditableRow'
 
 interface EditableCellPropsType extends Omit<ITableColumnObjTypes, 'children'> {
   editable: EditableType
@@ -44,15 +35,11 @@ const EditableCell: React.FC<EditableCellPropsType> = ({
 }) => {
   const [editing, setEditing] = useState(false)
   const inputRef = useRef<InputRef>(null)
-  const { form } = useContext(
-    EditableContext as React.Context<Required<EditableContextType>>
-  )
+  const { form } = useContext(EditableContext as React.Context<Required<EditableContextType>>)
   const { rowKey, editingRowKey, setEditingRowKey } = useContext(
     ItableContext as React.Context<Required<ItableContextType>>
   )
-  const realRowKey = `${rowIndex}$_$${
-    rowKey ? (record ?? {})[rowKey as string] : ''
-  }`
+  const realRowKey = `${rowIndex}$_$${rowKey ? (record ?? {})[rowKey as string] : ''}`
   const realEditingKeyRowFlag = realRowKey === editingRowKey
   const colKey = `${realRowKey}-${rowIndex}-${dataIndex}`
 
@@ -92,16 +79,7 @@ const EditableCell: React.FC<EditableCellPropsType> = ({
         console.log('Save failed:', errInfo)
       }
     },
-    [
-      form,
-      editRowFlag,
-      record,
-      dataIndex,
-      setEditingRowKey,
-      toggleEdit,
-      changeHandler,
-      rowIndex,
-    ]
+    [form, editRowFlag, record, dataIndex, setEditingRowKey, toggleEdit, changeHandler, rowIndex]
   )
 
   const edit = useCallback(
@@ -118,21 +96,17 @@ const EditableCell: React.FC<EditableCellPropsType> = ({
 
   const childrenHOC = React.Children.map(children, (child) =>
     React.isValidElement(child)
-      ? React.cloneElement<React.HTMLAttributes<unknown>>(
-          child as React.ReactElement,
-          {
-            style: { userSelect: 'none', ...child?.props?.style },
-            onClick: (...params) => {
-              if (editRowFlag) {
-                setEditingRowKey('')
-              }
-              const columnOnClick = (child?.props as React.ComponentProps<any>)
-                ?.onClick
-              if (typeof columnOnClick === 'function') columnOnClick(...params)
-            },
-            key: colKey,
-          }
-        )
+      ? React.cloneElement<React.HTMLAttributes<unknown>>(child as React.ReactElement, {
+          style: { userSelect: 'none', ...child?.props?.style },
+          onClick: (...params) => {
+            if (editRowFlag) {
+              setEditingRowKey('')
+            }
+            const columnOnClick = (child?.props as React.ComponentProps<any>)?.onClick
+            if (typeof columnOnClick === 'function') columnOnClick(...params)
+          },
+          key: colKey,
+        })
       : child
   )
 
@@ -147,10 +121,7 @@ const EditableCell: React.FC<EditableCellPropsType> = ({
         ) : (
           <Typography.Link
             disabled={disabled || !!realEditingKeyRowFlag}
-            onClick={() =>
-              edit(record as Partial<RecordType> & { key: React.Key })
-            }
-          >
+            onClick={() => edit(record as Partial<RecordType> & { key: React.Key })}>
             编辑
           </Typography.Link>
         )

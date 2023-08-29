@@ -1,4 +1,4 @@
-import type { InputRef, InputProps } from 'antd'
+import type { InputProps, InputRef } from 'antd'
 import { Input } from 'antd'
 import React from 'react'
 
