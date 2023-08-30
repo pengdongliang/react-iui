@@ -1,6 +1,4 @@
-const {
-  generateNodeModulesPattern,
-} = require('@teambit/dependencies.modules.packages-excluder')
+const { generateNodeModulesPattern } = require('@teambit/dependencies.modules.packages-excluder')
 const { jestConfig } = require('@teambit/react.react-env')
 
 const packagesToExclude = ['a-package-to-exclude']

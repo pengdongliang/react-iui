@@ -1,47 +1,52 @@
 /**
- * This env extends react-env version 1.0.6.
- * to inspect its config @see https://bit.cloud/teambit/react/react-env?version=1.0.6
- *
+ * 管理后台env
  */
 
-import { Pipeline } from '@teambit/builder'
-import { Compiler } from '@teambit/compiler'
-import { EslintConfigWriter, ESLintLinter, EslintTask } from '@teambit/defender.eslint-linter'
-import { JestTask, JestTester } from '@teambit/defender.jest-tester'
-import { PrettierConfigWriter, PrettierFormatter } from '@teambit/defender.prettier-formatter'
-import { DependenciesEnv, EnvHandler } from '@teambit/envs'
-import { Preview } from '@teambit/preview'
-import { ReactPreview } from '@teambit/preview.react-preview'
-import { ReactEnv } from '@teambit/react.react-env'
-import { Tester } from '@teambit/tester'
+import { Pipeline } from '@teambit/builder';
+import { Compiler } from '@teambit/compiler';
+import {
+  EslintConfigWriter,
+  ESLintLinter,
+  EslintTask,
+} from '@teambit/defender.eslint-linter';
+import { JestTask, JestTester } from '@teambit/defender.jest-tester';
+import {
+  PrettierConfigWriter,
+  PrettierFormatter,
+} from '@teambit/defender.prettier-formatter';
+import { DependenciesEnv, EnvHandler } from '@teambit/envs';
+import { Preview } from '@teambit/preview';
+import { ReactPreview } from '@teambit/preview.react-preview';
+import { ReactEnv } from '@teambit/react.react-env';
+import { Tester } from '@teambit/tester';
 import {
   resolveTypes,
   TypescriptCompiler,
   TypescriptConfigWriter,
   TypescriptTask,
-} from '@teambit/typescript.typescript-compiler'
-import { ConfigWriterList } from '@teambit/workspace-config-files'
-import { ESLint as ESLintLib } from 'eslint'
-import typescript from 'typescript'
+} from '@teambit/typescript.typescript-compiler';
+import { ConfigWriterList } from '@teambit/workspace-config-files';
+import { ESLint as ESLintLib } from 'eslint';
+import typescript from 'typescript';
 
 // Import { webpackTransformer } from './config/webpack.config';
-import hostDependencies from './preview/host-dependencies'
+import hostDependencies from './preview/host-dependencies';
 
 export class AdminEnv extends ReactEnv implements DependenciesEnv {
   /* A shorthand name for the env */
-  name = 'admin-env'
+  name = 'admin-env';
 
-  protected tsconfigPath = require.resolve('./config/tsconfig.json')
+  protected tsconfigPath = require.resolve('./config/tsconfig.json');
 
-  protected tsTypesPath = './types'
+  protected tsTypesPath = './types';
 
-  protected jestConfigPath = require.resolve('./config/jest.config')
+  protected jestConfigPath = require.resolve('./config/jest.config');
 
-  protected eslintConfigPath = require.resolve('./config/eslintrc.js')
+  protected eslintConfigPath = require.resolve('./config/eslintrc.js');
 
-  protected eslintExtensions = ['.ts', '.tsx', '.js', '.jsx', '.mjs']
+  protected eslintExtensions = ['.ts', '.tsx', '.js', '.jsx', '.mjs'];
 
-  protected prettierConfigPath = require.resolve('./config/prettier.config.js')
+  protected prettierConfigPath = require.resolve('./config/prettier.config.js');
 
   protected prettierExtensions = [
     '.js',
@@ -60,7 +65,7 @@ export class AdminEnv extends ReactEnv implements DependenciesEnv {
     '.yaml',
   ]
 
-  protected previewMounter = require.resolve('./preview/mounter')
+  protected previewMounter = require.resolve('./preview/mounter');
 
   /* The compiler to use during development */
   compiler(): EnvHandler<Compiler> {

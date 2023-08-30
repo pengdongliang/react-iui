@@ -9,13 +9,15 @@
     "dev": "father dev",
     "build": "father build",
     "build:deps": "father prebundle",
-    "prepublishOnly": "father doctor && npm run build",
+    "prepublishOnly": "father doctor && pnpm run build",
     "postinstall": "bit import && bit compile && bit link",
     "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|md)\"",
-    "clean": "bash ./clear.bash",
-    "build:npm": "npm run clean && npm run build",
+    "build:npm": "pnpm run clean && pnpm run build",
     "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
-    "build-storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook"
+    "build-storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "clean": "bash ./clear.bash",
+    "re-install": "pnpm run clean && bit install",
+    "start": "bit start"
   },
   "keywords": [
     "iui",
