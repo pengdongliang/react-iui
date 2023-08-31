@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "@yooco/react-iui.envs.admin-env/config/tsconfig.json"
-  ]
+  "extends": "@yooco/react-iui.envs.admin-env/config/tsconfig.json"
 }

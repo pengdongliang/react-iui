@@ -22,10 +22,16 @@
         }
     },
     "envs/admin-env": {
-        "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
-        "rootDir": "src/envs/admin-env"
+        "rootDir": "src/envs/admin-env",
+        "config": {
+            "teambit.envs/env": {},
+            "teambit.envs/envs": {
+                "env": "teambit.envs/env"
+            }
+        }
     },
     "hooks/use-remove-input-spaces": {
         "scope": "",
