@@ -1,3 +1,7 @@
+/**
+ * prettier基础配置
+ */
+
 module.exports = {
   printWidth: 120, // 单行长度
   tabWidth: 2, // 缩进长度

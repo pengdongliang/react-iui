@@ -1,3 +1,3 @@
 module.exports = {
-  extends: [require.resolve('@yooco/react-iui.envs.admin-env/config/eslintrc.js')],
+  extends: [require.resolve('@yooco/react-iui.eslint-config-base')],
 }

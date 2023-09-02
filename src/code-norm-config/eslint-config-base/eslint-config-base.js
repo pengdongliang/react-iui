@@ -1,3 +1,7 @@
+/**
+ * eslint基础配置
+ */
+
 module.exports = {
   extends: [
     'eslint:all',
@@ -87,7 +91,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        parser: 'typescript',
+        endOfLine: 'auto',
       },
     ],
     semi: ['error', 'never'],
@@ -108,7 +112,13 @@ module.exports = {
     ],
     'no-unused-vars': 0,
     'no-restricted-exports': 0,
-    'react/function-component-definition': 0,
+    'react/function-component-definition': [
+      0,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'react/no-danger': 0,
     'react/require-default-props': 0,
     'react-hooks/rules-of-hooks': 'error',
@@ -132,5 +142,6 @@ module.exports = {
     'import/no-duplicates': 'error',
     'class-methods-use-this': 0,
     '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-empty-function': 0,
   },
 }
