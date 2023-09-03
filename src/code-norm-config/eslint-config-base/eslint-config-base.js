@@ -3,14 +3,8 @@
  */
 
 module.exports = {
-  extends: [
-    'eslint:all',
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-    'plugin:storybook/recommended',
-  ],
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort'],
+  extends: ['eslint:all', 'airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort', 'unused-imports'],
   parser: '@typescript-eslint/parser',
   env: { es6: true },
   parserOptions: {
@@ -143,5 +137,10 @@ module.exports = {
     'class-methods-use-this': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-empty-function': 0,
+    'unused-imports/no-unused-imports': 2,
+    'unused-imports/no-unused-vars': [
+      1,
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+    ],
   },
 }

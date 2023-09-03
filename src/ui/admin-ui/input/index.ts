@@ -13,16 +13,16 @@ export type { IInputProps, IInputRef } from './input'
 
 type CompoundedComponent = React.ForwardRefExoticComponent<IInputProps & React.RefAttributes<IInputRef>> & {
   Group: typeof Input.Group
-  ISearch: typeof ISearch
-  ITextArea: typeof ITextArea
-  IPassword: typeof IPassword
+  Search: typeof ISearch
+  TextArea: typeof ITextArea
+  Password: typeof IPassword
 }
 
 const IInput = InternalInput as unknown as CompoundedComponent
 
 IInput.Group = Input.Group
-IInput.ISearch = ISearch
-IInput.ITextArea = ITextArea
-IInput.IPassword = IPassword
+IInput.Search = ISearch
+IInput.TextArea = ITextArea
+IInput.Password = IPassword
 
 export { IInput }

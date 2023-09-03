@@ -1,6 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@teambit/react.react-env/config/tsconfig.json",
   "types": ["node", "jest"],
   "compilerOptions": {
     "sourceMap": true,
@@ -31,7 +30,8 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "preserveSymlinks": true,
-    "noImplicitReturns": false
+    "noImplicitReturns": false,
+    "outDir": "./dist",
   },
   "rules": {
     "member-access": false,

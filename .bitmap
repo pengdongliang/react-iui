@@ -10,88 +10,40 @@
 
 {
     "admin-ui/input": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/ui/admin-ui/input",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
+        "rootDir": "src/ui/admin-ui/input"
     },
     "envs/admin-env": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/envs/admin-env",
-        "config": {
-            "teambit.envs/env": {},
-            "teambit.envs/envs": {
-                "env": "teambit.envs/env"
-            },
-            "teambit.dependencies/dependency-resolver": {
-                "policy": {
-                    "dependencies": {
-                        "eslint": "^8.31.0",
-                        "eslint-plugin-prettier": "^4.2.1",
-                        "eslint-config-prettier": "^8.6.0",
-                        "@typescript-eslint/eslint-plugin": "^5.48.0",
-                        "@typescript-eslint/parser": "^5.48.0",
-                        "eslint-config-react-app": "^7.0.1",
-                        "eslint-plugin-storybook": "^0.6.10",
-                        "eslint-webpack-plugin": "^3.2.0",
-                        "eslint-plugin-react-hooks": "^4.3.0",
-                        "eslint-config-airbnb": "^18.2.1",
-                        "eslint-plugin-simple-import-sort": "^10.0.0",
-                        "eslint-plugin-import": "^2.27.5"
-                    }
-                }
-            }
-        }
+        "rootDir": "src/envs/admin-env"
     },
     "eslint-config-base": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/code-norm-config/eslint-config-base"
     },
     "hooks/use-remove-input-spaces": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/hooks/ui/input/use-remove-input-spaces",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
+        "rootDir": "src/hooks/ui/input/use-remove-input-spaces"
     },
     "prettier-config-base": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/code-norm-config/prettier-config-base",
-        "config": {
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            },
-            "teambit.react/react": {}
-        }
+        "rootDir": "src/code-norm-config/prettier-config-base"
     },
     "tsconfig-base": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.2",
         "mainFile": "tsconfig-base.json",
-        "rootDir": "src/code-norm-config/tsconfig-base",
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
-        }
+        "rootDir": "src/code-norm-config/tsconfig-base"
     },
     "$schema-version": "16.0.0"
 }

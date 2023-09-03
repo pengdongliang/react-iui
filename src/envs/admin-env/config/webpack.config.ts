@@ -10,13 +10,6 @@ export const webpackTransformer = (configMutator: WebpackConfigMutator): Webpack
     '@': resolve(__dirname, './src'),
     '~': resolve(__dirname, '.'),
   })
-  configMutator.addModuleRule([
-    {
-      test: /\.json$/i,
-      loader: 'json5-loader',
-      type: 'javascript/auto',
-    },
-  ])
 
   return configMutator
 }

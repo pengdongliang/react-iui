@@ -49,7 +49,10 @@
         "@teambit/typescript.typescript-compiler": "^2.0.6",
         "@testing-library/react": "^13.4.0"
       },
-      "peerDependencies": {}
+      "peerDependencies": {
+        "react": ">=18.2.0",
+        "react-dom": ">=18.2.0"
+      }
     },
     "linkCoreAspects": true,
     "rootComponents": true
