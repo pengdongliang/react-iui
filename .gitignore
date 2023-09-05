@@ -16,3 +16,7 @@ yarn-error.log*
 
 /storybook-static/
 /storybook-static.zip
+
+# IDEs and editors
+.idea
+.vscode

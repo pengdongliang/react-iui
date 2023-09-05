@@ -11,7 +11,7 @@
 {
     "admin-ui/input": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input"
     },
@@ -23,13 +23,13 @@
     },
     "eslint-config-base": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/code-norm-config/eslint-config-base"
     },
     "hooks/use-remove-input-spaces": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/ui/input/use-remove-input-spaces"
     },
@@ -41,7 +41,7 @@
     },
     "tsconfig-base": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "tsconfig-base.json",
         "rootDir": "src/code-norm-config/tsconfig-base"
     },

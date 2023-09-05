@@ -1,0 +1,27 @@
+{
+  "componentId": {
+    "scope": "yooco.react-iui",
+    "name": "tsconfig-base",
+    "version": "0.0.2"
+  },
+  "propagate": false,
+  "extensions": {
+    "teambit.react/react": {},
+    "teambit.envs/envs": {
+      "env": "teambit.react/react"
+    },
+    "teambit.dependencies/dependency-resolver": {
+      "policy": {
+        "dependencies": {
+          "@emotion/react": "^11.10.5"
+        }
+      }
+    },
+    "teambit.compositions/compositions": {},
+    "teambit.docs/docs": {},
+    "teambit.pkg/pkg": {},
+    "teambit.preview/preview": {},
+    "teambit.component/dev-files": {},
+    "teambit.pipelines/builder": {}
+  }
+}
