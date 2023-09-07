@@ -1,28 +1,28 @@
-import { Input } from 'antd'
+import { Input as AInput } from 'antd'
 
-import { IPassword } from './components/IPassword'
-import { ISearch } from './components/ISearch'
-import { ITextArea } from './components/ITextArea'
-import type { IInputProps, IInputRef } from './input'
-import { IInput as InternalInput } from './input'
+import { Password } from './components/Password'
+import { Search } from './components/Search'
+import { TextArea } from './components/TextArea'
+import type { InputProps, InputRef } from './input'
+import { Input as InternalInput } from './input'
 
-export type { IPasswordProps, IPasswordRef } from './components/IPassword'
-export type { ISearchProps, ISearchRef } from './components/ISearch'
-export type { ITextAreaProps, ITextAreaRef } from './components/ITextArea'
-export type { IInputProps, IInputRef } from './input'
+export type { PasswordProps, PasswordRef } from './components/Password'
+export type { SearchProps, SearchRef } from './components/Search'
+export type { TextAreaProps, TextAreaRef } from './components/TextArea'
+export type { InputProps, InputRef } from './input'
 
-type CompoundedComponent = React.ForwardRefExoticComponent<IInputProps & React.RefAttributes<IInputRef>> & {
-  Group: typeof Input.Group
-  Search: typeof ISearch
-  TextArea: typeof ITextArea
-  Password: typeof IPassword
+type CompoundedComponent = React.ForwardRefExoticComponent<InputProps & React.RefAttributes<InputRef>> & {
+  Group: typeof AInput.Group
+  Search: typeof Search
+  TextArea: typeof TextArea
+  Password: typeof Password
 }
 
-const IInput = InternalInput as unknown as CompoundedComponent
+const Input = InternalInput as unknown as CompoundedComponent
 
-IInput.Group = Input.Group
-IInput.Search = ISearch
-IInput.TextArea = ITextArea
-IInput.Password = IPassword
+Input.Group = AInput.Group
+Input.Search = Search
+Input.TextArea = TextArea
+Input.Password = Password
 
-export { IInput }
+export { Input }

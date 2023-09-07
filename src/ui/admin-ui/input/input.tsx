@@ -1,18 +1,18 @@
 import type { UseRemoveInputSpacesProps } from '@yooco/react-iui.hooks.use-remove-input-spaces'
 import { useRemoveInputSpaces } from '@yooco/react-iui.hooks.use-remove-input-spaces'
-import type { InputProps, InputRef } from 'antd'
-import { Input } from 'antd'
+import type { InputProps as AInputProps, InputRef as AInputRef } from 'antd'
+import { Input as AInput } from 'antd'
 import React from 'react'
 
-export type IInputProps = InputProps & UseRemoveInputSpacesProps
+export type InputProps = AInputProps & UseRemoveInputSpacesProps
 
-export type IInputRef = InputRef
+export type InputRef = AInputRef
 
 /**
- * IInput
+ * Input
  */
-export const IInput = React.forwardRef<IInputRef, IInputProps>((props, ref) => {
+export const Input = React.forwardRef<InputRef, InputProps>((props, ref) => {
   const removeInputSpacesEvent = useRemoveInputSpaces(props)
 
-  return <Input {...props} {...removeInputSpacesEvent} ref={ref} />
+  return <AInput {...props} {...removeInputSpacesEvent} ref={ref} />
 })

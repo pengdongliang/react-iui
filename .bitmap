@@ -11,13 +11,13 @@
 {
     "admin-ui/input": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input"
     },
     "envs/admin-env": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/envs/admin-env"
     },
@@ -29,7 +29,7 @@
     },
     "hooks/use-remove-input-spaces": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/ui/input/use-remove-input-spaces"
     },
@@ -38,6 +38,18 @@
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/code-norm-config/prettier-config-base"
+    },
+    "theme/base-theme": {
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/theme/base-theme"
+    },
+    "theme/theme-provider": {
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/theme/theme-provider"
     },
     "tsconfig-base": {
         "scope": "yooco.react-iui",

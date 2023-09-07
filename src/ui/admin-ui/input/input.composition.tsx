@@ -1,8 +1,8 @@
 import React from 'react'
 
-import type { IInputProps } from './input'
-import { IInput } from './input'
+import type { InputProps } from './input'
+import { Input } from './input'
 
-export const BasicIInput = (props: IInputProps) => {
-  return <IInput {...props} />
+export const BasicInput = (props: InputProps) => {
+  return <Input {...props} />
 }
