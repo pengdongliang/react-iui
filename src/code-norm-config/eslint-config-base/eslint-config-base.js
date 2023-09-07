@@ -3,8 +3,8 @@
  */
 
 module.exports = {
-  extends: ['eslint:all', 'airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+  extends: ['eslint:all', 'next', 'airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
   parser: '@typescript-eslint/parser',
   env: { es6: true },
   parserOptions: {

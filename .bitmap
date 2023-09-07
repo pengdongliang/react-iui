@@ -23,7 +23,7 @@
     },
     "eslint-config-base": {
         "scope": "yooco.react-iui",
-        "version": "0.0.5",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/code-norm-config/eslint-config-base"
     },
