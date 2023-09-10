@@ -1,35 +1,58 @@
 import { legacyLogicalPropertiesTransformer, StyleProvider } from '@ant-design/cssinjs'
-import type { BaseThemeProps } from '@emotion/react'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
-import { antdDefaultToken, baseTheme } from '@yooco/react-iui.theme.base-theme'
+import type { ConfigProviderProps } from '@yooco/react-iui.provider.config-provider'
+import { ConfigContext } from '@yooco/react-iui.provider.config-provider'
+import { baseTheme } from '@yooco/react-iui.theme.base-theme'
 import merge from 'lodash/merge'
-import react, { useMemo } from 'react'
+import { useContext, useMemo } from 'react'
 
-export interface ThemeProviderProps {
-  /** 主题配置 */
-  theme?: BaseThemeProps
-  /** 主题类型, 默认为merge, merge=合并每一层, replace=替换 */
-  themeConfigMode?: 'merge' | 'replace'
-}
+export type ThemeProviderProps = Pick<ConfigProviderProps, 'cssinjsConfig' | 'theme' | 'themeConfigMode' | 'children'>
 
 /**
- * 基础主题提供者
+ * 基础主题配置上下文 + cssinjs配置
  */
-export const ThemeProvider = ({
-  children,
-  theme,
-  themeConfigMode = 'merge',
-}: react.PropsWithChildren<ThemeProviderProps>) => {
+export const ThemeProvider = (props: ThemeProviderProps) => {
+  const { children } = props
+
+  const {
+    cssinjsConfig: contextCssinjsConfig,
+    theme: contextTheme,
+    themeConfigMode: contextThemeConfigMode,
+  } = useContext(ConfigContext)
+  const {
+    cssinjsConfig,
+    theme,
+    themeConfigMode = 'merge',
+  } = {
+    ...{ cssinjsConfig: contextCssinjsConfig, theme: contextTheme, themeConfigMode: contextThemeConfigMode },
+    ...props,
+  }
+
   const finalTheme = useMemo(() => {
     if (theme) {
-      if (themeConfigMode === 'merge') return merge(baseTheme, theme)
-      if (themeConfigMode === 'replace') return merge({ antdTheme: antdDefaultToken }, theme)
+      switch (themeConfigMode) {
+        case 'merge':
+          return merge(baseTheme, theme)
+        case 'replace':
+          return theme
+        case 'replaceAntd':
+          return { ...baseTheme, antdTheme: theme }
+        default:
+          break
+      }
     }
     return baseTheme
   }, [theme, themeConfigMode])
 
+  const finalCssinjsConfig = useMemo(() => {
+    return {
+      transformers: [legacyLogicalPropertiesTransformer],
+      ...cssinjsConfig,
+    }
+  }, [cssinjsConfig])
+
   return (
-    <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
+    <StyleProvider {...finalCssinjsConfig}>
       <EmotionThemeProvider theme={finalTheme}>{children}</EmotionThemeProvider>
     </StyleProvider>
   )

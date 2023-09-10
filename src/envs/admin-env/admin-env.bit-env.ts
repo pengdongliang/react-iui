@@ -36,9 +36,9 @@ export class AdminEnv extends ReactEnv implements DependenciesEnv {
 
   protected jestConfigPath = require.resolve('./config/jest.config')
 
-  protected eslintConfigPath = require.resolve('@yooco/react-iui.eslint-config-base')
+  protected eslintConfigPath = require.resolve('./config/eslint-config')
 
-  protected eslintExtensions = []
+  protected eslintExtensions = ['.ts', '.tsx', '.js', '.jsx', '.mjs']
 
   protected prettierConfigPath = require.resolve('@yooco/react-iui.prettier-config-base')
 

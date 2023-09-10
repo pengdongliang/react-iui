@@ -39,6 +39,30 @@
         "mainFile": "index.ts",
         "rootDir": "src/code-norm-config/prettier-config-base"
     },
+    "provider/antd-config-provider": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/provider/antd-config-provider",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
+    "provider/config-provider": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/provider/config-provider",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
     "theme/base-theme": {
         "scope": "yooco.react-iui",
         "version": "0.0.1",
