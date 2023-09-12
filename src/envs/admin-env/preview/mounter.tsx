@@ -6,4 +6,4 @@ import { ConfigProvider } from '@yooco/react-iui.context.config'
  * use the default template or create your own.
  * @see https://docs/react-env/component-previews#composition-mounter
  */
-export default createMounter(ConfigProvider) as any
+export default createMounter(ConfigProvider)

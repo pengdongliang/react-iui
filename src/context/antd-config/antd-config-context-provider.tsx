@@ -1,10 +1,7 @@
-import 'dayjs/locale/zh-cn'
-
 import type { AntdConfigType } from '@yooco/react-iui.context.config'
 import { useConfigContext } from '@yooco/react-iui.context.config'
 import { App, ConfigProvider } from 'antd'
-import enUS from 'antd/locale/en_US'
-import zhCN from 'antd/locale/zh_CN'
+import { Locale } from 'antd/es/locale'
 import dayjs from 'dayjs'
 import React, { useEffect } from 'react'
 
@@ -15,7 +12,7 @@ export type AntdConfigProviderProps = AntdConfigType
  */
 export const AntdConfigProvider = (props: AntdConfigProviderProps) => {
   const { children, appConfig, locale, ...rest } = props
-  const [localeData, setLocaleData] = React.useState<any>(zhCN)
+  const [localeData, setLocaleData] = React.useState<Locale>()
 
   const { antdConfig, locale: localeContext } = useConfigContext()
 
@@ -24,20 +21,21 @@ export const AntdConfigProvider = (props: AntdConfigProviderProps) => {
   const finalAppConfig = { ...antdConfig?.appConfig, ...appConfig }
 
   useEffect(() => {
-    let name = 'zh-cn'
-    let currentLocale = enUS
-    if (finalLocale) {
-      name = finalLocale?.toLocaleLowerCase()
+    const loadLocale = async () => {
+      try {
+        if (finalLocale) {
+          const name = finalLocale?.toLocaleLowerCase()
+          import(`dayjs/locale/${name === 'en-us' ? 'en' : name}.js`)
+          const localeFile = await import(`antd/locale/${finalLocale.replace('-', '_')}.js`)
+          const currentLocale = localeFile?.default
+          setLocaleData(currentLocale)
+          dayjs.locale(name)
+        }
+      } catch (err) {
+        console.error('Load antd locale Error: ', err)
+      }
     }
-    switch (name) {
-      case 'zh-cn':
-        currentLocale = zhCN
-        break
-      default:
-        break
-    }
-    setLocaleData(currentLocale)
-    dayjs.locale(name)
+    loadLocale()
   }, [finalLocale])
 
   return (

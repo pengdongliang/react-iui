@@ -19,7 +19,7 @@ export const ConfigProvider = (props: ConfigProviderProps) => {
       ...rest,
       theme,
       antdConfig: { theme: theme?.antdTheme, ...antdConfig },
-      locale: locale ?? 'zh-CN',
+      locale: locale ?? 'en-US',
     }),
     [antdConfig, locale, rest, theme]
   )
