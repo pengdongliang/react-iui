@@ -15,6 +15,42 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input"
     },
+    "context/antd-config": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/context/antd-config",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
+    "context/config": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/context/config",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
+    "context/locale": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/context/locale",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
     "envs/admin-env": {
         "scope": "yooco.react-iui",
         "version": "0.0.3",
@@ -27,6 +63,18 @@
         "mainFile": "index.ts",
         "rootDir": "src/code-norm-config/eslint-config-base"
     },
+    "hooks/use-cookie": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/hooks/use-cookie",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
     "hooks/use-remove-input-spaces": {
         "scope": "yooco.react-iui",
         "version": "0.0.4",
@@ -38,30 +86,6 @@
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/code-norm-config/prettier-config-base"
-    },
-    "provider/antd-config-provider": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "src/provider/antd-config-provider",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
-    },
-    "provider/config-provider": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "src/provider/config-provider",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
     },
     "theme/base-theme": {
         "scope": "yooco.react-iui",

@@ -1,0 +1,24 @@
+---
+description: 主题配置
+---
+
+### 功能
+
+- 为组件提供统一的主题配置
+
+### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| cssinjsConfig | cssinjs配置 | StyleProviderProps | - |
+| theme | 主题配置 | BaseThemeProps | - |
+| themeConfigMode | 主题类型, 默认为merge, merge=合并每一层, replace=替换, replaceAntd=仅替换antdTheme &#124; 'merge' &#124; 'replace' &#124; 'replaceAntd' | 'merge' |
+| children | children | ReactNode | - |
+
+### 示例
+
+import { ThemeProvider } from './theme-provider'
+
+```tsx live
+<ThemeProvider />
+```

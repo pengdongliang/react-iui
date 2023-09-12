@@ -60,7 +60,9 @@
     "ahooks": "^3.7.4",
     "use-http": "^1.0.27",
     "@ant-design/cssinjs": "^1.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "react-intl": "^6.2.5",
+    "nookies": "^2.5.2"
   },
   "devDependencies": {
     "@ant-design/icons": "^5.1.4",

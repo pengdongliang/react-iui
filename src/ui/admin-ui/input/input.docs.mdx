@@ -1,15 +1,21 @@
 ---
-description: A Input component.
+description: Input
 ---
 
+### 功能
+
+- 支持失去焦点和回车去除空格
+
+### Props
+
+| 参数     | 说明         | 类型                | 默认值           |
+| -------- | ------------ | ------------------- | ---------------- |
+| regex    | 替换正则     | RegExp &#124; false | /(^\s*)/(\s*$)/g    |
+| formName | form表单name | string              | -                |
+
+### 示例
+
 import { Input } from './input';
-
-### Component usage
-```tsx
-<Input />
-```
-
-### Try it out
 
 ```tsx live
 <Input />

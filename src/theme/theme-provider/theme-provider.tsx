@@ -1,10 +1,10 @@
 import { legacyLogicalPropertiesTransformer, StyleProvider } from '@ant-design/cssinjs'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
-import type { ConfigProviderProps } from '@yooco/react-iui.provider.config-provider'
-import { ConfigContext } from '@yooco/react-iui.provider.config-provider'
+import type { ConfigProviderProps } from '@yooco/react-iui.context.config'
+import { useConfigContext } from '@yooco/react-iui.context.config'
 import { baseTheme } from '@yooco/react-iui.theme.base-theme'
 import merge from 'lodash/merge'
-import { useContext, useMemo } from 'react'
+import { useMemo } from 'react'
 
 export type ThemeProviderProps = Pick<ConfigProviderProps, 'cssinjsConfig' | 'theme' | 'themeConfigMode' | 'children'>
 
@@ -12,20 +12,20 @@ export type ThemeProviderProps = Pick<ConfigProviderProps, 'cssinjsConfig' | 'th
  * 基础主题配置上下文 + cssinjs配置
  */
 export const ThemeProvider = (props: ThemeProviderProps) => {
-  const { children } = props
+  const { children, ...rest } = props
 
   const {
     cssinjsConfig: contextCssinjsConfig,
     theme: contextTheme,
     themeConfigMode: contextThemeConfigMode,
-  } = useContext(ConfigContext)
+  } = useConfigContext()
   const {
     cssinjsConfig,
     theme,
     themeConfigMode = 'merge',
   } = {
     ...{ cssinjsConfig: contextCssinjsConfig, theme: contextTheme, themeConfigMode: contextThemeConfigMode },
-    ...props,
+    ...rest,
   }
 
   const finalTheme = useMemo(() => {
