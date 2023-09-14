@@ -1,12 +1,10 @@
 /**
  * @see https://bit.dev/reference/jest/jest-config
  */
-const { jestConfig } = require('@teambit/react.react-env');
-const {
-  generateNodeModulesPattern,
-} = require('@teambit/dependencies.modules.packages-excluder');
+const { jestConfig } = require('@teambit/react.react-env')
+const { generateNodeModulesPattern } = require('@teambit/dependencies.modules.packages-excluder')
 
-const packagesToExclude = ['a-package-to-exclude'];
+const packagesToExclude = ['a-package-to-exclude']
 
 /**
  * by default, jest excludes all node_modules from the transform (compilation) process.
@@ -21,4 +19,4 @@ module.exports = {
       excludeComponents: true,
     }),
   ],
-};
+}

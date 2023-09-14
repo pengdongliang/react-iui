@@ -11,110 +11,81 @@
 {
     "admin-ui/input": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input"
     },
     "context/antd-config": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/context/antd-config",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
+        "rootDir": "src/context/antd-config"
     },
     "context/config": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/context/config",
-        "config": {
-            "yooco.react-iui/envs/provider-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/provider-env"
-            },
-        }
+        "rootDir": "src/context/config"
     },
     "context/locale": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/context/locale",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
+        "rootDir": "src/context/locale"
+    },
+    "dev-config/eslint-config-base": {
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/dev-config/eslint-config-base"
+    },
+    "dev-config/prettier-config-base": {
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "src/dev-config/prettier-config-base"
+    },
+    "dev-config/tsconfig-base": {
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
+        "mainFile": "tsconfig-base.json",
+        "rootDir": "src/dev-config/tsconfig-base"
     },
     "envs/admin-env": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/envs/admin-env"
     },
     "envs/provider-env": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "src/envs/provider-env",
-        "config": {
-            "teambit.envs/envs": {
-                "env": "teambit.envs/env"
-            }
-        }
-    },
-    "eslint-config-base": {
         "scope": "yooco.react-iui",
-        "version": "0.0.7",
+        "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/code-norm-config/eslint-config-base"
+        "rootDir": "src/envs/provider-env"
     },
     "hooks/use-cookie": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/hooks/use-cookie",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
+        "rootDir": "src/hooks/use-cookie"
     },
     "hooks/use-remove-input-spaces": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/ui/input/use-remove-input-spaces"
     },
-    "prettier-config-base": {
-        "scope": "yooco.react-iui",
-        "version": "0.0.1",
-        "mainFile": "index.ts",
-        "rootDir": "src/code-norm-config/prettier-config-base"
-    },
     "theme/base-theme": {
         "scope": "yooco.react-iui",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/theme/base-theme"
     },
     "theme/theme-provider": {
         "scope": "yooco.react-iui",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/theme/theme-provider"
-    },
-    "tsconfig-base": {
-        "scope": "yooco.react-iui",
-        "version": "0.0.3",
-        "mainFile": "tsconfig-base.json",
-        "rootDir": "src/code-norm-config/tsconfig-base"
     },
     "$schema-version": "16.0.0"
 }

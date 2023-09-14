@@ -119,9 +119,9 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-unused-vars': 2,
-    'consistent-return': ['off'], // 不要求 return 语句要么总是指定返回的值
+    'consistent-return': ['off'],
     'no-unused-expressions': ['off'],
-    'no-return-assign': ['off'], // 禁止在返回语句中赋值
+    'no-return-assign': ['off'],
     'comma-dangle': [2, 'only-multiline'],
     'jsx-a11y/alt-text': 1,
     'no-underscore-dangle': 0,

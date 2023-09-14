@@ -56,7 +56,6 @@
   },
   "packageManager": "pnpm@7.24.3",
   "dependencies": {
-    "@babel/runtime": "^7.20.7",
     "ahooks": "^3.7.4",
     "use-http": "^1.0.27",
     "@ant-design/cssinjs": "^1.6.0",
@@ -66,7 +65,6 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^5.1.4",
-    "@babel/core": "^7.20.12",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -81,8 +79,6 @@
     "@types/react-dom": "^18.2.5",
     "@typescript-eslint/eslint-plugin": "^5.30.4",
     "@typescript-eslint/parser": "^5.30.4",
-    "babel-loader": "^8.3.0",
-    "babel-plugin-import": "^1.13.6",
     "dayjs": "^1.11.9",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.3.0",
