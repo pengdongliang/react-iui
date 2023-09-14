@@ -33,10 +33,10 @@
         "mainFile": "index.ts",
         "rootDir": "src/context/config",
         "config": {
-            "yooco.react-iui/envs/admin-env": {},
+            "yooco.react-iui/envs/provider-env": {},
             "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
+                "env": "yooco.react-iui/envs/provider-env"
+            },
         }
     },
     "context/locale": {
@@ -56,6 +56,17 @@
         "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/envs/admin-env"
+    },
+    "envs/provider-env": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/envs/provider-env",
+        "config": {
+            "teambit.envs/envs": {
+                "env": "teambit.envs/env"
+            }
+        }
     },
     "eslint-config-base": {
         "scope": "yooco.react-iui",
