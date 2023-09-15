@@ -1,4 +1,4 @@
-import { ConfigProvider, useConfigContext } from '@yooco/react-iui.context.config'
+import { useConfigContext } from '@yooco/react-iui.context.config'
 import { Button, DatePicker, Empty, Space } from 'antd'
 import React from 'react'
 
@@ -45,10 +45,8 @@ export const BasicUsage = () => {
   const [locale, setLocale] = React.useState<'zh-CN' | 'en-US'>('en-US')
 
   return (
-    <ConfigProvider locale={locale}>
-      <AntdConfigProvider>
-        <DisplayAntd isIntl setLocale={setLocale} />
-      </AntdConfigProvider>
-    </ConfigProvider>
+    <AntdConfigProvider>
+      <DisplayAntd isIntl setLocale={setLocale} />
+    </AntdConfigProvider>
   )
 }

@@ -15,6 +15,18 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input"
     },
+    "aspect/provider": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/aspect/provider",
+        "config": {
+            "teambit.harmony/aspect": {},
+            "teambit.envs/envs": {
+                "env": "teambit.harmony/aspect"
+            }
+        }
+    },
     "context/antd-config": {
         "scope": "yooco.react-iui",
         "version": "0.0.1",
@@ -55,7 +67,10 @@
         "scope": "yooco.react-iui",
         "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/envs/admin-env"
+        "rootDir": "src/envs/admin-env",
+        "config": {
+            "aspect/provider": {}
+        }
     },
     "envs/provider-env": {
         "scope": "yooco.react-iui",

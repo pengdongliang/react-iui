@@ -14,12 +14,12 @@ export interface ConfigProviderProps extends ConfigContextType {
 export const ConfigProvider = (props: ConfigProviderProps) => {
   const { children, theme, antdConfig, locale, ...rest } = props
 
-  const configContextData = useMemo<ConfigProviderProps>(
+  const configContextData = useMemo<ConfigContextType>(
     () => ({
       ...rest,
       theme,
       antdConfig: { theme: theme?.antdTheme, ...antdConfig },
-      locale: locale ?? 'en-US',
+      locale: locale ?? 'zh-CN',
     }),
     [antdConfig, locale, rest, theme]
   )
