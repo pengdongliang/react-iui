@@ -67,10 +67,7 @@
         "scope": "yooco.react-iui",
         "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/envs/admin-env",
-        "config": {
-            "aspect/provider": {}
-        }
+        "rootDir": "src/envs/admin-env"
     },
     "envs/provider-env": {
         "scope": "yooco.react-iui",
