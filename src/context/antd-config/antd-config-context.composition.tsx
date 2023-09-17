@@ -11,8 +11,8 @@ export const DisplayAntd = ({
   isIntl,
   setLocale,
 }: {
-  isIntl: boolean
-  setLocale: (locale: 'zh-CN' | 'en-US') => void
+  isIntl?: boolean
+  setLocale?: (locale: 'zh-CN' | 'en-US') => void
 }) => {
   const { locale } = useConfigContext()
 

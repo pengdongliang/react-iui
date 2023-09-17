@@ -1,3 +1,3 @@
 export type { LocaleProviderProps } from './locale-context-provider'
 export { LocaleProvider } from './locale-context-provider'
-export { useLocaleContext } from './use-locale'
+export { useLocale } from './use-locale'

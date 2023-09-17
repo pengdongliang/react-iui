@@ -1,9 +1,10 @@
 import type { StyleProviderProps } from '@ant-design/cssinjs'
-import type { BaseThemeProps } from '@emotion/react'
 import type { AppProps } from 'antd'
 import type { ConfigProviderProps } from 'antd/es/config-provider'
 import React from 'react'
 import type { ResolvedIntlConfig } from 'react-intl'
+
+import type { BaseThemeProps } from './types'
 
 // export interface RequestConfigType {
 //   /** useRequest请求响应后的操作 */
@@ -17,7 +18,7 @@ export interface AntdConfigType extends ConfigProviderProps {
   appConfig?: AppProps
 }
 
-export interface LocaleConfigType extends Partial<Omit<ResolvedIntlConfig, 'locale' | 'messages'>> {
+export interface LocaleConfigType extends Partial<Omit<ResolvedIntlConfig, 'locale'>> {
   /** 国际化语言编码存储key,默认locale_code */
   storageKey?: string
 }
