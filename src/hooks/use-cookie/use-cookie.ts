@@ -1,6 +1,9 @@
 import { CookieSerializeOptions } from 'cookie'
 import nookies from 'nookies'
 
+/**
+ * 使用cookie
+ */
 export const useCookie = () => {
   const defaultOptions: CookieSerializeOptions = {
     maxAge: 60 * 60 * 24 * 1,

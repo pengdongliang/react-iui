@@ -1,7 +1,3 @@
-/**
- * 管理后台env
- */
-
 import { Pipeline } from '@teambit/builder'
 import { Compiler } from '@teambit/compiler'
 import { EslintConfigWriter, ESLintLinter, EslintTask } from '@teambit/defender.eslint-linter'
