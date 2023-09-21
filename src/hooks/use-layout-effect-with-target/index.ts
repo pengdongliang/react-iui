@@ -1,1 +1,1 @@
-export { useLayoutEffectWithTarget, useLayoutEffectWithTargettAfterWindowChange } from './use-layout-effect-with-target'
+export { useLayoutEffectWithTarget, useLayoutEffectWithTargetAfterWindowChange } from './use-layout-effect-with-target'

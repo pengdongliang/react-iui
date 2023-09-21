@@ -6,7 +6,7 @@ import { useMemo } from 'react'
  * 页面content区域高度
  */
 export const useContentPageHeight = () => {
-  const layoutMainRect = useDomRect(document.getElementById(webConfig.mainContentElementId))
+  const layoutMainRect = useDomRect(() => document.getElementById(webConfig.mainContentElementId))
 
   const itemHeight = useMemo(() => {
     const { realHeight } = layoutMainRect ?? {}

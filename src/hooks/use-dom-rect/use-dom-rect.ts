@@ -1,4 +1,4 @@
-import { useLayoutEffectWithTargettAfterWindowChange } from '@yooco/react-iui.hooks.use-layout-effect-with-target'
+import { useLayoutEffectWithTargetAfterWindowChange } from '@yooco/react-iui.hooks.use-layout-effect-with-target'
 import type { BasicTarget, TargetType } from '@yooco/react-iui.toolbox.utils'
 import { getTargetElement } from '@yooco/react-iui.toolbox.utils'
 import { useState } from 'react'
@@ -28,7 +28,7 @@ export const useDomRect = <T extends TargetType>(...props: UseDomRectProps<T>) =
     return { scrollX, scrollY }
   }
 
-  useLayoutEffectWithTargettAfterWindowChange(
+  useLayoutEffectWithTargetAfterWindowChange(
     () => {
       const el = getTargetElement<T>(target)
 

@@ -9,6 +9,6 @@ export const useLayoutEffectWithTarget = createEffectWithTarget(useLayoutEffect)
 /**
  * 监听dom元素的useLayoutEffect, 在窗口尺寸变化后更新
  */
-export const useLayoutEffectWithTargettAfterWindowChange = createEffectWithTarget(useLayoutEffect, {
+export const useLayoutEffectWithTargetAfterWindowChange = createEffectWithTarget(useLayoutEffect, {
   updateAfterWindowChange: true,
 })
