@@ -1,3 +1,4 @@
+import webConfig from '@yooco/react-iui.config.web-config'
 import React, { useMemo } from 'react'
 
 import type { ConfigContextType } from './config-context'
@@ -19,7 +20,7 @@ export const ConfigProvider = (props: ConfigProviderProps) => {
       ...rest,
       theme,
       antdConfig: { theme: theme?.antdTheme, ...antdConfig },
-      locale: locale ?? 'zh-CN',
+      locale: locale ?? webConfig.defaultLocale,
     }),
     [antdConfig, locale, rest, theme]
   )

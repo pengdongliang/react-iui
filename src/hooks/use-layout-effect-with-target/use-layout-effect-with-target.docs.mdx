@@ -1,0 +1,24 @@
+---
+description: '监听dom元素的useLayoutEffect'
+labels: ['hook']
+---
+
+### 功能
+
+| 方法 | 说明 |
+| --- | --- |
+| useLayoutEffectWithTarget | 监听dom元素的useLayoutEffect |
+| useLayoutEffectWithTargettAfterWindowChange | 监听dom元素的useLayoutEffect, 在窗口尺寸变化后更新 |
+
+
+### 示例
+
+```tsx
+const [rect] = useLayoutEffectWithTarget(document.getElementById('test'))
+
+return <div id="test">test</div>
+```
+
+### 变更日志
+
+1. 初始化

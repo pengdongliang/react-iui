@@ -1,17 +1,29 @@
 ---
-description: 'A React Hook that increments a count by 1 each time it is called.'
-labels: ['hook', 'counter']
+description: '输入框去除空格'
+labels: ['hook']
 ---
 
-import { useRemoveInputSpaces } from './use-remove-input-spaces';
+### 功能
 
-## A React Hook to increment a count
+- 去除input内容首尾空格, 支持失去焦点和回车
 
-Increments the state of `count` by 1 each time `increment` is called
+### Props
 
-### Component usage
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| regex | 替换正则 | `RegExp` &#124; `false` | `/(^\s*)|(\s*$)/g` |
+| formName | form表单name | `string` | `Input id` |
+| pressEnterFlag | 回车是否去除空格 | `boolean` | `true` |
+| onChange | onChange | `React.ChangeEventHandler` | - |
+
+
+### 示例
 
 ```tsx
+import {useRemoveInputSpaces} from './use-remove-input-spaces'
+import {Form, Input} from 'antd'
+
+const [form] = Form.useForm()
 const removeInputSpacesEvent = useRemoveInputSpaces({})
 
 return (
@@ -23,8 +35,6 @@ return (
 )
 ```
 
-import { BasicuseRemoveInputSpaces } from './use-remove-input-spaces.composition';
+### 变更日志
 
-```tsx live
-<BasicuseRemoveInputSpaces />
-```
+1. 初始化

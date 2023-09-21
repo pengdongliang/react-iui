@@ -1,3 +1,4 @@
+import webConfig from '@yooco/react-iui.config.web-config'
 import type { AntdConfigType } from '@yooco/react-iui.context.config'
 import { useConfigContext } from '@yooco/react-iui.context.config'
 import { App, ConfigProvider } from 'antd'
@@ -16,7 +17,7 @@ export const AntdConfigProvider = (props: AntdConfigProviderProps) => {
 
   const { antdConfig, locale: localeContext } = useConfigContext()
 
-  const finalLocale = locale?.locale ?? localeContext ?? 'zh-CN'
+  const finalLocale = locale?.locale ?? localeContext ?? webConfig.defaultLocale
   const finalAntdConfig = { ...antdConfig, ...rest }
   const finalAppConfig = { ...antdConfig?.appConfig, ...appConfig }
 

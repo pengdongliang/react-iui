@@ -1,0 +1,20 @@
+---
+description: '工具方法'
+labels: ['utils']
+abbrLabel: '工具方法'
+---
+
+### 功能
+
+| 方法 | 说明 | 参数 | 返回值 |
+| ---- | --- | ---- | ---- |
+| isBrowser | 判断是否为浏览器环境 | - | `boolean` |
+| simpleEqual | 简单比较是否一样, 非深度比较, 只比较第一层 | `(oldData, newData)` | `boolean` |
+| getTargetElement | 获取目标元素 | `ref` &#124; `dom` &#124; `()=>dom` | `dom` |
+| createEffectWithTarget | 创建一个带有目标元素的监听Effect | `[useEffectType?: useEffect or useLayoutEffect, `<br/>`options?: { updateAfterWindowChange?: boolean }]` | `dom` |
+
+### 变更日志
+
+1. 初始化
+
+

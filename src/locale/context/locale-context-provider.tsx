@@ -1,3 +1,4 @@
+import webConfig from '@yooco/react-iui.config.web-config'
 import { useConfigContext } from '@yooco/react-iui.context.config'
 import { useCookie } from '@yooco/react-iui.hooks.use-cookie'
 import defaultMessages from '@yooco/react-iui.locale.base-locale'
@@ -16,12 +17,12 @@ export interface LocaleProviderProps extends Partial<ResolvedIntlConfig> {
 export const LocaleProvider = (props: LocaleProviderProps) => {
   const { children, locale: propsLocale, messages: propsMessages, ...rest } = props
 
-  const { cookie } = useCookie()
+  const cookie = useCookie()
   const { locale: contextLocale, localeConfig } = useConfigContext()
   const { storageKey = 'locale_code', messages: configMessages } = localeConfig ?? {}
 
   const locale = useMemo<string>(() => {
-    const localeKey = propsLocale ?? contextLocale ?? 'zh-CN'
+    const localeKey = propsLocale ?? contextLocale ?? webConfig.defaultLocale
     const cache = cookie?.getItem(storageKey)
     if (!cache) cookie.setItem(storageKey, localeKey)
     return localeKey

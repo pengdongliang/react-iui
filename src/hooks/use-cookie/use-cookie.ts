@@ -27,7 +27,5 @@ export const useCookie = () => {
     },
   }
 
-  return {
-    cookie,
-  }
+  return cookie
 }

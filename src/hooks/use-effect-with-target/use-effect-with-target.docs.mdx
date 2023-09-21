@@ -1,0 +1,24 @@
+---
+description: '监听dom元素的useEffect'
+labels: ['hook']
+---
+
+### 功能
+
+| 方法 | 说明 |
+| --- | --- |
+| useEffectWithTarget | 监听dom元素的useEffect |
+| useEffectWithTargetAfterWindowChange | 监听dom元素的useEffect, 在窗口尺寸变化后更新 |
+
+
+### 示例
+
+```tsx
+const [rect] = useEffectWithTarget(document.getElementById('test'))
+
+return <div id="test">test</div>
+```
+
+### 变更日志
+
+1. 初始化

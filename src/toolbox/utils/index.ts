@@ -1,0 +1,6 @@
+export type { CreateEffectWithTargetType } from './createEffectWithTarget'
+export { createEffectWithTarget } from './createEffectWithTarget'
+export type { BasicTarget, TargetType, TargetValue } from './domTarget'
+export { getTargetElement } from './domTarget'
+export { isBrowser } from './isBrowser'
+export { simpleEqual } from './utils'

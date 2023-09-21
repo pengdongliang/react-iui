@@ -1,0 +1,26 @@
+---
+description: '使用cookie'
+labels: ['hook']
+---
+
+### 功能
+
+| 方法 | 说明 | 类型 |
+| --- | --- | --- |
+| setItem | 设置cookie | `(key: string, value: string, options?: CookieSerializeOptions) => void` |
+| getItem | 获取cookie | `(key: string) => string` |
+| hasItem | 是否cookie存在 | `(key: string) => boolean` |
+| removeItem | 清除所有cookie | `(key: string, options?: CookieSerializeOptions) => void` |
+
+
+### 示例
+
+```tsx
+const cookie = useCookie()
+cookie.setItem('test', '123')
+cookie.getItem('test')
+```
+
+### 变更日志
+
+1. 初始化

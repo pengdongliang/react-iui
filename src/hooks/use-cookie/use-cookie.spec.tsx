@@ -3,7 +3,7 @@ import { act } from '@testing-library/react-hooks'
 import { useCookie } from './use-cookie'
 
 it('存取Cookie', () => {
-  const { cookie } = useCookie()
+  const cookie = useCookie()
   act(() => {
     cookie?.setItem('test-cookie', '1')
   })
