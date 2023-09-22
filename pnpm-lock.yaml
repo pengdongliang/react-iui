@@ -207,6 +207,9 @@ importers:
         specifier: ^1.0.27
         version: registry.npmjs.org/use-http@1.0.28(react-dom@17.0.2)(react@18.2.0)
     devDependencies:
+      '@testing-library/dom':
+        specifier: 8.20.1
+        version: registry.npmjs.org/@testing-library/dom@8.20.1
       '@testing-library/react':
         specifier: ^13.4.0
         version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@17.0.2)(react@18.2.0)
@@ -214,8 +217,8 @@ importers:
         specifier: ^8.0.1
         version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@17.0.2)(react@18.2.0)
       '@types/jest':
-        specifier: 26.0.20
-        version: registry.npmjs.org/@types/jest@26.0.20
+        specifier: '>=29.2.2 <30.0.0'
+        version: registry.npmjs.org/@types/jest@29.5.5
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
@@ -242,7 +245,7 @@ importers:
         version: file:src/aspect/provider(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
-        version: file:src/config/web-config
+        version: file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
@@ -266,19 +269,19 @@ importers:
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
       '@yooco/react-iui.hooks.use-content-page-height':
         specifier: workspace:*
-        version: file:src/hooks/use-content-page-height
+        version: file:src/hooks/use-content-page-height(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.hooks.use-cookie':
         specifier: workspace:*
         version: file:src/hooks/use-cookie
       '@yooco/react-iui.hooks.use-dom-rect':
         specifier: workspace:*
-        version: file:src/hooks/use-dom-rect
+        version: file:src/hooks/use-dom-rect(react@18.2.0)
       '@yooco/react-iui.hooks.use-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-effect-with-target
+        version: file:src/hooks/use-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-layout-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-layout-effect-with-target
+        version: file:src/hooks/use-layout-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-remove-input-spaces':
         specifier: workspace:*
         version: file:src/hooks/ui/input/use-remove-input-spaces(antd@5.9.2)(react@18.2.0)
@@ -296,7 +299,7 @@ importers:
         version: file:src/theme/theme-provider(@emotion/react@11.10.5)(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.toolbox.utils':
         specifier: workspace:*
-        version: file:src/toolbox/utils
+        version: file:src/toolbox/utils(react@18.2.0)
     dependenciesMeta:
       '@yooco/react-iui.admin-ui.input':
         injected: true
@@ -351,7 +354,7 @@ importers:
         version: file:src/aspect/provider(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
-        version: file:src/config/web-config
+        version: file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
@@ -375,19 +378,19 @@ importers:
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
       '@yooco/react-iui.hooks.use-content-page-height':
         specifier: workspace:*
-        version: file:src/hooks/use-content-page-height
+        version: file:src/hooks/use-content-page-height(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.hooks.use-cookie':
         specifier: workspace:*
         version: file:src/hooks/use-cookie
       '@yooco/react-iui.hooks.use-dom-rect':
         specifier: workspace:*
-        version: file:src/hooks/use-dom-rect
+        version: file:src/hooks/use-dom-rect(react@18.2.0)
       '@yooco/react-iui.hooks.use-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-effect-with-target
+        version: file:src/hooks/use-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-layout-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-layout-effect-with-target
+        version: file:src/hooks/use-layout-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-remove-input-spaces':
         specifier: workspace:*
         version: file:src/hooks/ui/input/use-remove-input-spaces(antd@5.9.2)(react@18.2.0)
@@ -405,116 +408,7 @@ importers:
         version: file:src/theme/theme-provider(@emotion/react@11.10.5)(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.toolbox.utils':
         specifier: workspace:*
-        version: file:src/toolbox/utils
-    dependenciesMeta:
-      '@yooco/react-iui.admin-ui.input':
-        injected: true
-      '@yooco/react-iui.aspect.provider':
-        injected: true
-      '@yooco/react-iui.config.web-config':
-        injected: true
-      '@yooco/react-iui.context.antd-config':
-        injected: true
-      '@yooco/react-iui.context.config':
-        injected: true
-      '@yooco/react-iui.dev-config.eslint-config-base':
-        injected: true
-      '@yooco/react-iui.dev-config.prettier-config-base':
-        injected: true
-      '@yooco/react-iui.dev-config.tsconfig-base':
-        injected: true
-      '@yooco/react-iui.envs.admin-env':
-        injected: true
-      '@yooco/react-iui.envs.provider-env':
-        injected: true
-      '@yooco/react-iui.hooks.use-content-page-height':
-        injected: true
-      '@yooco/react-iui.hooks.use-cookie':
-        injected: true
-      '@yooco/react-iui.hooks.use-dom-rect':
-        injected: true
-      '@yooco/react-iui.hooks.use-effect-with-target':
-        injected: true
-      '@yooco/react-iui.hooks.use-layout-effect-with-target':
-        injected: true
-      '@yooco/react-iui.hooks.use-remove-input-spaces':
-        injected: true
-      '@yooco/react-iui.locale.base-locale':
-        injected: true
-      '@yooco/react-iui.locale.context':
-        injected: true
-      '@yooco/react-iui.theme.base-theme':
-        injected: true
-      '@yooco/react-iui.theme.theme-provider':
-        injected: true
-      '@yooco/react-iui.toolbox.utils':
-        injected: true
-
-  node_modules/.bit_roots/teambit.harmony_node:
-    dependencies:
-      '@yooco/react-iui.admin-ui.input':
-        specifier: workspace:*
-        version: file:src/ui/admin-ui/input(antd@5.9.2)(react@18.2.0)
-      '@yooco/react-iui.aspect.provider':
-        specifier: workspace:*
-        version: file:src/aspect/provider(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
-      '@yooco/react-iui.config.web-config':
-        specifier: workspace:*
-        version: file:src/config/web-config
-      '@yooco/react-iui.context.antd-config':
-        specifier: workspace:*
-        version: file:src/context/antd-config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
-      '@yooco/react-iui.context.config':
-        specifier: workspace:*
-        version: file:src/context/config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
-      '@yooco/react-iui.dev-config.eslint-config-base':
-        specifier: workspace:*
-        version: file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
-      '@yooco/react-iui.dev-config.prettier-config-base':
-        specifier: workspace:*
-        version: file:src/dev-config/prettier-config-base(react-dom@17.0.2)(react@18.2.0)
-      '@yooco/react-iui.dev-config.tsconfig-base':
-        specifier: workspace:*
-        version: file:src/dev-config/tsconfig-base(@types/react@18.2.12)(react-dom@17.0.2)(react@18.2.0)
-      '@yooco/react-iui.envs.admin-env':
-        specifier: workspace:*
-        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(antd@5.9.2)
-      '@yooco/react-iui.envs.provider-env':
-        specifier: workspace:*
-        version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
-      '@yooco/react-iui.hooks.use-content-page-height':
-        specifier: workspace:*
-        version: file:src/hooks/use-content-page-height
-      '@yooco/react-iui.hooks.use-cookie':
-        specifier: workspace:*
-        version: file:src/hooks/use-cookie
-      '@yooco/react-iui.hooks.use-dom-rect':
-        specifier: workspace:*
-        version: file:src/hooks/use-dom-rect
-      '@yooco/react-iui.hooks.use-effect-with-target':
-        specifier: workspace:*
-        version: file:src/hooks/use-effect-with-target
-      '@yooco/react-iui.hooks.use-layout-effect-with-target':
-        specifier: workspace:*
-        version: file:src/hooks/use-layout-effect-with-target
-      '@yooco/react-iui.hooks.use-remove-input-spaces':
-        specifier: workspace:*
-        version: file:src/hooks/ui/input/use-remove-input-spaces(antd@5.9.2)(react@18.2.0)
-      '@yooco/react-iui.locale.base-locale':
-        specifier: workspace:*
-        version: file:src/locale/base-locale
-      '@yooco/react-iui.locale.context':
-        specifier: workspace:*
-        version: file:src/locale/context(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
-      '@yooco/react-iui.theme.base-theme':
-        specifier: workspace:*
-        version: file:src/theme/base-theme(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
-      '@yooco/react-iui.theme.theme-provider':
-        specifier: workspace:*
-        version: file:src/theme/theme-provider(@emotion/react@11.10.5)(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
-      '@yooco/react-iui.toolbox.utils':
-        specifier: workspace:*
-        version: file:src/toolbox/utils
+        version: file:src/toolbox/utils(react@18.2.0)
     dependenciesMeta:
       '@yooco/react-iui.admin-ui.input':
         injected: true
@@ -569,7 +463,7 @@ importers:
         version: file:src/aspect/provider(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
-        version: file:src/config/web-config
+        version: file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
@@ -593,19 +487,19 @@ importers:
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
       '@yooco/react-iui.hooks.use-content-page-height':
         specifier: workspace:*
-        version: file:src/hooks/use-content-page-height
+        version: file:src/hooks/use-content-page-height(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.hooks.use-cookie':
         specifier: workspace:*
         version: file:src/hooks/use-cookie
       '@yooco/react-iui.hooks.use-dom-rect':
         specifier: workspace:*
-        version: file:src/hooks/use-dom-rect
+        version: file:src/hooks/use-dom-rect(react@18.2.0)
       '@yooco/react-iui.hooks.use-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-effect-with-target
+        version: file:src/hooks/use-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-layout-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-layout-effect-with-target
+        version: file:src/hooks/use-layout-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-remove-input-spaces':
         specifier: workspace:*
         version: file:src/hooks/ui/input/use-remove-input-spaces(antd@5.9.2)(react@18.2.0)
@@ -623,7 +517,7 @@ importers:
         version: file:src/theme/theme-provider(@emotion/react@11.10.5)(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.toolbox.utils':
         specifier: workspace:*
-        version: file:src/toolbox/utils
+        version: file:src/toolbox/utils(react@18.2.0)
     dependenciesMeta:
       '@yooco/react-iui.admin-ui.input':
         injected: true
@@ -690,7 +584,7 @@ importers:
         version: file:src/aspect/provider(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
-        version: file:src/config/web-config
+        version: file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
@@ -714,19 +608,19 @@ importers:
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
       '@yooco/react-iui.hooks.use-content-page-height':
         specifier: workspace:*
-        version: file:src/hooks/use-content-page-height
+        version: file:src/hooks/use-content-page-height(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.hooks.use-cookie':
         specifier: workspace:*
         version: file:src/hooks/use-cookie
       '@yooco/react-iui.hooks.use-dom-rect':
         specifier: workspace:*
-        version: file:src/hooks/use-dom-rect
+        version: file:src/hooks/use-dom-rect(react@18.2.0)
       '@yooco/react-iui.hooks.use-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-effect-with-target
+        version: file:src/hooks/use-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-layout-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-layout-effect-with-target
+        version: file:src/hooks/use-layout-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-remove-input-spaces':
         specifier: workspace:*
         version: file:src/hooks/ui/input/use-remove-input-spaces(antd@5.9.2)(react@18.2.0)
@@ -744,7 +638,7 @@ importers:
         version: file:src/theme/theme-provider(@emotion/react@11.10.5)(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.toolbox.utils':
         specifier: workspace:*
-        version: file:src/toolbox/utils
+        version: file:src/toolbox/utils(react@18.2.0)
       graphql:
         specifier: 14.7.0
         version: registry.npmjs.org/graphql@14.7.0
@@ -826,7 +720,7 @@ importers:
         version: file:src/aspect/provider(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
-        version: file:src/config/web-config
+        version: file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
@@ -850,19 +744,19 @@ importers:
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
       '@yooco/react-iui.hooks.use-content-page-height':
         specifier: workspace:*
-        version: file:src/hooks/use-content-page-height
+        version: file:src/hooks/use-content-page-height(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.hooks.use-cookie':
         specifier: workspace:*
         version: file:src/hooks/use-cookie
       '@yooco/react-iui.hooks.use-dom-rect':
         specifier: workspace:*
-        version: file:src/hooks/use-dom-rect
+        version: file:src/hooks/use-dom-rect(react@18.2.0)
       '@yooco/react-iui.hooks.use-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-effect-with-target
+        version: file:src/hooks/use-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-layout-effect-with-target':
         specifier: workspace:*
-        version: file:src/hooks/use-layout-effect-with-target
+        version: file:src/hooks/use-layout-effect-with-target(react@18.2.0)
       '@yooco/react-iui.hooks.use-remove-input-spaces':
         specifier: workspace:*
         version: file:src/hooks/ui/input/use-remove-input-spaces(antd@5.9.2)(react@18.2.0)
@@ -880,7 +774,7 @@ importers:
         version: file:src/theme/theme-provider(@emotion/react@11.10.5)(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.toolbox.utils':
         specifier: workspace:*
-        version: file:src/toolbox/utils
+        version: file:src/toolbox/utils(react@18.2.0)
       graphql:
         specifier: 14.7.0
         version: registry.npmjs.org/graphql@14.7.0
@@ -960,7 +854,7 @@ importers:
     devDependencies:
       '@types/jest':
         specifier: ^26.0.0
-        version: registry.npmjs.org/@types/jest@26.0.20
+        version: registry.npmjs.org/@types/jest@26.0.24
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
@@ -975,16 +869,35 @@ importers:
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/config/web-config:
+    dependencies:
+      core-js:
+        specifier: ^3.0.0
+        version: registry.npmjs.org/core-js@3.32.2
+      react:
+        specifier: ^16.8.0 || ^17.0.0
+        version: registry.npmjs.org/react@17.0.2
+      react-dom:
+        specifier: ^16.8.0 || ^17.0.0
+        version: registry.npmjs.org/react-dom@17.0.2(react@17.0.2)
     devDependencies:
       '@babel/runtime':
         specifier: 7.20.0
         version: registry.npmjs.org/@babel/runtime@7.20.0
       '@types/jest':
-        specifier: 26.0.20
-        version: registry.npmjs.org/@types/jest@26.0.20
+        specifier: ^26.0.0
+        version: registry.npmjs.org/@types/jest@26.0.24
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
+      '@types/react':
+        specifier: ^17.0.8
+        version: registry.npmjs.org/@types/react@17.0.65
+      '@types/react-dom':
+        specifier: ^17.0.5
+        version: registry.npmjs.org/@types/react-dom@17.0.20
+      '@types/testing-library__jest-dom':
+        specifier: 5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/context/antd-config:
     dependencies:
@@ -1149,7 +1062,7 @@ importers:
         version: registry.npmjs.org/@babel/runtime@7.20.0
       '@types/jest':
         specifier: ^26.0.0
-        version: registry.npmjs.org/@types/jest@26.0.20
+        version: registry.npmjs.org/@types/jest@26.0.24
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
@@ -1180,7 +1093,7 @@ importers:
         version: registry.npmjs.org/@babel/runtime@7.20.0
       '@types/jest':
         specifier: ^26.0.0
-        version: registry.npmjs.org/@types/jest@26.0.20
+        version: registry.npmjs.org/@types/jest@26.0.24
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
@@ -1214,7 +1127,7 @@ importers:
         version: registry.npmjs.org/@babel/runtime@7.20.0
       '@types/jest':
         specifier: ^26.0.0
-        version: registry.npmjs.org/@types/jest@26.0.20
+        version: registry.npmjs.org/@types/jest@26.0.24
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
@@ -1332,7 +1245,7 @@ importers:
     devDependencies:
       '@types/jest':
         specifier: ^26.0.0
-        version: registry.npmjs.org/@types/jest@26.0.20
+        version: registry.npmjs.org/@types/jest@26.0.24
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
@@ -1420,7 +1333,7 @@ importers:
     devDependencies:
       '@types/jest':
         specifier: ^26.0.0
-        version: registry.npmjs.org/@types/jest@26.0.20
+        version: registry.npmjs.org/@types/jest@26.0.24
       '@types/node':
         specifier: 12.20.4
         version: registry.npmjs.org/@types/node@12.20.4
@@ -1490,22 +1403,56 @@ importers:
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/hooks/use-content-page-height:
+    dependencies:
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
-      '@babel/runtime':
-        specifier: 7.20.0
-        version: registry.npmjs.org/@babel/runtime@7.20.0
+      '@testing-library/dom':
+        specifier: 8.20.1
+        version: registry.npmjs.org/@testing-library/dom@8.20.1
       '@testing-library/react':
         specifier: ^13.4.0
-        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@17.0.2)(react@18.2.0)
+        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: ^8.0.1
+        version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 26.0.20
-        version: registry.npmjs.org/@types/jest@26.0.20
-      '@types/node':
-        specifier: 12.20.4
-        version: registry.npmjs.org/@types/node@12.20.4
+        specifier: ^29.2.2
+        version: registry.npmjs.org/@types/jest@29.5.5
       '@types/react':
-        specifier: ^18.2.12
+        specifier: 18.2.12
         version: registry.npmjs.org/@types/react@18.2.12
+      '@types/react-dom':
+        specifier: ^18.2.5
+        version: registry.npmjs.org/@types/react-dom@18.2.7
+      '@types/testing-library__jest-dom':
+        specifier: ^5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/hooks/use-cookie:
     dependencies:
@@ -1563,52 +1510,154 @@ importers:
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/hooks/use-dom-rect:
+    dependencies:
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
-      '@babel/runtime':
-        specifier: 7.20.0
-        version: registry.npmjs.org/@babel/runtime@7.20.0
+      '@testing-library/dom':
+        specifier: 8.20.1
+        version: registry.npmjs.org/@testing-library/dom@8.20.1
       '@testing-library/react':
         specifier: ^13.4.0
-        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@17.0.2)(react@18.2.0)
+        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: ^8.0.1
+        version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 26.0.20
-        version: registry.npmjs.org/@types/jest@26.0.20
-      '@types/node':
-        specifier: 12.20.4
-        version: registry.npmjs.org/@types/node@12.20.4
+        specifier: ^29.2.2
+        version: registry.npmjs.org/@types/jest@29.5.5
       '@types/react':
-        specifier: ^18.2.12
+        specifier: 18.2.12
         version: registry.npmjs.org/@types/react@18.2.12
+      '@types/react-dom':
+        specifier: ^18.2.5
+        version: registry.npmjs.org/@types/react-dom@18.2.7
+      '@types/testing-library__jest-dom':
+        specifier: ^5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/hooks/use-effect-with-target:
+    dependencies:
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
-      '@babel/runtime':
-        specifier: 7.20.0
-        version: registry.npmjs.org/@babel/runtime@7.20.0
+      '@testing-library/react':
+        specifier: ^13.4.0
+        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: ^8.0.1
+        version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 26.0.20
-        version: registry.npmjs.org/@types/jest@26.0.20
-      '@types/node':
-        specifier: 12.20.4
-        version: registry.npmjs.org/@types/node@12.20.4
+        specifier: ^29.2.2
+        version: registry.npmjs.org/@types/jest@29.5.5
       '@types/react':
-        specifier: ^18.2.12
+        specifier: 18.2.12
         version: registry.npmjs.org/@types/react@18.2.12
+      '@types/react-dom':
+        specifier: ^18.2.5
+        version: registry.npmjs.org/@types/react-dom@18.2.7
+      '@types/testing-library__jest-dom':
+        specifier: ^5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/hooks/use-layout-effect-with-target:
+    dependencies:
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
-      '@babel/runtime':
-        specifier: 7.20.0
-        version: registry.npmjs.org/@babel/runtime@7.20.0
+      '@testing-library/react':
+        specifier: ^13.4.0
+        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: ^8.0.1
+        version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 26.0.20
-        version: registry.npmjs.org/@types/jest@26.0.20
-      '@types/node':
-        specifier: 12.20.4
-        version: registry.npmjs.org/@types/node@12.20.4
+        specifier: ^29.2.2
+        version: registry.npmjs.org/@types/jest@29.5.5
       '@types/react':
-        specifier: ^18.2.12
+        specifier: 18.2.12
         version: registry.npmjs.org/@types/react@18.2.12
+      '@types/react-dom':
+        specifier: ^18.2.5
+        version: registry.npmjs.org/@types/react-dom@18.2.7
+      '@types/testing-library__jest-dom':
+        specifier: ^5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/locale/base-locale:
     dependencies:
@@ -1825,19 +1874,53 @@ importers:
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/toolbox/utils:
+    dependencies:
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
-      '@babel/runtime':
-        specifier: 7.20.0
-        version: registry.npmjs.org/@babel/runtime@7.20.0
+      '@testing-library/react':
+        specifier: ^13.4.0
+        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: ^8.0.1
+        version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 26.0.20
-        version: registry.npmjs.org/@types/jest@26.0.20
-      '@types/node':
-        specifier: 12.20.4
-        version: registry.npmjs.org/@types/node@12.20.4
+        specifier: ^29.2.2
+        version: registry.npmjs.org/@types/jest@29.5.5
       '@types/react':
-        specifier: ^18.2.12
+        specifier: 18.2.12
         version: registry.npmjs.org/@types/react@18.2.12
+      '@types/react-dom':
+        specifier: ^18.2.5
+        version: registry.npmjs.org/@types/react-dom@18.2.7
+      '@types/testing-library__jest-dom':
+        specifier: ^5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/ui/admin-ui/input:
     dependencies:
@@ -3745,9 +3828,40 @@ packages:
       - typescript
     dev: false
 
-  file:src/config/web-config:
+  file:src/config/web-config(react-dom@17.0.2)(react@18.2.0):
     resolution: {directory: src/config/web-config, type: directory}
+    id: file:src/config/web-config
     name: '@yooco/react-iui.config.web-config'
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      core-js: registry.npmjs.org/core-js@3.32.2
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@17.0.2(react@18.2.0)
+    dev: false
+
+  file:src/config/web-config(react-dom@18.2.0)(react@18.2.0):
+    resolution: {directory: src/config/web-config, type: directory}
+    id: file:src/config/web-config
+    name: '@yooco/react-iui.config.web-config'
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      core-js: registry.npmjs.org/core-js@3.32.2
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
   file:src/context/antd-config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5):
@@ -3763,6 +3877,7 @@ packages:
       react:
         optional: true
     dependencies:
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.config': file:src/context/config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       antd: registry.npmjs.org/antd@5.9.2(react-dom@17.0.2)(react@18.2.0)
       dayjs: registry.npmjs.org/dayjs@1.11.10
@@ -3785,6 +3900,7 @@ packages:
       react:
         optional: true
     dependencies:
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.context.config': file:src/context/config(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       antd: registry.npmjs.org/antd@5.9.2(react-dom@17.0.2)(react@18.2.0)
       dayjs: registry.npmjs.org/dayjs@1.11.10
@@ -3808,6 +3924,7 @@ packages:
         optional: true
     dependencies:
       '@ant-design/cssinjs': registry.npmjs.org/@ant-design/cssinjs@1.17.0(react-dom@17.0.2)(react@18.2.0)
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
       antd: registry.npmjs.org/antd@5.9.2(react-dom@17.0.2)(react@18.2.0)
       react: registry.npmjs.org/react@18.2.0
       react-intl: registry.npmjs.org/react-intl@6.4.7(react@18.2.0)(typescript@4.9.5)
@@ -3830,6 +3947,7 @@ packages:
         optional: true
     dependencies:
       '@ant-design/cssinjs': registry.npmjs.org/@ant-design/cssinjs@1.17.0(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
       antd: registry.npmjs.org/antd@5.9.2(react-dom@17.0.2)(react@18.2.0)
       react: registry.npmjs.org/react@18.2.0
       react-intl: registry.npmjs.org/react-intl@6.4.7(react@18.2.0)(typescript@4.9.5)
@@ -4180,9 +4298,38 @@ packages:
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  file:src/hooks/use-content-page-height:
+  file:src/hooks/use-content-page-height(react-dom@17.0.2)(react@18.2.0):
     resolution: {directory: src/hooks/use-content-page-height, type: directory}
+    id: file:src/hooks/use-content-page-height
     name: '@yooco/react-iui.hooks.use-content-page-height'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
+      '@yooco/react-iui.hooks.use-dom-rect': file:src/hooks/use-dom-rect(react@18.2.0)
+      react: registry.npmjs.org/react@18.2.0
+    transitivePeerDependencies:
+      - react-dom
+    dev: false
+
+  file:src/hooks/use-content-page-height(react-dom@18.2.0)(react@18.2.0):
+    resolution: {directory: src/hooks/use-content-page-height, type: directory}
+    id: file:src/hooks/use-content-page-height
+    name: '@yooco/react-iui.hooks.use-content-page-height'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.hooks.use-dom-rect': file:src/hooks/use-dom-rect(react@18.2.0)
+      react: registry.npmjs.org/react@18.2.0
+    transitivePeerDependencies:
+      - react-dom
     dev: false
 
   file:src/hooks/use-cookie:
@@ -4193,19 +4340,47 @@ packages:
       nookies: registry.npmjs.org/nookies@2.5.2
     dev: false
 
-  file:src/hooks/use-dom-rect:
+  file:src/hooks/use-dom-rect(react@18.2.0):
     resolution: {directory: src/hooks/use-dom-rect, type: directory}
+    id: file:src/hooks/use-dom-rect
     name: '@yooco/react-iui.hooks.use-dom-rect'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      '@yooco/react-iui.hooks.use-layout-effect-with-target': file:src/hooks/use-layout-effect-with-target(react@18.2.0)
+      '@yooco/react-iui.toolbox.utils': file:src/toolbox/utils(react@18.2.0)
+      react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  file:src/hooks/use-effect-with-target:
+  file:src/hooks/use-effect-with-target(react@18.2.0):
     resolution: {directory: src/hooks/use-effect-with-target, type: directory}
+    id: file:src/hooks/use-effect-with-target
     name: '@yooco/react-iui.hooks.use-effect-with-target'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      '@yooco/react-iui.toolbox.utils': file:src/toolbox/utils(react@18.2.0)
+      react: registry.npmjs.org/react@18.2.0
     dev: false
 
-  file:src/hooks/use-layout-effect-with-target:
+  file:src/hooks/use-layout-effect-with-target(react@18.2.0):
     resolution: {directory: src/hooks/use-layout-effect-with-target, type: directory}
+    id: file:src/hooks/use-layout-effect-with-target
     name: '@yooco/react-iui.hooks.use-layout-effect-with-target'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      '@yooco/react-iui.toolbox.utils': file:src/toolbox/utils(react@18.2.0)
+      react: registry.npmjs.org/react@18.2.0
     dev: false
 
   file:src/locale/base-locale:
@@ -4226,6 +4401,7 @@ packages:
       react:
         optional: true
     dependencies:
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.config': file:src/context/config(antd@5.9.2)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.hooks.use-cookie': file:src/hooks/use-cookie
       '@yooco/react-iui.locale.base-locale': file:src/locale/base-locale
@@ -4250,6 +4426,7 @@ packages:
       react:
         optional: true
     dependencies:
+      '@yooco/react-iui.config.web-config': file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.context.config': file:src/context/config(antd@5.9.2)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.hooks.use-cookie': file:src/hooks/use-cookie
       '@yooco/react-iui.locale.base-locale': file:src/locale/base-locale
@@ -4349,9 +4526,17 @@ packages:
       - typescript
     dev: false
 
-  file:src/toolbox/utils:
+  file:src/toolbox/utils(react@18.2.0):
     resolution: {directory: src/toolbox/utils, type: directory}
+    id: file:src/toolbox/utils
     name: '@yooco/react-iui.toolbox.utils'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
     dev: false
 
   file:src/ui/admin-ui/input(antd@5.9.2)(react@18.2.0):
@@ -4737,7 +4922,7 @@ packages:
     dependencies:
       '@babel/compat-data': registry.npmjs.org/@babel/compat-data@7.22.20
       '@babel/helper-validator-option': registry.npmjs.org/@babel/helper-validator-option@7.22.15
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       lru-cache: registry.npmjs.org/lru-cache@5.1.1
       semver: registry.npmjs.org/semver@6.3.1
     dev: false
@@ -20063,13 +20248,14 @@ packages:
     dependencies:
       '@types/istanbul-lib-report': registry.npmjs.org/@types/istanbul-lib-report@3.0.0
 
-  registry.npmjs.org/@types/jest@26.0.20:
-    resolution: {integrity: sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/jest/-/jest-26.0.20.tgz}
+  registry.npmjs.org/@types/jest@26.0.24:
+    resolution: {integrity: sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/jest/-/jest-26.0.24.tgz}
     name: '@types/jest'
-    version: 26.0.20
+    version: 26.0.24
     dependencies:
       jest-diff: registry.npmjs.org/jest-diff@26.6.2
       pretty-format: registry.npmjs.org/pretty-format@26.6.2
+    dev: true
 
   registry.npmjs.org/@types/jest@29.5.5:
     resolution: {integrity: sha512-ebylz2hnsWR9mYvmBFbXJXr+33UPc4+ZdxyDXh5w0FlPBTfCVN3wPL+kuOiQt3xvrK419v7XWeAs+AeOksafXg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/jest/-/jest-29.5.5.tgz}
@@ -20078,7 +20264,6 @@ packages:
     dependencies:
       expect: registry.npmjs.org/expect@29.7.0
       pretty-format: registry.npmjs.org/pretty-format@29.7.0
-    dev: true
 
   registry.npmjs.org/@types/js-cookie@2.2.7:
     resolution: {integrity: sha512-aLkWa0C0vO5b4Sr798E26QgOkss68Un0bLjs7u9qxzPT5CG+8DuNTffWES58YzJs3hrVAOs1wonycqEBqNJubA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/js-cookie/-/js-cookie-2.2.7.tgz}
@@ -20326,7 +20511,7 @@ packages:
     name: '@types/testing-library__jest-dom'
     version: 5.9.5
     dependencies:
-      '@types/jest': registry.npmjs.org/@types/jest@26.0.20
+      '@types/jest': registry.npmjs.org/@types/jest@29.5.5
 
   registry.npmjs.org/@types/tough-cookie@4.0.3:
     resolution: {integrity: sha512-THo502dA5PzG/sfQH+42Lw3fvmYkceefOspdCwpHRul8ik2Jv1K8I5OZz1AT3/rs46kwgMCe9bSBmDLYkkOMGg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/tough-cookie/-/tough-cookie-4.0.3.tgz}
@@ -22374,7 +22559,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001538
       fraction.js: registry.npmjs.org/fraction.js@4.3.6
       normalize-range: registry.npmjs.org/normalize-range@0.1.2
@@ -22396,7 +22581,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001538
       fraction.js: registry.npmjs.org/fraction.js@4.3.6
       normalize-range: registry.npmjs.org/normalize-range@0.1.2
@@ -22411,7 +22596,7 @@ packages:
     version: 9.8.8
     hasBin: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001538
       normalize-range: registry.npmjs.org/normalize-range@0.1.2
       num2fraction: registry.npmjs.org/num2fraction@1.2.2
@@ -23322,17 +23507,17 @@ packages:
       pako: registry.npmjs.org/pako@1.0.11
     dev: false
 
-  registry.npmjs.org/browserslist@4.21.10:
-    resolution: {integrity: sha512-bipEBdZfVH5/pwrvqc+Ub0kUPVfGUhlKxbvfD+z1BDnPEO/X98ruXGA1WP5ASpAFKan7Qr6j736IacbZQuAlKQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/browserslist/-/browserslist-4.21.10.tgz}
+  registry.npmjs.org/browserslist@4.21.11:
+    resolution: {integrity: sha512-xn1UXOKUz7DjdGlg9RrUr0GGiWzI97UQJnugHtH0OLDfJB7jMgoIkYvRIEO1l9EeEERVqeqLYOcFBW9ldjypbQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/browserslist/-/browserslist-4.21.11.tgz}
     name: browserslist
-    version: 4.21.10
+    version: 4.21.11
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001538
-      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.526
+      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.527
       node-releases: registry.npmjs.org/node-releases@2.0.13
-      update-browserslist-db: registry.npmjs.org/update-browserslist-db@1.0.13(browserslist@4.21.10)
+      update-browserslist-db: registry.npmjs.org/update-browserslist-db@1.0.13(browserslist@4.21.11)
     dev: false
 
   registry.npmjs.org/browserslist@4.21.4:
@@ -23343,7 +23528,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001538
-      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.526
+      electron-to-chromium: registry.npmjs.org/electron-to-chromium@1.4.527
       node-releases: registry.npmjs.org/node-releases@2.0.13
       update-browserslist-db: registry.npmjs.org/update-browserslist-db@1.0.13(browserslist@4.21.4)
     dev: false
@@ -23597,7 +23782,7 @@ packages:
     name: caniuse-api
     version: 3.0.0
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001538
       lodash.memoize: registry.npmjs.org/lodash.memoize@4.1.2
       lodash.uniq: registry.npmjs.org/lodash.uniq@4.5.0
@@ -24292,7 +24477,7 @@ packages:
     name: core-js-compat
     version: 3.32.2
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
     dev: false
 
   registry.npmjs.org/core-js-pure@3.32.2:
@@ -25465,6 +25650,7 @@ packages:
     name: diff-sequences
     version: 26.6.2
     engines: {node: '>= 10.14.2'}
+    dev: true
 
   registry.npmjs.org/diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/diff-sequences/-/diff-sequences-29.6.3.tgz}
@@ -25711,10 +25897,10 @@ packages:
     version: 1.1.1
     dev: false
 
-  registry.npmjs.org/electron-to-chromium@1.4.526:
-    resolution: {integrity: sha512-tjjTMjmZAx1g6COrintLTa2/jcafYKxKoiEkdQOrVdbLaHh2wCt2nsAF8ZHweezkrP+dl/VG9T5nabcYoo0U5Q==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.526.tgz}
+  registry.npmjs.org/electron-to-chromium@1.4.527:
+    resolution: {integrity: sha512-EafxEiEDzk2aLrdbtVczylHflHdHkNrpGNHIgDyA63sUQLQVS2ayj2hPw3RsVB42qkwURH+T2OxV7kGPUuYszA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.527.tgz}
     name: electron-to-chromium
-    version: 1.4.526
+    version: 1.4.527
     dev: false
 
   registry.npmjs.org/elliptic@6.5.4:
@@ -30698,6 +30884,7 @@ packages:
       diff-sequences: registry.npmjs.org/diff-sequences@26.6.2
       jest-get-type: registry.npmjs.org/jest-get-type@26.3.0
       pretty-format: registry.npmjs.org/pretty-format@26.6.2
+    dev: true
 
   registry.npmjs.org/jest-diff@29.7.0:
     resolution: {integrity: sha512-LMIgiIrhigmPrs03JHpxUh2yISK3vLFPkAodPeo0+BuF7wA2FoQbkEg1u8gBYBThncu7e1oEDUfIXVuTqLRUjw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/jest-diff/-/jest-diff-29.7.0.tgz}
@@ -30776,6 +30963,7 @@ packages:
     name: jest-get-type
     version: 26.3.0
     engines: {node: '>= 10.14.2'}
+    dev: true
 
   registry.npmjs.org/jest-get-type@29.6.3:
     resolution: {integrity: sha512-zrteXnqYxfQh7l5FHyL38jL39di8H8rHoecLH3JNxH3BwOrBsNeabdap5e0I23lD4HHI8W5VFBZqG4Eaq5LNcw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/jest-get-type/-/jest-get-type-29.6.3.tgz}
@@ -34079,7 +34267,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-api: registry.npmjs.org/caniuse-api@3.0.0
       colord: registry.npmjs.org/colord@2.9.3
       postcss: registry.npmjs.org/postcss@8.4.30
@@ -34098,7 +34286,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-value-parser: registry.npmjs.org/postcss-value-parser@4.2.0
     dev: false
@@ -34750,7 +34938,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-api: registry.npmjs.org/caniuse-api@3.0.0
       cssnano-utils: registry.npmjs.org/cssnano-utils@4.0.0(postcss@8.4.30)
       postcss: registry.npmjs.org/postcss@8.4.30
@@ -34803,7 +34991,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       cssnano-utils: registry.npmjs.org/cssnano-utils@4.0.0(postcss@8.4.30)
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-value-parser: registry.npmjs.org/postcss-value-parser@4.2.0
@@ -35136,7 +35324,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-value-parser: registry.npmjs.org/postcss-value-parser@4.2.0
     dev: false
@@ -35357,7 +35545,7 @@ packages:
       '@csstools/postcss-stepped-value-functions': registry.npmjs.org/@csstools/postcss-stepped-value-functions@1.0.1(postcss@8.4.30)
       '@csstools/postcss-unset-value': registry.npmjs.org/@csstools/postcss-unset-value@1.0.2(postcss@8.4.30)
       autoprefixer: registry.npmjs.org/autoprefixer@10.4.16(postcss@8.4.30)
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       css-blank-pseudo: registry.npmjs.org/css-blank-pseudo@3.0.3(postcss@8.4.30)
       css-has-pseudo: registry.npmjs.org/css-has-pseudo@3.0.4(postcss@8.4.30)
       css-prefers-color-scheme: registry.npmjs.org/css-prefers-color-scheme@6.0.3(postcss@8.4.30)
@@ -35502,7 +35690,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-api: registry.npmjs.org/caniuse-api@3.0.0
       postcss: registry.npmjs.org/postcss@8.4.30
     dev: false
@@ -35766,6 +35954,7 @@ packages:
       ansi-regex: registry.npmjs.org/ansi-regex@5.0.1
       ansi-styles: registry.npmjs.org/ansi-styles@4.3.0
       react-is: registry.npmjs.org/react-is@17.0.2
+    dev: true
 
   registry.npmjs.org/pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/pretty-format/-/pretty-format-27.5.1.tgz}
@@ -40354,7 +40543,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-selector-parser: registry.npmjs.org/postcss-selector-parser@6.0.13
     dev: false
@@ -41732,7 +41921,7 @@ packages:
     dev: false
     optional: true
 
-  registry.npmjs.org/update-browserslist-db@1.0.13(browserslist@4.21.10):
+  registry.npmjs.org/update-browserslist-db@1.0.13(browserslist@4.21.11):
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.0.13.tgz}
     id: registry.npmjs.org/update-browserslist-db/1.0.13
     name: update-browserslist-db
@@ -41744,7 +41933,7 @@ packages:
       browserslist:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       escalade: registry.npmjs.org/escalade@3.1.1
       picocolors: registry.npmjs.org/picocolors@1.0.0
     dev: false
@@ -42480,7 +42669,7 @@ packages:
       '@webassemblyjs/wasm-parser': registry.npmjs.org/@webassemblyjs/wasm-parser@1.11.6
       acorn: registry.npmjs.org/acorn@8.10.0
       acorn-import-assertions: registry.npmjs.org/acorn-import-assertions@1.9.0(acorn@8.10.0)
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       chrome-trace-event: registry.npmjs.org/chrome-trace-event@1.0.3
       enhanced-resolve: registry.npmjs.org/enhanced-resolve@5.15.0
       es-module-lexer: registry.npmjs.org/es-module-lexer@1.3.1
@@ -42523,7 +42712,7 @@ packages:
       '@webassemblyjs/wasm-parser': registry.npmjs.org/@webassemblyjs/wasm-parser@1.11.6
       acorn: registry.npmjs.org/acorn@8.10.0
       acorn-import-assertions: registry.npmjs.org/acorn-import-assertions@1.9.0(acorn@8.10.0)
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       chrome-trace-event: registry.npmjs.org/chrome-trace-event@1.0.3
       enhanced-resolve: registry.npmjs.org/enhanced-resolve@5.15.0
       es-module-lexer: registry.npmjs.org/es-module-lexer@1.3.1
@@ -42565,7 +42754,7 @@ packages:
       '@webassemblyjs/wasm-parser': registry.npmjs.org/@webassemblyjs/wasm-parser@1.11.6
       acorn: registry.npmjs.org/acorn@8.10.0
       acorn-import-assertions: registry.npmjs.org/acorn-import-assertions@1.9.0(acorn@8.10.0)
-      browserslist: registry.npmjs.org/browserslist@4.21.10
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       chrome-trace-event: registry.npmjs.org/chrome-trace-event@1.0.3
       enhanced-resolve: registry.npmjs.org/enhanced-resolve@5.15.0
       es-module-lexer: registry.npmjs.org/es-module-lexer@1.3.1

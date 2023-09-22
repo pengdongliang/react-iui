@@ -22,7 +22,7 @@
         "rootDir": "src/aspect/provider"
     },
     "config/web-config": {
-        "scope": "",
+        "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/config/web-config"
@@ -70,7 +70,7 @@
         "rootDir": "src/envs/provider-env"
     },
     "hooks/use-content-page-height": {
-        "scope": "",
+        "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-content-page-height"
@@ -82,19 +82,19 @@
         "rootDir": "src/hooks/use-cookie"
     },
     "hooks/use-dom-rect": {
-        "scope": "",
+        "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-dom-rect"
     },
     "hooks/use-effect-with-target": {
-        "scope": "",
+        "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-effect-with-target"
     },
     "hooks/use-layout-effect-with-target": {
-        "scope": "",
+        "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-layout-effect-with-target"
@@ -130,7 +130,7 @@
         "rootDir": "src/theme/theme-provider"
     },
     "toolbox/utils": {
-        "scope": "",
+        "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/toolbox/utils"
