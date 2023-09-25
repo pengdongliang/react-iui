@@ -1,0 +1,31 @@
+---
+description: 'store'
+labels: ['ConfigProvider']
+---
+
+### 功能
+
+- 存储全局数据
+- useSelector获取数据
+- useDispatch修改数据
+- 添加额外state, reducer
+
+### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| children | children | ReactNode | - |
+| initState | 额外初始state | `StateType `&#124;` TData` | - |
+| customReducer | 自定义reducer | `[k: string]: (state: StateType, action: any) => StateType` | - |
+
+### 示例
+
+import { StoreProvider } from './store-context-provider'
+
+```tsx live
+<StoreProvider />
+```
+
+### 变更日志
+
+1. 初始化

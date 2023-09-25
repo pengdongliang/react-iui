@@ -1,9 +1,10 @@
 import type { BaseThemeProps } from '@yooco/react-iui.context.config'
 import { theme } from 'antd'
+import type { AliasToken } from 'antd/es/theme/interface'
 import merge from 'lodash/merge'
 
 const { getDesignToken } = theme
-export const antdDefaultToken = getDesignToken()
+export const antdDefaultToken: AliasToken = getDesignToken()
 
 /**
  * 基础主题token, antd + emotion
@@ -71,16 +72,16 @@ export const baseTheme: BaseThemeProps = {
     },
     components: {
       Layout: {
-        colorBgHeader: '#30B8BD',
-        colorBgBody: '#F2F6FA',
-        colorBgTrigger: '#30B8BD',
+        headerBg: '#30B8BD',
+        bodyBg: '#F2F6FA',
+        triggerBg: '#30B8BD',
       },
       Menu: {
         itemBg: '#ffffff',
         itemColor: '#221F1F',
         groupTitleColor: '#221F1F',
         itemHoverColor: '#2AB9C5',
-        colorItemBgSelected: '#ffffff',
+        itemSelectedBg: '#ffffff',
         subMenuItemBg: '#ffffff',
         horizontalItemHoverColor: '#2AB9C5',
         itemSelectedColor: '#30B8BD',

@@ -27,6 +27,18 @@
         "mainFile": "index.ts",
         "rootDir": "src/config/web-config"
     },
+    "container/main-content-container": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/container/main-content-container",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
     "context/antd-config": {
         "scope": "yooco.react-iui",
         "version": "0.0.3",
@@ -38,6 +50,18 @@
         "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/context/config"
+    },
+    "context/store": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/context/store",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
     },
     "dev-config/eslint-config-base": {
         "scope": "yooco.react-iui",
