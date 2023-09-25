@@ -7,7 +7,7 @@
   "types": "es/index.d.ts",
   "scripts": {
     "start": "bit start",
-    "export": "pnpm exec pnpm tag && bit export",
+    "export": "pnpm run tag && bit export",
     "re-install": "pnpm run clean && bit install",
     "postinstall": "bit import && bit compile && bit link",
     "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|md)\"",

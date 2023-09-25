@@ -160,7 +160,7 @@ importers:
         version: registry.npmjs.org/prettier@2.8.8
       rc-table:
         specifier: ^7.32.3
-        version: registry.npmjs.org/rc-table@7.34.3(react-dom@17.0.2)(react@18.2.0)
+        version: registry.npmjs.org/rc-table@7.34.4(react-dom@17.0.2)(react@18.2.0)
       react:
         specifier: '>=18.2.0 <19.0.0'
         version: registry.npmjs.org/react@18.2.0
@@ -22012,7 +22012,7 @@ packages:
       rc-slider: registry.npmjs.org/rc-slider@10.2.1(react-dom@17.0.2)(react@18.2.0)
       rc-steps: registry.npmjs.org/rc-steps@6.0.1(react-dom@17.0.2)(react@18.2.0)
       rc-switch: registry.npmjs.org/rc-switch@4.1.0(react-dom@17.0.2)(react@18.2.0)
-      rc-table: registry.npmjs.org/rc-table@7.34.3(react-dom@17.0.2)(react@18.2.0)
+      rc-table: registry.npmjs.org/rc-table@7.34.4(react-dom@17.0.2)(react@18.2.0)
       rc-tabs: registry.npmjs.org/rc-tabs@12.12.1(react-dom@17.0.2)(react@18.2.0)
       rc-textarea: registry.npmjs.org/rc-textarea@1.3.4(react-dom@17.0.2)(react@18.2.0)
       rc-tooltip: registry.npmjs.org/rc-tooltip@6.0.1(react-dom@17.0.2)(react@18.2.0)
@@ -22082,7 +22082,7 @@ packages:
       rc-slider: registry.npmjs.org/rc-slider@10.2.1(react-dom@18.2.0)(react@18.2.0)
       rc-steps: registry.npmjs.org/rc-steps@6.0.1(react-dom@18.2.0)(react@18.2.0)
       rc-switch: registry.npmjs.org/rc-switch@4.1.0(react-dom@18.2.0)(react@18.2.0)
-      rc-table: registry.npmjs.org/rc-table@7.34.3(react-dom@18.2.0)(react@18.2.0)
+      rc-table: registry.npmjs.org/rc-table@7.34.4(react-dom@18.2.0)(react@18.2.0)
       rc-tabs: registry.npmjs.org/rc-tabs@12.12.1(react-dom@18.2.0)(react@18.2.0)
       rc-textarea: registry.npmjs.org/rc-textarea@1.3.4(react-dom@18.2.0)(react@18.2.0)
       rc-tooltip: registry.npmjs.org/rc-tooltip@6.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -23782,7 +23782,7 @@ packages:
     name: caniuse-api
     version: 3.0.0
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001538
       lodash.memoize: registry.npmjs.org/lodash.memoize@4.1.2
       lodash.uniq: registry.npmjs.org/lodash.uniq@4.5.0
@@ -34267,7 +34267,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-api: registry.npmjs.org/caniuse-api@3.0.0
       colord: registry.npmjs.org/colord@2.9.3
       postcss: registry.npmjs.org/postcss@8.4.30
@@ -34286,7 +34286,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-value-parser: registry.npmjs.org/postcss-value-parser@4.2.0
     dev: false
@@ -34938,7 +34938,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-api: registry.npmjs.org/caniuse-api@3.0.0
       cssnano-utils: registry.npmjs.org/cssnano-utils@4.0.0(postcss@8.4.30)
       postcss: registry.npmjs.org/postcss@8.4.30
@@ -34991,7 +34991,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       cssnano-utils: registry.npmjs.org/cssnano-utils@4.0.0(postcss@8.4.30)
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-value-parser: registry.npmjs.org/postcss-value-parser@4.2.0
@@ -35324,7 +35324,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-value-parser: registry.npmjs.org/postcss-value-parser@4.2.0
     dev: false
@@ -35690,7 +35690,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       caniuse-api: registry.npmjs.org/caniuse-api@3.0.0
       postcss: registry.npmjs.org/postcss@8.4.30
     dev: false
@@ -37567,11 +37567,11 @@ packages:
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmjs.org/rc-table@7.34.3(react-dom@17.0.2)(react@18.2.0):
-    resolution: {integrity: sha512-bDCE+5n9j6K2MsBFHrk2X6DnNtEbcC2SXMfE3+5+XczKrqO5xMVwNkKSSH/2cO/Q/ch6Z6ETtMShekQ5sf8Q5A==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/rc-table/-/rc-table-7.34.3.tgz}
-    id: registry.npmjs.org/rc-table/7.34.3
+  registry.npmjs.org/rc-table@7.34.4(react-dom@17.0.2)(react@18.2.0):
+    resolution: {integrity: sha512-os+i88Y2AO/6dNkOgJkKSHgXYaZZGnuOEEe+nyaq5IRgvAQNhLysUjXt2objtBeFDEZR8TqXrajwBNRUwunmdw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/rc-table/-/rc-table-7.34.4.tgz}
+    id: registry.npmjs.org/rc-table/7.34.4
     name: rc-table
-    version: 7.34.3
+    version: 7.34.4
     engines: {node: '>=8.x'}
     peerDependencies:
       react: '*'
@@ -37592,11 +37592,11 @@ packages:
       react-dom: registry.npmjs.org/react-dom@17.0.2(react@18.2.0)
     dev: false
 
-  registry.npmjs.org/rc-table@7.34.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-bDCE+5n9j6K2MsBFHrk2X6DnNtEbcC2SXMfE3+5+XczKrqO5xMVwNkKSSH/2cO/Q/ch6Z6ETtMShekQ5sf8Q5A==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/rc-table/-/rc-table-7.34.3.tgz}
-    id: registry.npmjs.org/rc-table/7.34.3
+  registry.npmjs.org/rc-table@7.34.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-os+i88Y2AO/6dNkOgJkKSHgXYaZZGnuOEEe+nyaq5IRgvAQNhLysUjXt2objtBeFDEZR8TqXrajwBNRUwunmdw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/rc-table/-/rc-table-7.34.4.tgz}
+    id: registry.npmjs.org/rc-table/7.34.4
     name: rc-table
-    version: 7.34.3
+    version: 7.34.4
     engines: {node: '>=8.x'}
     peerDependencies:
       react: '*'
@@ -40543,7 +40543,7 @@ packages:
       postcss:
         optional: true
     dependencies:
-      browserslist: registry.npmjs.org/browserslist@4.21.4
+      browserslist: registry.npmjs.org/browserslist@4.21.11
       postcss: registry.npmjs.org/postcss@8.4.30
       postcss-selector-parser: registry.npmjs.org/postcss-selector-parser@6.0.13
     dev: false
