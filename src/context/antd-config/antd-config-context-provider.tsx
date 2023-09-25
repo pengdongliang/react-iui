@@ -27,7 +27,7 @@ export const AntdConfigProvider = (props: AntdConfigProviderProps) => {
         if (finalLocale) {
           const name = finalLocale?.toLocaleLowerCase()
           import(`dayjs/locale/${name === 'en-us' ? 'en' : name}.js`)
-          const localeFile = await import(`antd/locale/${finalLocale.replace('-', '_')}.js`)
+          const localeFile = await import(`antd/lib/locale/${finalLocale.replace('-', '_')}.js`)
           const currentLocale = localeFile?.default
           setLocaleData(currentLocale)
           dayjs.locale(name)

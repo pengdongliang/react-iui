@@ -27,6 +27,18 @@
         "mainFile": "index.ts",
         "rootDir": "src/config/web-config"
     },
+    "container/app-container": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/container/app-container",
+        "config": {
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/container-env"
+            },
+            "yooco.react-iui/envs/container-env": {}
+        }
+    },
     "container/main-content-container": {
         "scope": "",
         "version": "",
@@ -43,7 +55,13 @@
         "scope": "yooco.react-iui",
         "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "src/context/antd-config"
+        "rootDir": "src/context/antd-config",
+        "config": {
+            "yooco.react-iui/envs/container-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/container-env"
+            }
+        }
     },
     "context/config": {
         "scope": "yooco.react-iui",
@@ -87,6 +105,48 @@
         "mainFile": "index.ts",
         "rootDir": "src/envs/admin-env"
     },
+    "envs/container-env": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/envs/container-env",
+        "config": {
+            "teambit.envs/env": {},
+            "teambit.envs/envs": {
+                "env": "teambit.envs/env"
+            },
+            "teambit.dependencies/dependency-resolver": {
+                "policy": {
+                    "dependencies": {
+                        "eslint": "^8.31.0",
+                        "eslint-plugin-prettier": "^4.2.1",
+                        "eslint-config-prettier": "^8.6.0",
+                        "@typescript-eslint/eslint-plugin": "^5.48.0",
+                        "@typescript-eslint/parser": "^5.48.0",
+                        "eslint-config-react-app": "^7.0.1",
+                        "eslint-plugin-storybook": "^0.6.10",
+                        "eslint-webpack-plugin": "^3.2.0",
+                        "eslint-plugin-react-hooks": "^4.3.0",
+                        "eslint-config-airbnb": "^18.2.1",
+                        "eslint-plugin-simple-import-sort": "^10.0.0",
+                        "eslint-plugin-import": "^2.27.5"
+                    }
+                }
+            },
+            "teambit.compositions/compositions": {},
+            "teambit.docs/docs": {},
+            "teambit.preview/preview": {},
+            "teambit.component/dev-files": {},
+            "teambit.pipelines/builder": {},
+            "teambit.component/forking": {
+                "forkedFrom": {
+                    "scope": "yooco.react-iui",
+                    "name": "envs/admin-env",
+                    "version": "0.0.6"
+                }
+            }
+        }
+    },
     "envs/provider-env": {
         "scope": "yooco.react-iui",
         "version": "0.0.4",
@@ -103,7 +163,13 @@
         "scope": "yooco.react-iui",
         "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "src/hooks/use-cookie"
+        "rootDir": "src/hooks/use-cookie",
+        "config": {
+            "yooco.react-iui/envs/container-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/container-env"
+            }
+        }
     },
     "hooks/use-dom-rect": {
         "scope": "yooco.react-iui",
@@ -133,25 +199,49 @@
         "scope": "yooco.react-iui",
         "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/locale/base-locale"
+        "rootDir": "src/locale/base-locale",
+        "config": {
+            "yooco.react-iui/envs/container-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/container-env"
+            }
+        }
     },
     "locale/context": {
         "scope": "yooco.react-iui",
         "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "src/locale/context"
+        "rootDir": "src/locale/context",
+        "config": {
+            "yooco.react-iui/envs/container-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/container-env"
+            }
+        }
     },
     "theme/base-theme": {
         "scope": "yooco.react-iui",
         "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/theme/base-theme"
+        "rootDir": "src/theme/base-theme",
+        "config": {
+            "yooco.react-iui/envs/container-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/container-env"
+            }
+        }
     },
     "theme/theme-provider": {
         "scope": "yooco.react-iui",
         "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/theme/theme-provider"
+        "rootDir": "src/theme/theme-provider",
+        "config": {
+            "yooco.react-iui/envs/container-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/container-env"
+            }
+        }
     },
     "toolbox/utils": {
         "scope": "yooco.react-iui",

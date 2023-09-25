@@ -112,7 +112,7 @@ importers:
         version: registry.npmjs.org/eslint-config-airbnb@18.2.1(eslint-plugin-import@2.28.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.50.0)
       eslint-config-next:
         specifier: ^13.1.1
-        version: registry.npmjs.org/eslint-config-next@13.5.2(eslint@8.50.0)(typescript@4.9.5)
+        version: registry.npmjs.org/eslint-config-next@13.5.3(eslint@8.50.0)(typescript@4.9.5)
       eslint-config-prettier:
         specifier: '>=8.6.0 <9.0.0'
         version: registry.npmjs.org/eslint-config-prettier@8.10.0(eslint@8.50.0)
@@ -246,18 +246,21 @@ importers:
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
         version: file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
+      '@yooco/react-iui.container.app-container':
+        specifier: workspace:*
+        version: file:src/ui/container/app-container(react@18.2.0)
       '@yooco/react-iui.container.main-content-container':
         specifier: workspace:*
         version: file:src/ui/container/main-content-container(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(react@18.2.0)
-      '@yooco/react-iui.container.pagination-container':
-        specifier: workspace:*
-        version: file:src/ui/container/pagination-container(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.3)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.context.config':
         specifier: workspace:*
         version: file:src/context/config(antd@5.9.3)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.context.store':
+        specifier: workspace:*
+        version: file:src/context/store(react@18.2.0)
       '@yooco/react-iui.dev-config.eslint-config-base':
         specifier: workspace:*
         version: file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
@@ -269,7 +272,10 @@ importers:
         version: file:src/dev-config/tsconfig-base(@types/react@18.2.12)(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.envs.admin-env':
         specifier: workspace:*
-        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(antd@5.9.3)
+        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
+      '@yooco/react-iui.envs.container-env':
+        specifier: workspace:*
+        version: file:src/envs/container-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
       '@yooco/react-iui.envs.provider-env':
         specifier: workspace:*
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
@@ -313,13 +319,15 @@ importers:
         injected: true
       '@yooco/react-iui.config.web-config':
         injected: true
-      '@yooco/react-iui.container.main-content-container':
+      '@yooco/react-iui.container.app-container':
         injected: true
-      '@yooco/react-iui.container.pagination-container':
+      '@yooco/react-iui.container.main-content-container':
         injected: true
       '@yooco/react-iui.context.antd-config':
         injected: true
       '@yooco/react-iui.context.config':
+        injected: true
+      '@yooco/react-iui.context.store':
         injected: true
       '@yooco/react-iui.dev-config.eslint-config-base':
         injected: true
@@ -328,6 +336,8 @@ importers:
       '@yooco/react-iui.dev-config.tsconfig-base':
         injected: true
       '@yooco/react-iui.envs.admin-env':
+        injected: true
+      '@yooco/react-iui.envs.container-env':
         injected: true
       '@yooco/react-iui.envs.provider-env':
         injected: true
@@ -365,18 +375,21 @@ importers:
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
         version: file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
+      '@yooco/react-iui.container.app-container':
+        specifier: workspace:*
+        version: file:src/ui/container/app-container(react@18.2.0)
       '@yooco/react-iui.container.main-content-container':
         specifier: workspace:*
         version: file:src/ui/container/main-content-container(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(react@18.2.0)
-      '@yooco/react-iui.container.pagination-container':
-        specifier: workspace:*
-        version: file:src/ui/container/pagination-container(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.3)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.context.config':
         specifier: workspace:*
         version: file:src/context/config(antd@5.9.3)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.context.store':
+        specifier: workspace:*
+        version: file:src/context/store(react@18.2.0)
       '@yooco/react-iui.dev-config.eslint-config-base':
         specifier: workspace:*
         version: file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
@@ -388,7 +401,10 @@ importers:
         version: file:src/dev-config/tsconfig-base(@types/react@18.2.12)(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.envs.admin-env':
         specifier: workspace:*
-        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(antd@5.9.3)
+        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
+      '@yooco/react-iui.envs.container-env':
+        specifier: workspace:*
+        version: file:src/envs/container-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
       '@yooco/react-iui.envs.provider-env':
         specifier: workspace:*
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
@@ -432,13 +448,15 @@ importers:
         injected: true
       '@yooco/react-iui.config.web-config':
         injected: true
-      '@yooco/react-iui.container.main-content-container':
+      '@yooco/react-iui.container.app-container':
         injected: true
-      '@yooco/react-iui.container.pagination-container':
+      '@yooco/react-iui.container.main-content-container':
         injected: true
       '@yooco/react-iui.context.antd-config':
         injected: true
       '@yooco/react-iui.context.config':
+        injected: true
+      '@yooco/react-iui.context.store':
         injected: true
       '@yooco/react-iui.dev-config.eslint-config-base':
         injected: true
@@ -447,6 +465,8 @@ importers:
       '@yooco/react-iui.dev-config.tsconfig-base':
         injected: true
       '@yooco/react-iui.envs.admin-env':
+        injected: true
+      '@yooco/react-iui.envs.container-env':
         injected: true
       '@yooco/react-iui.envs.provider-env':
         injected: true
@@ -484,18 +504,21 @@ importers:
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
         version: file:src/config/web-config(react-dom@17.0.2)(react@18.2.0)
+      '@yooco/react-iui.container.app-container':
+        specifier: workspace:*
+        version: file:src/ui/container/app-container(react@18.2.0)
       '@yooco/react-iui.container.main-content-container':
         specifier: workspace:*
         version: file:src/ui/container/main-content-container(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(react@18.2.0)
-      '@yooco/react-iui.container.pagination-container':
-        specifier: workspace:*
-        version: file:src/ui/container/pagination-container(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.3)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.context.config':
         specifier: workspace:*
         version: file:src/context/config(antd@5.9.3)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.context.store':
+        specifier: workspace:*
+        version: file:src/context/store(react@18.2.0)
       '@yooco/react-iui.dev-config.eslint-config-base':
         specifier: workspace:*
         version: file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5)
@@ -507,7 +530,10 @@ importers:
         version: file:src/dev-config/tsconfig-base(@types/react@18.2.12)(react-dom@17.0.2)(react@18.2.0)
       '@yooco/react-iui.envs.admin-env':
         specifier: workspace:*
-        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(antd@5.9.3)
+        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
+      '@yooco/react-iui.envs.container-env':
+        specifier: workspace:*
+        version: file:src/envs/container-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
       '@yooco/react-iui.envs.provider-env':
         specifier: workspace:*
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
@@ -551,13 +577,15 @@ importers:
         injected: true
       '@yooco/react-iui.config.web-config':
         injected: true
-      '@yooco/react-iui.container.main-content-container':
+      '@yooco/react-iui.container.app-container':
         injected: true
-      '@yooco/react-iui.container.pagination-container':
+      '@yooco/react-iui.container.main-content-container':
         injected: true
       '@yooco/react-iui.context.antd-config':
         injected: true
       '@yooco/react-iui.context.config':
+        injected: true
+      '@yooco/react-iui.context.store':
         injected: true
       '@yooco/react-iui.dev-config.eslint-config-base':
         injected: true
@@ -566,6 +594,8 @@ importers:
       '@yooco/react-iui.dev-config.tsconfig-base':
         injected: true
       '@yooco/react-iui.envs.admin-env':
+        injected: true
+      '@yooco/react-iui.envs.container-env':
         injected: true
       '@yooco/react-iui.envs.provider-env':
         injected: true
@@ -615,18 +645,21 @@ importers:
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
         version: file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.container.app-container':
+        specifier: workspace:*
+        version: file:src/ui/container/app-container(react@18.2.0)
       '@yooco/react-iui.container.main-content-container':
         specifier: workspace:*
         version: file:src/ui/container/main-content-container(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(react@18.2.0)
-      '@yooco/react-iui.container.pagination-container':
-        specifier: workspace:*
-        version: file:src/ui/container/pagination-container(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.context.config':
         specifier: workspace:*
         version: file:src/context/config(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.context.store':
+        specifier: workspace:*
+        version: file:src/context/store(react@18.2.0)
       '@yooco/react-iui.dev-config.eslint-config-base':
         specifier: workspace:*
         version: file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
@@ -638,7 +671,10 @@ importers:
         version: file:src/dev-config/tsconfig-base(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.envs.admin-env':
         specifier: workspace:*
-        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(antd@5.9.3)
+        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
+      '@yooco/react-iui.envs.container-env':
+        specifier: workspace:*
+        version: file:src/envs/container-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
       '@yooco/react-iui.envs.provider-env':
         specifier: workspace:*
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
@@ -697,13 +733,15 @@ importers:
         injected: true
       '@yooco/react-iui.config.web-config':
         injected: true
-      '@yooco/react-iui.container.main-content-container':
+      '@yooco/react-iui.container.app-container':
         injected: true
-      '@yooco/react-iui.container.pagination-container':
+      '@yooco/react-iui.container.main-content-container':
         injected: true
       '@yooco/react-iui.context.antd-config':
         injected: true
       '@yooco/react-iui.context.config':
+        injected: true
+      '@yooco/react-iui.context.store':
         injected: true
       '@yooco/react-iui.dev-config.eslint-config-base':
         injected: true
@@ -712,6 +750,164 @@ importers:
       '@yooco/react-iui.dev-config.tsconfig-base':
         injected: true
       '@yooco/react-iui.envs.admin-env':
+        injected: true
+      '@yooco/react-iui.envs.container-env':
+        injected: true
+      '@yooco/react-iui.envs.provider-env':
+        injected: true
+      '@yooco/react-iui.hooks.use-content-page-height':
+        injected: true
+      '@yooco/react-iui.hooks.use-cookie':
+        injected: true
+      '@yooco/react-iui.hooks.use-dom-rect':
+        injected: true
+      '@yooco/react-iui.hooks.use-effect-with-target':
+        injected: true
+      '@yooco/react-iui.hooks.use-layout-effect-with-target':
+        injected: true
+      '@yooco/react-iui.hooks.use-remove-input-spaces':
+        injected: true
+      '@yooco/react-iui.locale.base-locale':
+        injected: true
+      '@yooco/react-iui.locale.context':
+        injected: true
+      '@yooco/react-iui.theme.base-theme':
+        injected: true
+      '@yooco/react-iui.theme.theme-provider':
+        injected: true
+      '@yooco/react-iui.toolbox.utils':
+        injected: true
+
+  node_modules/.bit_roots/yooco.react-iui_envs_container-env:
+    dependencies:
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.admin-ui.input':
+        specifier: workspace:*
+        version: file:src/ui/admin-ui/input(antd@5.9.3)(react@18.2.0)
+      '@yooco/react-iui.aspect.provider':
+        specifier: workspace:*
+        version: file:src/aspect/provider(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.config.web-config':
+        specifier: workspace:*
+        version: file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.container.app-container':
+        specifier: workspace:*
+        version: file:src/ui/container/app-container(react@18.2.0)
+      '@yooco/react-iui.container.main-content-container':
+        specifier: workspace:*
+        version: file:src/ui/container/main-content-container(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(react@18.2.0)
+      '@yooco/react-iui.context.antd-config':
+        specifier: workspace:*
+        version: file:src/context/antd-config(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.context.config':
+        specifier: workspace:*
+        version: file:src/context/config(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.context.store':
+        specifier: workspace:*
+        version: file:src/context/store(react@18.2.0)
+      '@yooco/react-iui.dev-config.eslint-config-base':
+        specifier: workspace:*
+        version: file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.dev-config.prettier-config-base':
+        specifier: workspace:*
+        version: file:src/dev-config/prettier-config-base(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.dev-config.tsconfig-base':
+        specifier: workspace:*
+        version: file:src/dev-config/tsconfig-base(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.envs.admin-env':
+        specifier: workspace:*
+        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
+      '@yooco/react-iui.envs.container-env':
+        specifier: workspace:*
+        version: file:src/envs/container-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
+      '@yooco/react-iui.envs.provider-env':
+        specifier: workspace:*
+        version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
+      '@yooco/react-iui.hooks.use-content-page-height':
+        specifier: workspace:*
+        version: file:src/hooks/use-content-page-height(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.hooks.use-cookie':
+        specifier: workspace:*
+        version: file:src/hooks/use-cookie
+      '@yooco/react-iui.hooks.use-dom-rect':
+        specifier: workspace:*
+        version: file:src/hooks/use-dom-rect(react@18.2.0)
+      '@yooco/react-iui.hooks.use-effect-with-target':
+        specifier: workspace:*
+        version: file:src/hooks/use-effect-with-target(react@18.2.0)
+      '@yooco/react-iui.hooks.use-layout-effect-with-target':
+        specifier: workspace:*
+        version: file:src/hooks/use-layout-effect-with-target(react@18.2.0)
+      '@yooco/react-iui.hooks.use-remove-input-spaces':
+        specifier: workspace:*
+        version: file:src/hooks/ui/input/use-remove-input-spaces(antd@5.9.3)(react@18.2.0)
+      '@yooco/react-iui.locale.base-locale':
+        specifier: workspace:*
+        version: file:src/locale/base-locale
+      '@yooco/react-iui.locale.context':
+        specifier: workspace:*
+        version: file:src/locale/context(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.theme.base-theme':
+        specifier: workspace:*
+        version: file:src/theme/base-theme(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.theme.theme-provider':
+        specifier: workspace:*
+        version: file:src/theme/theme-provider(@emotion/react@11.10.5)(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.toolbox.utils':
+        specifier: workspace:*
+        version: file:src/toolbox/utils(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
+    dependenciesMeta:
+      '@yooco/react-iui.admin-ui.input':
+        injected: true
+      '@yooco/react-iui.aspect.provider':
+        injected: true
+      '@yooco/react-iui.config.web-config':
+        injected: true
+      '@yooco/react-iui.container.app-container':
+        injected: true
+      '@yooco/react-iui.container.main-content-container':
+        injected: true
+      '@yooco/react-iui.context.antd-config':
+        injected: true
+      '@yooco/react-iui.context.config':
+        injected: true
+      '@yooco/react-iui.context.store':
+        injected: true
+      '@yooco/react-iui.dev-config.eslint-config-base':
+        injected: true
+      '@yooco/react-iui.dev-config.prettier-config-base':
+        injected: true
+      '@yooco/react-iui.dev-config.tsconfig-base':
+        injected: true
+      '@yooco/react-iui.envs.admin-env':
+        injected: true
+      '@yooco/react-iui.envs.container-env':
         injected: true
       '@yooco/react-iui.envs.provider-env':
         injected: true
@@ -761,18 +957,21 @@ importers:
       '@yooco/react-iui.config.web-config':
         specifier: workspace:*
         version: file:src/config/web-config(react-dom@18.2.0)(react@18.2.0)
+      '@yooco/react-iui.container.app-container':
+        specifier: workspace:*
+        version: file:src/ui/container/app-container(react@18.2.0)
       '@yooco/react-iui.container.main-content-container':
         specifier: workspace:*
         version: file:src/ui/container/main-content-container(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(react@18.2.0)
-      '@yooco/react-iui.container.pagination-container':
-        specifier: workspace:*
-        version: file:src/ui/container/pagination-container(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.context.antd-config':
         specifier: workspace:*
         version: file:src/context/antd-config(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@yooco/react-iui.context.config':
         specifier: workspace:*
         version: file:src/context/config(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@yooco/react-iui.context.store':
+        specifier: workspace:*
+        version: file:src/context/store(react@18.2.0)
       '@yooco/react-iui.dev-config.eslint-config-base':
         specifier: workspace:*
         version: file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
@@ -784,7 +983,10 @@ importers:
         version: file:src/dev-config/tsconfig-base(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@yooco/react-iui.envs.admin-env':
         specifier: workspace:*
-        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(antd@5.9.3)
+        version: file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
+      '@yooco/react-iui.envs.container-env':
+        specifier: workspace:*
+        version: file:src/envs/container-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)
       '@yooco/react-iui.envs.provider-env':
         specifier: workspace:*
         version: file:src/envs/provider-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
@@ -843,13 +1045,15 @@ importers:
         injected: true
       '@yooco/react-iui.config.web-config':
         injected: true
-      '@yooco/react-iui.container.main-content-container':
+      '@yooco/react-iui.container.app-container':
         injected: true
-      '@yooco/react-iui.container.pagination-container':
+      '@yooco/react-iui.container.main-content-container':
         injected: true
       '@yooco/react-iui.context.antd-config':
         injected: true
       '@yooco/react-iui.context.config':
+        injected: true
+      '@yooco/react-iui.context.store':
         injected: true
       '@yooco/react-iui.dev-config.eslint-config-base':
         injected: true
@@ -858,6 +1062,8 @@ importers:
       '@yooco/react-iui.dev-config.tsconfig-base':
         injected: true
       '@yooco/react-iui.envs.admin-env':
+        injected: true
+      '@yooco/react-iui.envs.container-env':
         injected: true
       '@yooco/react-iui.envs.provider-env':
         injected: true
@@ -1059,6 +1265,55 @@ importers:
         specifier: ^5.9.5
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
+  src/context/store:
+    dependencies:
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
+      '@testing-library/react':
+        specifier: ^13.4.0
+        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: ^8.0.1
+        version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
+      '@types/jest':
+        specifier: ^29.2.2
+        version: registry.npmjs.org/@types/jest@29.5.5
+      '@types/react':
+        specifier: 18.2.12
+        version: registry.npmjs.org/@types/react@18.2.12
+      '@types/react-dom':
+        specifier: ^18.2.5
+        version: registry.npmjs.org/@types/react-dom@18.2.7
+      '@types/testing-library__jest-dom':
+        specifier: ^5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
+
   src/dev-config/eslint-config-base:
     dependencies:
       '@typescript-eslint/eslint-plugin':
@@ -1078,7 +1333,7 @@ importers:
         version: registry.npmjs.org/eslint-config-airbnb@18.2.1(eslint-plugin-import@2.28.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.50.0)
       eslint-config-next:
         specifier: ^13.1.1
-        version: registry.npmjs.org/eslint-config-next@13.5.2(eslint@8.50.0)(typescript@4.9.5)
+        version: registry.npmjs.org/eslint-config-next@13.5.3(eslint@8.50.0)(typescript@4.9.5)
       eslint-config-prettier:
         specifier: ^8.3.0
         version: registry.npmjs.org/eslint-config-prettier@8.10.0(eslint@8.50.0)
@@ -1192,6 +1447,127 @@ importers:
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
   src/envs/admin-env:
+    dependencies:
+      '@babel/runtime':
+        specifier: 7.20.0
+        version: registry.npmjs.org/@babel/runtime@7.20.0
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@17.0.65)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@17.0.65)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/defender.eslint-linter':
+        specifier: ^1.0.7
+        version: 1.0.8(@teambit/legacy@node_modules+@teambit+legacy)
+      '@teambit/defender.jest-tester':
+        specifier: ^1.0.2
+        version: 1.0.5(@teambit/legacy@node_modules+@teambit+legacy)(@types/node@12.20.4)
+      '@teambit/defender.prettier-formatter':
+        specifier: ^1.0.2
+        version: 1.0.2(@teambit/legacy@node_modules+@teambit+legacy)
+      '@teambit/dependencies.modules.packages-excluder':
+        specifier: ^1.0.2
+        version: registry.npmjs.org/@teambit/dependencies.modules.packages-excluder@1.0.4(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@teambit/preview.react-preview':
+        specifier: ^1.0.2
+        version: 1.0.8(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/react@17.0.65)(eslint@8.50.0)(graphql@14.7.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@teambit/react.mounter':
+        specifier: ^1.0.1
+        version: 1.0.2
+      '@teambit/react.react-env':
+        specifier: ^1.0.6
+        version: 1.0.15(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@17.0.65)(@typescript-eslint/parser@5.62.0)
+      '@teambit/typescript.typescript-compiler':
+        specifier: ^2.0.6
+        version: 2.0.7(@teambit/legacy@node_modules+@teambit+legacy)
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^5.48.0
+        version: registry.npmjs.org/@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.50.0)(typescript@4.9.5)
+      '@typescript-eslint/parser':
+        specifier: ^5.48.0
+        version: registry.npmjs.org/@typescript-eslint/parser@5.62.0(eslint@8.50.0)(typescript@4.9.5)
+      core-js:
+        specifier: ^3.0.0
+        version: registry.npmjs.org/core-js@3.32.2
+      eslint:
+        specifier: ^8.31.0
+        version: registry.npmjs.org/eslint@8.50.0
+      eslint-config-airbnb:
+        specifier: ^18.2.1
+        version: registry.npmjs.org/eslint-config-airbnb@18.2.1(eslint-plugin-import@2.28.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.50.0)
+      eslint-config-prettier:
+        specifier: ^8.6.0
+        version: registry.npmjs.org/eslint-config-prettier@8.10.0(eslint@8.50.0)
+      eslint-config-react-app:
+        specifier: ^7.0.1
+        version: registry.npmjs.org/eslint-config-react-app@7.0.1(eslint@8.50.0)(jest@29.3.1)(typescript@4.9.5)
+      eslint-plugin-import:
+        specifier: ^2.27.5
+        version: registry.npmjs.org/eslint-plugin-import@2.28.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.50.0)
+      eslint-plugin-prettier:
+        specifier: ^4.2.1
+        version: registry.npmjs.org/eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.10.0)(eslint@8.50.0)(prettier@2.8.8)
+      eslint-plugin-react-hooks:
+        specifier: ^4.3.0
+        version: registry.npmjs.org/eslint-plugin-react-hooks@4.6.0(eslint@8.50.0)
+      eslint-plugin-simple-import-sort:
+        specifier: ^10.0.0
+        version: registry.npmjs.org/eslint-plugin-simple-import-sort@10.0.0(eslint@8.50.0)
+      eslint-plugin-storybook:
+        specifier: ^0.6.10
+        version: registry.npmjs.org/eslint-plugin-storybook@0.6.14(eslint@8.50.0)(typescript@4.9.5)
+      eslint-webpack-plugin:
+        specifier: ^3.2.0
+        version: registry.npmjs.org/eslint-webpack-plugin@3.2.0(eslint@8.50.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      prettier:
+        specifier: ^2.8.8
+        version: registry.npmjs.org/prettier@2.8.8
+      react:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
+      typescript:
+        specifier: ^4.9.5
+        version: registry.npmjs.org/typescript@4.9.5
+    devDependencies:
+      '@types/jest':
+        specifier: ^26.0.0
+        version: registry.npmjs.org/@types/jest@26.0.24
+      '@types/node':
+        specifier: 12.20.4
+        version: registry.npmjs.org/@types/node@12.20.4
+      '@types/prettier':
+        specifier: ^2.7.3
+        version: registry.npmjs.org/@types/prettier@2.7.3
+      '@types/react':
+        specifier: ^17.0.8
+        version: registry.npmjs.org/@types/react@17.0.65
+      '@types/react-dom':
+        specifier: ^17.0.5
+        version: registry.npmjs.org/@types/react-dom@17.0.20
+      '@types/testing-library__jest-dom':
+        specifier: 5.9.5
+        version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
+
+  src/envs/container-env:
     dependencies:
       '@babel/runtime':
         specifier: 7.20.0
@@ -2024,7 +2400,7 @@ importers:
         specifier: ^5.9.5
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
-  src/ui/container/main-content-container:
+  src/ui/container/app-container:
     dependencies:
       '@emotion/react':
         specifier: 11.10.5
@@ -2073,38 +2449,53 @@ importers:
         specifier: ^5.9.5
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
-  src/ui/container/pagination-container:
+  src/ui/container/main-content-container:
     dependencies:
-      core-js:
-        specifier: ^3.0.0
-        version: registry.npmjs.org/core-js@3.32.2
+      '@emotion/react':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled':
+        specifier: 11.10.5
+        version: registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      graphql:
+        specifier: 14.7.0
+        version: registry.npmjs.org/graphql@14.7.0
+      jest:
+        specifier: 29.3.1
+        version: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
       react:
-        specifier: ^16.8.0 || ^17.0.0
-        version: registry.npmjs.org/react@17.0.2
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react@18.2.0
       react-dom:
-        specifier: ^16.8.0 || ^17.0.0
-        version: registry.npmjs.org/react-dom@17.0.2(react@17.0.2)
+        specifier: ^18.2.0
+        version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 6.8.1
+        version: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
-      '@babel/runtime':
-        specifier: 7.20.0
-        version: registry.npmjs.org/@babel/runtime@7.20.0
       '@testing-library/react':
         specifier: ^13.4.0
-        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@17.0.2)(react@17.0.2)
+        version: registry.npmjs.org/@testing-library/react@13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react-hooks':
+        specifier: ^8.0.1
+        version: registry.npmjs.org/@testing-library/react-hooks@8.0.1(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: ^26.0.0
-        version: registry.npmjs.org/@types/jest@26.0.24
-      '@types/node':
-        specifier: 12.20.4
-        version: registry.npmjs.org/@types/node@12.20.4
+        specifier: ^29.2.2
+        version: registry.npmjs.org/@types/jest@29.5.5
       '@types/react':
-        specifier: ^17.0.8
-        version: registry.npmjs.org/@types/react@17.0.65
+        specifier: 18.2.12
+        version: registry.npmjs.org/@types/react@18.2.12
       '@types/react-dom':
-        specifier: ^17.0.5
-        version: registry.npmjs.org/@types/react-dom@17.0.20
+        specifier: ^18.2.5
+        version: registry.npmjs.org/@types/react-dom@18.2.7
       '@types/testing-library__jest-dom':
-        specifier: 5.9.5
+        specifier: ^5.9.5
         version: registry.npmjs.org/@types/testing-library__jest-dom@5.9.5
 
 packages:
@@ -4089,6 +4480,19 @@ packages:
       - typescript
     dev: false
 
+  file:src/context/store(react@18.2.0):
+    resolution: {directory: src/context/store, type: directory}
+    id: file:src/context/store
+    name: '@yooco/react-iui.context.store'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
+    dev: false
+
   file:src/dev-config/eslint-config-base(eslint-plugin-react-hooks@4.6.0)(jest@29.3.1)(prettier@2.8.8)(react-dom@17.0.2)(react@18.2.0)(typescript@4.9.5):
     resolution: {directory: src/dev-config/eslint-config-base, type: directory}
     id: file:src/dev-config/eslint-config-base
@@ -4107,7 +4511,7 @@ packages:
       core-js: registry.npmjs.org/core-js@3.32.2
       eslint: registry.npmjs.org/eslint@8.50.0
       eslint-config-airbnb: registry.npmjs.org/eslint-config-airbnb@18.2.1(eslint-plugin-import@2.28.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.50.0)
-      eslint-config-next: registry.npmjs.org/eslint-config-next@13.5.2(eslint@8.50.0)(typescript@4.9.5)
+      eslint-config-next: registry.npmjs.org/eslint-config-next@13.5.3(eslint@8.50.0)(typescript@4.9.5)
       eslint-config-prettier: registry.npmjs.org/eslint-config-prettier@8.10.0(eslint@8.50.0)
       eslint-config-react-app: registry.npmjs.org/eslint-config-react-app@7.0.1(eslint@8.50.0)(jest@29.3.1)(typescript@4.9.5)
       eslint-plugin-import: registry.npmjs.org/eslint-plugin-import@2.28.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.50.0)
@@ -4150,7 +4554,7 @@ packages:
       core-js: registry.npmjs.org/core-js@3.32.2
       eslint: registry.npmjs.org/eslint@8.50.0
       eslint-config-airbnb: registry.npmjs.org/eslint-config-airbnb@18.2.1(eslint-plugin-import@2.28.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.50.0)
-      eslint-config-next: registry.npmjs.org/eslint-config-next@13.5.2(eslint@8.50.0)(typescript@4.9.5)
+      eslint-config-next: registry.npmjs.org/eslint-config-next@13.5.3(eslint@8.50.0)(typescript@4.9.5)
       eslint-config-prettier: registry.npmjs.org/eslint-config-prettier@8.10.0(eslint@8.50.0)
       eslint-config-react-app: registry.npmjs.org/eslint-config-react-app@7.0.1(eslint@8.50.0)(jest@29.3.1)(typescript@4.9.5)
       eslint-plugin-import: registry.npmjs.org/eslint-plugin-import@2.28.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.50.0)
@@ -4255,7 +4659,7 @@ packages:
       - '@types/react'
     dev: false
 
-  file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(antd@5.9.3):
+  file:src/envs/admin-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12):
     resolution: {directory: src/envs/admin-env, type: directory}
     id: file:src/envs/admin-env
     name: '@yooco/react-iui.envs.admin-env'
@@ -4275,7 +4679,6 @@ packages:
       '@teambit/typescript.typescript-compiler': 2.0.7(@teambit/legacy@node_modules+@teambit+legacy)
       '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.50.0)(typescript@4.9.5)
       '@typescript-eslint/parser': registry.npmjs.org/@typescript-eslint/parser@5.62.0(eslint@8.50.0)(typescript@4.9.5)
-      '@yooco/react-iui.context.config': file:src/context/config(antd@5.9.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       core-js: registry.npmjs.org/core-js@3.32.2
       eslint: registry.npmjs.org/eslint@8.50.0
       eslint-config-airbnb: registry.npmjs.org/eslint-config-airbnb@18.2.1(eslint-plugin-import@2.28.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.50.0)
@@ -4308,7 +4711,92 @@ packages:
       - '@types/node'
       - '@types/react'
       - '@types/webpack'
-      - antd
+      - babel-plugin-macros
+      - bufferutil
+      - canvas
+      - clean-css
+      - csso
+      - debug
+      - encoding
+      - esbuild
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - eslint-plugin-jsx-a11y
+      - eslint-plugin-react
+      - fibers
+      - html-webpack-plugin
+      - less
+      - lightningcss
+      - node-notifier
+      - node-sass
+      - puppeteer
+      - sass-embedded
+      - sockjs-client
+      - supports-color
+      - ts-node
+      - type-fest
+      - uglify-js
+      - utf-8-validate
+      - vue-template-compiler
+      - webpack
+      - webpack-cli
+      - webpack-dev-server
+      - webpack-hot-middleware
+      - webpack-plugin-serve
+    dev: false
+
+  file:src/envs/container-env(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12):
+    resolution: {directory: src/envs/container-env, type: directory}
+    id: file:src/envs/container-env
+    name: '@yooco/react-iui.envs.container-env'
+    dependencies:
+      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.20.0
+      '@emotion/react': registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
+      '@emotion/styled': registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
+      '@mdx-js/react': registry.npmjs.org/@mdx-js/react@1.6.22(react@18.2.0)
+      '@teambit/defender.eslint-linter': 1.0.8(@teambit/legacy@node_modules+@teambit+legacy)
+      '@teambit/defender.jest-tester': 1.0.5(@teambit/legacy@node_modules+@teambit+legacy)(@types/node@12.20.4)
+      '@teambit/defender.prettier-formatter': 1.0.2(@teambit/legacy@node_modules+@teambit+legacy)
+      '@teambit/dependencies.modules.packages-excluder': registry.npmjs.org/@teambit/dependencies.modules.packages-excluder@1.0.4(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context': registry.npmjs.org/@teambit/mdx.ui.mdx-scope-context@1.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@teambit/preview.react-preview': 1.0.8(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/react@18.2.12)(eslint@8.50.0)(graphql@14.7.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      '@teambit/react.mounter': 1.0.2
+      '@teambit/react.react-env': 1.0.15(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@12.20.4)(@types/react@18.2.12)(@typescript-eslint/parser@5.62.0)
+      '@teambit/typescript.typescript-compiler': 2.0.7(@teambit/legacy@node_modules+@teambit+legacy)
+      '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.50.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': registry.npmjs.org/@typescript-eslint/parser@5.62.0(eslint@8.50.0)(typescript@4.9.5)
+      core-js: registry.npmjs.org/core-js@3.32.2
+      eslint: registry.npmjs.org/eslint@8.50.0
+      eslint-config-airbnb: registry.npmjs.org/eslint-config-airbnb@18.2.1(eslint-plugin-import@2.28.1)(eslint-plugin-react-hooks@4.6.0)(eslint@8.50.0)
+      eslint-config-prettier: registry.npmjs.org/eslint-config-prettier@8.10.0(eslint@8.50.0)
+      eslint-config-react-app: registry.npmjs.org/eslint-config-react-app@7.0.1(eslint@8.50.0)(jest@29.3.1)(typescript@4.9.5)
+      eslint-plugin-import: registry.npmjs.org/eslint-plugin-import@2.28.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.50.0)
+      eslint-plugin-prettier: registry.npmjs.org/eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.10.0)(eslint@8.50.0)(prettier@2.8.8)
+      eslint-plugin-react-hooks: registry.npmjs.org/eslint-plugin-react-hooks@4.6.0(eslint@8.50.0)
+      eslint-plugin-simple-import-sort: registry.npmjs.org/eslint-plugin-simple-import-sort@10.0.0(eslint@8.50.0)
+      eslint-plugin-storybook: registry.npmjs.org/eslint-plugin-storybook@0.6.14(eslint@8.50.0)(typescript@4.9.5)
+      eslint-webpack-plugin: registry.npmjs.org/eslint-webpack-plugin@3.2.0(eslint@8.50.0)
+      graphql: registry.npmjs.org/graphql@14.7.0
+      jest: registry.npmjs.org/jest@29.3.1(@types/node@12.20.4)
+      prettier: registry.npmjs.org/prettier@2.8.8
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-router-dom: registry.npmjs.org/react-router-dom@6.8.1(react-dom@18.2.0)(react@18.2.0)
+      typescript: registry.npmjs.org/typescript@4.9.5
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@babel/plugin-syntax-flow'
+      - '@babel/plugin-transform-react-jsx'
+      - '@babel/traverse'
+      - '@parcel/css'
+      - '@swc/core'
+      - '@swc/css'
+      - '@teambit/legacy'
+      - '@testing-library/react'
+      - '@types/express'
+      - '@types/node'
+      - '@types/react'
+      - '@types/webpack'
       - babel-plugin-macros
       - bufferutil
       - canvas
@@ -4690,6 +5178,19 @@ packages:
       react: registry.npmjs.org/react@18.2.0
     dev: false
 
+  file:src/ui/container/app-container(react@18.2.0):
+    resolution: {directory: src/ui/container/app-container, type: directory}
+    id: file:src/ui/container/app-container
+    name: '@yooco/react-iui.container.app-container'
+    peerDependencies:
+      react: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
+    dev: false
+
   file:src/ui/container/main-content-container(@emotion/react@11.10.5)(@emotion/styled@11.10.5)(react@18.2.0):
     resolution: {directory: src/ui/container/main-content-container, type: directory}
     id: file:src/ui/container/main-content-container
@@ -4709,42 +5210,6 @@ packages:
       '@emotion/react': registry.npmjs.org/@emotion/react@11.10.5(@types/react@18.2.12)(react@18.2.0)
       '@emotion/styled': registry.npmjs.org/@emotion/styled@11.10.5(@emotion/react@11.10.5)(@types/react@18.2.12)(react@18.2.0)
       react: registry.npmjs.org/react@18.2.0
-    dev: false
-
-  file:src/ui/container/pagination-container(react-dom@17.0.2)(react@18.2.0):
-    resolution: {directory: src/ui/container/pagination-container, type: directory}
-    id: file:src/ui/container/pagination-container
-    name: '@yooco/react-iui.container.pagination-container'
-    peerDependencies:
-      react: '*'
-      react-dom: '*'
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      core-js: registry.npmjs.org/core-js@3.32.2
-      react: registry.npmjs.org/react@18.2.0
-      react-dom: registry.npmjs.org/react-dom@17.0.2(react@18.2.0)
-    dev: false
-
-  file:src/ui/container/pagination-container(react-dom@18.2.0)(react@18.2.0):
-    resolution: {directory: src/ui/container/pagination-container, type: directory}
-    id: file:src/ui/container/pagination-container
-    name: '@yooco/react-iui.container.pagination-container'
-    peerDependencies:
-      react: '*'
-      react-dom: '*'
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      core-js: registry.npmjs.org/core-js@3.32.2
-      react: registry.npmjs.org/react@18.2.0
-      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
   registry.npmjs.org/@aashutoshrathi/word-wrap@1.2.6:
@@ -12727,10 +13192,10 @@ packages:
       glob-to-regexp: registry.npmjs.org/glob-to-regexp@0.3.0
     dev: false
 
-  registry.npmjs.org/@next/eslint-plugin-next@13.5.2:
-    resolution: {integrity: sha512-Ew8DOUerJYGRo8pI84SVwn9wxxx8sH92AanCXSkkLJM2W0RJEWy+BqWSCfrlA/3ZIczEl4l4o4lOeTGBPYfBJg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.5.2.tgz}
+  registry.npmjs.org/@next/eslint-plugin-next@13.5.3:
+    resolution: {integrity: sha512-lbZOoEjzSuTtpk9UgV9rOmxYw+PsSfNR+00mZcInqooiDMZ1u+RqT1YQYLsEZPW1kumZoQe5+exkCBtZ2xn0uw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.5.3.tgz}
     name: '@next/eslint-plugin-next'
-    version: 13.5.2
+    version: 13.5.3
     dependencies:
       glob: registry.npmjs.org/glob@7.1.7
     dev: false
@@ -13818,7 +14283,7 @@ packages:
       '@storybook/csf': registry.npmjs.org/@storybook/csf@0.0.2--canary.4566f4d.1
       '@storybook/router': registry.npmjs.org/@storybook/router@6.5.16(react-dom@17.0.2)(react@18.2.0)
       '@storybook/theming': registry.npmjs.org/@storybook/theming@6.5.16(react-dom@17.0.2)(react@18.2.0)
-      '@types/webpack-env': registry.npmjs.org/@types/webpack-env@1.18.1
+      '@types/webpack-env': registry.npmjs.org/@types/webpack-env@1.18.2
       core-js: registry.npmjs.org/core-js@3.32.2
       global: registry.npmjs.org/global@4.4.0
       react: registry.npmjs.org/react@18.2.0
@@ -13896,7 +14361,7 @@ packages:
       '@storybook/theming': registry.npmjs.org/@storybook/theming@6.5.16(react-dom@17.0.2)(react@18.2.0)
       '@storybook/ui': registry.npmjs.org/@storybook/ui@6.5.16(react-dom@17.0.2)(react@18.2.0)
       '@types/node': registry.npmjs.org/@types/node@16.18.54
-      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.33
+      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.34
       autoprefixer: registry.npmjs.org/autoprefixer@9.8.8
       babel-loader: registry.npmjs.org/babel-loader@8.3.0(@babel/core@7.23.0)(webpack@4.47.0)
       case-sensitive-paths-webpack-plugin: registry.npmjs.org/case-sensitive-paths-webpack-plugin@2.4.0
@@ -13995,7 +14460,7 @@ packages:
       '@storybook/csf': registry.npmjs.org/@storybook/csf@0.0.2--canary.4566f4d.1
       '@storybook/store': registry.npmjs.org/@storybook/store@6.5.16(react-dom@17.0.2)(react@18.2.0)
       '@types/qs': registry.npmjs.org/@types/qs@6.9.8
-      '@types/webpack-env': registry.npmjs.org/@types/webpack-env@1.18.1
+      '@types/webpack-env': registry.npmjs.org/@types/webpack-env@1.18.2
       core-js: registry.npmjs.org/core-js@3.32.2
       fast-deep-equal: registry.npmjs.org/fast-deep-equal@3.1.3
       global: registry.npmjs.org/global@4.4.0
@@ -14262,7 +14727,7 @@ packages:
       '@types/node': registry.npmjs.org/@types/node@16.18.54
       '@types/node-fetch': registry.npmjs.org/@types/node-fetch@2.6.6
       '@types/pretty-hrtime': registry.npmjs.org/@types/pretty-hrtime@1.0.1
-      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.33
+      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.34
       better-opn: registry.npmjs.org/better-opn@2.1.1
       boxen: registry.npmjs.org/boxen@5.1.2
       chalk: registry.npmjs.org/chalk@4.1.2
@@ -14459,7 +14924,7 @@ packages:
       '@storybook/theming': registry.npmjs.org/@storybook/theming@6.5.16(react-dom@17.0.2)(react@18.2.0)
       '@storybook/ui': registry.npmjs.org/@storybook/ui@6.5.16(react-dom@17.0.2)(react@18.2.0)
       '@types/node': registry.npmjs.org/@types/node@16.18.54
-      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.33
+      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.34
       babel-loader: registry.npmjs.org/babel-loader@8.3.0(@babel/core@7.23.0)(webpack@4.47.0)
       case-sensitive-paths-webpack-plugin: registry.npmjs.org/case-sensitive-paths-webpack-plugin@2.4.0
       chalk: registry.npmjs.org/chalk@4.1.2
@@ -14675,7 +15140,7 @@ packages:
       '@storybook/store': registry.npmjs.org/@storybook/store@6.5.16(react-dom@17.0.2)(react@18.2.0)
       '@types/estree': registry.npmjs.org/@types/estree@0.0.51
       '@types/node': registry.npmjs.org/@types/node@16.18.54
-      '@types/webpack-env': registry.npmjs.org/@types/webpack-env@1.18.1
+      '@types/webpack-env': registry.npmjs.org/@types/webpack-env@1.18.2
       acorn: registry.npmjs.org/acorn@7.4.1
       acorn-jsx: registry.npmjs.org/acorn-jsx@5.3.2(acorn@7.4.1)
       acorn-walk: registry.npmjs.org/acorn-walk@7.2.0
@@ -20131,28 +20596,6 @@ packages:
       react-error-boundary: registry.npmjs.org/react-error-boundary@3.1.4(react@18.2.0)
     dev: true
 
-  registry.npmjs.org/@testing-library/react@13.4.0(react-dom@17.0.2)(react@17.0.2):
-    resolution: {integrity: sha512-sXOGON+WNTh3MLE9rve97ftaZukN3oNf2KjDy7YTx6hcTO2uuLHuCGynMDhFwGw/jYf4OJ2Qk0i4i79qMNNkyw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@testing-library/react/-/react-13.4.0.tgz}
-    id: registry.npmjs.org/@testing-library/react/13.4.0
-    name: '@testing-library/react'
-    version: 13.4.0
-    engines: {node: '>=12'}
-    peerDependencies:
-      react: '*'
-      react-dom: '*'
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.20.0
-      '@testing-library/dom': registry.npmjs.org/@testing-library/dom@8.20.1
-      '@types/react-dom': registry.npmjs.org/@types/react-dom@18.2.7
-      react: registry.npmjs.org/react@17.0.2
-      react-dom: registry.npmjs.org/react-dom@17.0.2(react@17.0.2)
-    dev: true
-
   registry.npmjs.org/@testing-library/react@13.4.0(react-dom@17.0.2)(react@18.2.0):
     resolution: {integrity: sha512-sXOGON+WNTh3MLE9rve97ftaZukN3oNf2KjDy7YTx6hcTO2uuLHuCGynMDhFwGw/jYf4OJ2Qk0i4i79qMNNkyw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@testing-library/react/-/react-13.4.0.tgz}
     id: registry.npmjs.org/@testing-library/react/13.4.0
@@ -20346,7 +20789,7 @@ packages:
       '@types/node': registry.npmjs.org/@types/node@12.20.4
       '@types/qs': registry.npmjs.org/@types/qs@6.9.8
       '@types/range-parser': registry.npmjs.org/@types/range-parser@1.2.4
-      '@types/send': registry.npmjs.org/@types/send@0.17.1
+      '@types/send': registry.npmjs.org/@types/send@0.17.2
     dev: false
 
   registry.npmjs.org/@types/express@4.17.18:
@@ -20357,7 +20800,7 @@ packages:
       '@types/body-parser': registry.npmjs.org/@types/body-parser@1.19.3
       '@types/express-serve-static-core': registry.npmjs.org/@types/express-serve-static-core@4.17.37
       '@types/qs': registry.npmjs.org/@types/qs@6.9.8
-      '@types/serve-static': registry.npmjs.org/@types/serve-static@1.15.2
+      '@types/serve-static': registry.npmjs.org/@types/serve-static@1.15.3
     dev: false
 
   registry.npmjs.org/@types/glob@7.2.0:
@@ -20637,7 +21080,7 @@ packages:
     version: 17.0.65
     dependencies:
       '@types/prop-types': registry.npmjs.org/@types/prop-types@15.7.7
-      '@types/scheduler': registry.npmjs.org/@types/scheduler@0.16.3
+      '@types/scheduler': registry.npmjs.org/@types/scheduler@0.16.4
       csstype: registry.npmjs.org/csstype@3.1.2
 
   registry.npmjs.org/@types/react@18.2.12:
@@ -20646,7 +21089,7 @@ packages:
     version: 18.2.12
     dependencies:
       '@types/prop-types': registry.npmjs.org/@types/prop-types@15.7.7
-      '@types/scheduler': registry.npmjs.org/@types/scheduler@0.16.3
+      '@types/scheduler': registry.npmjs.org/@types/scheduler@0.16.4
       csstype: registry.npmjs.org/csstype@3.1.2
 
   registry.npmjs.org/@types/retry@0.12.0:
@@ -20655,56 +21098,56 @@ packages:
     version: 0.12.0
     dev: false
 
-  registry.npmjs.org/@types/scheduler@0.16.3:
-    resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.3.tgz}
+  registry.npmjs.org/@types/scheduler@0.16.4:
+    resolution: {integrity: sha512-2L9ifAGl7wmXwP4v3pN4p2FLhD0O1qsJpvKmNin5VA8+UvNVb447UDaAEV6UdrkA+m/Xs58U1RFps44x6TFsVQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.4.tgz}
     name: '@types/scheduler'
-    version: 0.16.3
+    version: 0.16.4
 
-  registry.npmjs.org/@types/semver@7.5.2:
-    resolution: {integrity: sha512-7aqorHYgdNO4DM36stTiGO3DvKoex9TQRwsJU6vMaFGyqpBA1MNZkz+PG3gaNUPpTAOYhT1WR7M1JyA3fbS9Cw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/semver/-/semver-7.5.2.tgz}
+  registry.npmjs.org/@types/semver@7.5.3:
+    resolution: {integrity: sha512-OxepLK9EuNEIPxWNME+C6WwbRAOOI2o2BaQEGzz5Lu2e4Z5eDnEo+/aVEDMIXywoJitJ7xWd641wrGLZdtwRyw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/semver/-/semver-7.5.3.tgz}
     name: '@types/semver'
-    version: 7.5.2
+    version: 7.5.3
     dev: false
 
-  registry.npmjs.org/@types/send@0.17.1:
-    resolution: {integrity: sha512-Cwo8LE/0rnvX7kIIa3QHCkcuF21c05Ayb0ZfxPiv0W8VRiZiNW/WuRupHKpqqGVGf7SUA44QSOUKaEd9lIrd/Q==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/send/-/send-0.17.1.tgz}
+  registry.npmjs.org/@types/send@0.17.2:
+    resolution: {integrity: sha512-aAG6yRf6r0wQ29bkS+x97BIs64ZLxeE/ARwyS6wrldMm3C1MdKwCcnnEwMC1slI8wuxJOpiUH9MioC0A0i+GJw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/send/-/send-0.17.2.tgz}
     name: '@types/send'
-    version: 0.17.1
+    version: 0.17.2
     dependencies:
       '@types/mime': registry.npmjs.org/@types/mime@1.3.2
       '@types/node': registry.npmjs.org/@types/node@12.20.4
     dev: false
 
-  registry.npmjs.org/@types/serve-index@1.9.1:
-    resolution: {integrity: sha512-d/Hs3nWDxNL2xAczmOVZNj92YZCS6RGxfBPjKzuu/XirCgXdpKEb88dYNbrYGint6IVWLNP+yonwVAuRC0T2Dg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/serve-index/-/serve-index-1.9.1.tgz}
+  registry.npmjs.org/@types/serve-index@1.9.2:
+    resolution: {integrity: sha512-asaEIoc6J+DbBKXtO7p2shWUpKacZOoMBEGBgPG91P8xhO53ohzHWGCs4ScZo5pQMf5ukQzVT9fhX1WzpHihig==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/serve-index/-/serve-index-1.9.2.tgz}
     name: '@types/serve-index'
-    version: 1.9.1
+    version: 1.9.2
     dependencies:
       '@types/express': registry.npmjs.org/@types/express@4.17.18
     dev: false
 
-  registry.npmjs.org/@types/serve-static@1.15.2:
-    resolution: {integrity: sha512-J2LqtvFYCzaj8pVYKw8klQXrLLk7TBZmQ4ShlcdkELFKGwGMfevMLneMMRkMgZxotOD9wg497LpC7O8PcvAmfw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/serve-static/-/serve-static-1.15.2.tgz}
+  registry.npmjs.org/@types/serve-static@1.15.3:
+    resolution: {integrity: sha512-yVRvFsEMrv7s0lGhzrggJjNOSmZCdgCjw9xWrPr/kNNLp6FaDfMC1KaYl3TSJ0c58bECwNBMoQrZJ8hA8E1eFg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/serve-static/-/serve-static-1.15.3.tgz}
     name: '@types/serve-static'
-    version: 1.15.2
+    version: 1.15.3
     dependencies:
       '@types/http-errors': registry.npmjs.org/@types/http-errors@2.0.2
       '@types/mime': registry.npmjs.org/@types/mime@3.0.1
       '@types/node': registry.npmjs.org/@types/node@12.20.4
     dev: false
 
-  registry.npmjs.org/@types/sockjs@0.3.33:
-    resolution: {integrity: sha512-f0KEEe05NvUnat+boPTZ0dgaLZ4SfSouXUgv5noUiefG2ajgKjmETo9ZJyuqsl7dfl2aHlLJUiki6B4ZYldiiw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/sockjs/-/sockjs-0.3.33.tgz}
+  registry.npmjs.org/@types/sockjs@0.3.34:
+    resolution: {integrity: sha512-R+n7qBFnm/6jinlteC9DBL5dGiDGjWAvjo4viUanpnc/dG1y7uDoacXPIQ/PQEg1fI912SMHIa014ZjRpvDw4g==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/sockjs/-/sockjs-0.3.34.tgz}
     name: '@types/sockjs'
-    version: 0.3.33
+    version: 0.3.34
     dependencies:
       '@types/node': registry.npmjs.org/@types/node@12.20.4
     dev: false
 
-  registry.npmjs.org/@types/source-list-map@0.1.2:
-    resolution: {integrity: sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/source-list-map/-/source-list-map-0.1.2.tgz}
+  registry.npmjs.org/@types/source-list-map@0.1.3:
+    resolution: {integrity: sha512-I9R/7fUjzUOyDy6AFkehCK711wWoAXEaBi80AfjZt1lIkbe6AcXKd3ckQc3liMvQExWvfOeh/8CtKzrfUFN5gA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/source-list-map/-/source-list-map-0.1.3.tgz}
     name: '@types/source-list-map'
-    version: 0.1.2
+    version: 0.1.3
     dev: false
 
   registry.npmjs.org/@types/stack-utils@2.0.1:
@@ -20745,39 +21188,39 @@ packages:
     version: 2.0.8
     dev: false
 
-  registry.npmjs.org/@types/webpack-env@1.18.1:
-    resolution: {integrity: sha512-D0HJET2/UY6k9L6y3f5BL+IDxZmPkYmPT4+qBrRdmRLYRuV0qNKizMgTvYxXZYn+36zjPeoDZAEYBCM6XB+gww==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/webpack-env/-/webpack-env-1.18.1.tgz}
+  registry.npmjs.org/@types/webpack-env@1.18.2:
+    resolution: {integrity: sha512-BFqcTHHTrrI8EBmIzNAmLPP3IqtEG9J1IPFWbPeS/F0/TGNmo0pI5svOa7JbMF9vSCXQCvJWT2gxLJNVuf9blw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/webpack-env/-/webpack-env-1.18.2.tgz}
     name: '@types/webpack-env'
-    version: 1.18.1
+    version: 1.18.2
     dev: false
 
-  registry.npmjs.org/@types/webpack-sources@3.2.0:
-    resolution: {integrity: sha512-Ft7YH3lEVRQ6ls8k4Ff1oB4jN6oy/XmU6tQISKdhfh+1mR+viZFphS6WL0IrtDOzvefmJg5a0s7ZQoRXwqTEFg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/webpack-sources/-/webpack-sources-3.2.0.tgz}
+  registry.npmjs.org/@types/webpack-sources@3.2.1:
+    resolution: {integrity: sha512-iLC3Fsx62ejm3ST3PQ8vBMC54Rb3EoCprZjeJGI5q+9QjfDLGt9jeg/k245qz1G9AQnORGk0vqPicJFPT1QODQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/webpack-sources/-/webpack-sources-3.2.1.tgz}
     name: '@types/webpack-sources'
-    version: 3.2.0
+    version: 3.2.1
     dependencies:
       '@types/node': registry.npmjs.org/@types/node@12.20.4
-      '@types/source-list-map': registry.npmjs.org/@types/source-list-map@0.1.2
+      '@types/source-list-map': registry.npmjs.org/@types/source-list-map@0.1.3
       source-map: registry.npmjs.org/source-map@0.7.4
     dev: false
 
-  registry.npmjs.org/@types/webpack@4.41.33:
-    resolution: {integrity: sha512-PPajH64Ft2vWevkerISMtnZ8rTs4YmRbs+23c402J0INmxDKCrhZNvwZYtzx96gY2wAtXdrK1BS2fiC8MlLr3g==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/webpack/-/webpack-4.41.33.tgz}
+  registry.npmjs.org/@types/webpack@4.41.34:
+    resolution: {integrity: sha512-CN2aOGrR3zbMc2v+cKqzaClYP1ldkpPOgtdNvgX+RmlWCSWxHxpzz6WSCVQZRkF8D60ROlkRzAoEpgjWQ+bd2g==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/webpack/-/webpack-4.41.34.tgz}
     name: '@types/webpack'
-    version: 4.41.33
+    version: 4.41.34
     dependencies:
       '@types/node': registry.npmjs.org/@types/node@12.20.4
       '@types/tapable': registry.npmjs.org/@types/tapable@1.0.9
       '@types/uglify-js': registry.npmjs.org/@types/uglify-js@3.17.2
-      '@types/webpack-sources': registry.npmjs.org/@types/webpack-sources@3.2.0
+      '@types/webpack-sources': registry.npmjs.org/@types/webpack-sources@3.2.1
       anymatch: registry.npmjs.org/anymatch@3.1.3
       source-map: registry.npmjs.org/source-map@0.6.1
     dev: false
 
-  registry.npmjs.org/@types/ws@8.5.5:
-    resolution: {integrity: sha512-lwhs8hktwxSjf9UaZ9tG5M03PGogvFaH8gUgLNbN9HKIg0dvv6q+gkSuJ8HN4/VbyxkuLzCjlN7GquQ0gUJfIg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/ws/-/ws-8.5.5.tgz}
+  registry.npmjs.org/@types/ws@8.5.6:
+    resolution: {integrity: sha512-8B5EO9jLVCy+B58PLHvLDuOD8DRVMgQzq8d55SjLCOn9kqGyqOvy27exVaTio1q1nX5zLu8/6N0n2ThSxOM6tg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/ws/-/ws-8.5.6.tgz}
     name: '@types/ws'
-    version: 8.5.5
+    version: 8.5.6
     dependencies:
       '@types/node': registry.npmjs.org/@types/node@12.20.4
     dev: false
@@ -21248,7 +21691,7 @@ packages:
     dependencies:
       '@eslint-community/eslint-utils': registry.npmjs.org/@eslint-community/eslint-utils@4.4.0(eslint@8.50.0)
       '@types/json-schema': registry.npmjs.org/@types/json-schema@7.0.13
-      '@types/semver': registry.npmjs.org/@types/semver@7.5.2
+      '@types/semver': registry.npmjs.org/@types/semver@7.5.3
       '@typescript-eslint/scope-manager': registry.npmjs.org/@typescript-eslint/scope-manager@5.62.0
       '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types@5.62.0
       '@typescript-eslint/typescript-estree': registry.npmjs.org/@typescript-eslint/typescript-estree@5.62.0(typescript@4.9.5)
@@ -26924,11 +27367,11 @@ packages:
       object.entries: registry.npmjs.org/object.entries@1.1.7
     dev: false
 
-  registry.npmjs.org/eslint-config-next@13.5.2(eslint@8.50.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-kCF7k7fHBtFtxfP6J6AP6Mo0vW3CrFeoIuoZ7NHGIvLFc/RUaIspJ6inO/R33zE1o9t/lbJgTnsqnRB++sxCUQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-13.5.2.tgz}
-    id: registry.npmjs.org/eslint-config-next/13.5.2
+  registry.npmjs.org/eslint-config-next@13.5.3(eslint@8.50.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-VN2qbCpq2DMWgs7SVF8KTmc8bVaWz3s4nmcFqRLs7PNBt5AXejOhJuZ4zg2sCEHOvz5RvqdwLeI++NSCV6qHVg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-13.5.3.tgz}
+    id: registry.npmjs.org/eslint-config-next/13.5.3
     name: eslint-config-next
-    version: 13.5.2
+    version: 13.5.3
     peerDependencies:
       eslint: '*'
       typescript: '*'
@@ -26938,7 +27381,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': registry.npmjs.org/@next/eslint-plugin-next@13.5.2
+      '@next/eslint-plugin-next': registry.npmjs.org/@next/eslint-plugin-next@13.5.3
       '@rushstack/eslint-patch': registry.npmjs.org/@rushstack/eslint-patch@1.4.0
       '@typescript-eslint/parser': registry.npmjs.org/@typescript-eslint/parser@5.62.0(eslint@8.50.0)(typescript@4.9.5)
       eslint: registry.npmjs.org/eslint@8.50.0
@@ -29802,7 +30245,7 @@ packages:
     dependencies:
       '@types/html-minifier-terser': registry.npmjs.org/@types/html-minifier-terser@5.1.2
       '@types/tapable': registry.npmjs.org/@types/tapable@1.0.9
-      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.33
+      '@types/webpack': registry.npmjs.org/@types/webpack@4.41.34
       html-minifier-terser: registry.npmjs.org/html-minifier-terser@5.1.1
       loader-utils: registry.npmjs.org/loader-utils@1.4.2
       lodash: registry.npmjs.org/lodash@4.17.21
@@ -38375,6 +38818,7 @@ packages:
       object-assign: registry.npmjs.org/object-assign@4.1.1
       react: registry.npmjs.org/react@17.0.2
       scheduler: registry.npmjs.org/scheduler@0.20.2
+    dev: false
 
   registry.npmjs.org/react-dom@17.0.2(react@18.2.0):
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz}
@@ -38782,6 +39226,7 @@ packages:
     dependencies:
       loose-envify: registry.npmjs.org/loose-envify@1.4.0
       object-assign: registry.npmjs.org/object-assign@4.1.1
+    dev: false
 
   registry.npmjs.org/react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/react/-/react-18.2.0.tgz}
@@ -42712,10 +43157,10 @@ packages:
       '@types/bonjour': registry.npmjs.org/@types/bonjour@3.5.11
       '@types/connect-history-api-fallback': registry.npmjs.org/@types/connect-history-api-fallback@1.5.1
       '@types/express': registry.npmjs.org/@types/express@4.17.18
-      '@types/serve-index': registry.npmjs.org/@types/serve-index@1.9.1
-      '@types/serve-static': registry.npmjs.org/@types/serve-static@1.15.2
-      '@types/sockjs': registry.npmjs.org/@types/sockjs@0.3.33
-      '@types/ws': registry.npmjs.org/@types/ws@8.5.5
+      '@types/serve-index': registry.npmjs.org/@types/serve-index@1.9.2
+      '@types/serve-static': registry.npmjs.org/@types/serve-static@1.15.3
+      '@types/sockjs': registry.npmjs.org/@types/sockjs@0.3.34
+      '@types/ws': registry.npmjs.org/@types/ws@8.5.6
       ansi-html-community: registry.npmjs.org/ansi-html-community@0.0.8
       bonjour-service: registry.npmjs.org/bonjour-service@1.1.1
       chokidar: registry.npmjs.org/chokidar@3.5.3
