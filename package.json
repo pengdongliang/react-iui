@@ -11,8 +11,8 @@
     "re-install": "pnpm run clean && bit install",
     "postinstall": "bit import && bit compile && bit link",
     "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|md)\"",
-    "clean": "sh ./sh/clear.sh",
-    "tag": "sh ./sh/tag.sh"
+    "clean": "sh scripts/clear.sh",
+    "tag": "sh scripts/tag.sh"
   },
   "keywords": [
     "iui",

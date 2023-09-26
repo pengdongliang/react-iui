@@ -1,5 +1,5 @@
 /**
- * container-env
+ * 管理后台env
  */
 
 import { Pipeline } from '@teambit/builder'
@@ -26,9 +26,9 @@ import typescript from 'typescript'
 import { webpackTransformer } from './config/webpack.config'
 import hostDependencies from './preview/host-dependencies'
 
-export class AdminEnv extends ReactEnv implements DependenciesEnv {
+export class ContainerEnv extends ReactEnv implements DependenciesEnv {
   /* A shorthand name for the env */
-  name = 'admin-env'
+  name = 'container-env'
 
   protected tsconfigPath = require.resolve('./config/tsconfig.json')
 
@@ -159,4 +159,4 @@ export class AdminEnv extends ReactEnv implements DependenciesEnv {
   }
 }
 
-export default new AdminEnv()
+export default new ContainerEnv()

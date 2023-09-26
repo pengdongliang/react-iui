@@ -11,7 +11,7 @@
 {
     "admin-ui/input": {
         "scope": "yooco.react-iui",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input"
     },
@@ -28,40 +28,22 @@
         "rootDir": "src/config/web-config"
     },
     "container/app-container": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/ui/container/app-container",
-        "config": {
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/container-env"
-            },
-            "yooco.react-iui/envs/container-env": {}
-        }
+        "rootDir": "src/ui/container/app-container"
     },
     "container/main-content-container": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/ui/container/main-content-container",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
+        "rootDir": "src/ui/container/main-content-container"
     },
     "context/antd-config": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/context/antd-config",
-        "config": {
-            "yooco.react-iui/envs/container-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/container-env"
-            }
-        }
+        "rootDir": "src/context/antd-config"
     },
     "context/config": {
         "scope": "yooco.react-iui",
@@ -70,16 +52,10 @@
         "rootDir": "src/context/config"
     },
     "context/store": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/context/store",
-        "config": {
-            "yooco.react-iui/envs/admin-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/admin-env"
-            }
-        }
+        "rootDir": "src/context/store"
     },
     "dev-config/eslint-config-base": {
         "scope": "yooco.react-iui",
@@ -101,51 +77,15 @@
     },
     "envs/admin-env": {
         "scope": "yooco.react-iui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/envs/admin-env"
     },
     "envs/container-env": {
-        "scope": "",
-        "version": "",
+        "scope": "yooco.react-iui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/envs/container-env",
-        "config": {
-            "teambit.envs/env": {},
-            "teambit.envs/envs": {
-                "env": "teambit.envs/env"
-            },
-            "teambit.dependencies/dependency-resolver": {
-                "policy": {
-                    "dependencies": {
-                        "eslint": "^8.31.0",
-                        "eslint-plugin-prettier": "^4.2.1",
-                        "eslint-config-prettier": "^8.6.0",
-                        "@typescript-eslint/eslint-plugin": "^5.48.0",
-                        "@typescript-eslint/parser": "^5.48.0",
-                        "eslint-config-react-app": "^7.0.1",
-                        "eslint-plugin-storybook": "^0.6.10",
-                        "eslint-webpack-plugin": "^3.2.0",
-                        "eslint-plugin-react-hooks": "^4.3.0",
-                        "eslint-config-airbnb": "^18.2.1",
-                        "eslint-plugin-simple-import-sort": "^10.0.0",
-                        "eslint-plugin-import": "^2.27.5"
-                    }
-                }
-            },
-            "teambit.compositions/compositions": {},
-            "teambit.docs/docs": {},
-            "teambit.preview/preview": {},
-            "teambit.component/dev-files": {},
-            "teambit.pipelines/builder": {},
-            "teambit.component/forking": {
-                "forkedFrom": {
-                    "scope": "yooco.react-iui",
-                    "name": "envs/admin-env",
-                    "version": "0.0.6"
-                }
-            }
-        }
+        "rootDir": "src/envs/container-env"
     },
     "envs/provider-env": {
         "scope": "yooco.react-iui",
@@ -155,97 +95,67 @@
     },
     "hooks/use-content-page-height": {
         "scope": "yooco.react-iui",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-content-page-height"
     },
     "hooks/use-cookie": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/hooks/use-cookie",
-        "config": {
-            "yooco.react-iui/envs/container-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/container-env"
-            }
-        }
+        "rootDir": "src/hooks/use-cookie"
     },
     "hooks/use-dom-rect": {
         "scope": "yooco.react-iui",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-dom-rect"
     },
     "hooks/use-effect-with-target": {
         "scope": "yooco.react-iui",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-effect-with-target"
     },
     "hooks/use-layout-effect-with-target": {
         "scope": "yooco.react-iui",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-layout-effect-with-target"
     },
     "hooks/use-remove-input-spaces": {
         "scope": "yooco.react-iui",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/ui/input/use-remove-input-spaces"
     },
     "locale/base-locale": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "src/locale/base-locale",
-        "config": {
-            "yooco.react-iui/envs/container-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/container-env"
-            }
-        }
+        "rootDir": "src/locale/base-locale"
     },
     "locale/context": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
-        "rootDir": "src/locale/context",
-        "config": {
-            "yooco.react-iui/envs/container-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/container-env"
-            }
-        }
+        "rootDir": "src/locale/context"
     },
     "theme/base-theme": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
-        "rootDir": "src/theme/base-theme",
-        "config": {
-            "yooco.react-iui/envs/container-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/container-env"
-            }
-        }
+        "rootDir": "src/theme/base-theme"
     },
     "theme/theme-provider": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
-        "rootDir": "src/theme/theme-provider",
-        "config": {
-            "yooco.react-iui/envs/container-env": {},
-            "teambit.envs/envs": {
-                "env": "yooco.react-iui/envs/container-env"
-            }
-        }
+        "rootDir": "src/theme/theme-provider"
     },
     "toolbox/utils": {
         "scope": "yooco.react-iui",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/toolbox/utils"
     },
