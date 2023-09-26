@@ -1,0 +1,29 @@
+---
+description: '校验权限'
+labels: ['hook']
+---
+
+### 功能
+
+| 方法 | 说明 | 类型 |
+| --- | --- | --- |
+| usePermission | 校验hook | `UsePermissionProps` |
+| validatePermission | 校验方法 | `UsePermissionProps` |
+
+
+### 示例
+
+```tsx
+const [validatePermission] = usePermission()
+
+// 单个校验
+validatePermission('user:edit')
+// 多个校验, 全部通过才算通过
+validatePermission(['user:edit', 'user:delete'])
+// 多个校验，其中几个通过即可, 如果是对象{name, required}时, required默认为false, 否则为true
+validatePermission([{name: 'user:edit', required: true}, 'user:delete'])
+```
+
+### 变更日志
+
+1. 初始化

@@ -1,0 +1,34 @@
+---
+description: 'Button'
+labels: ['admin-ui']
+---
+
+### 功能
+
+- 内置红色, 橙色, 黄色, 绿色, 青色, 蓝色, 紫色
+- 支持扩展颜色
+- 权限控制
+- 自定义组件替换
+
+### Props
+
+| 参数       | 说明           | 类型                                                 | 默认值 |
+| ---------- | -------------- | ---------------------------------------------------- | ------ |
+| color       | 按钮颜色       | `ColorType` &#124; `string` | `default`  |
+| extraColor       | 额外的颜色配置 | `EntityButtonConfigType` &#124; `TextButtonConfigType` | `default`  |
+| permission | 权限           | `string` &#124; `string[]`                               | -      |
+| permissionReqestMethod | 权限请求方式  | `'GET'` &#124; `'POST'` &#124; `'PUT'` &#124; `'DELETE'`  | `GET`      |
+| component  | 自定义组件     | `keyof React.ReactDOM` &#124; `React.ComponentType<any>` | -      |
+
+### 示例
+
+import { Button } from './button'
+
+```tsx live
+
+<Button permission="" >测试按钮</Button>
+```
+
+### 变更日志
+
+1. 初始化

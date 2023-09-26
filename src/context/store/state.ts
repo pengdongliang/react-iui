@@ -1,5 +1,5 @@
 export interface StateType {
-  permissionList: Record<string, any>[]
+  permissionList: string[]
 }
 
 export const state: StateType = {

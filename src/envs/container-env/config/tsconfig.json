@@ -1,7 +1,4 @@
 {
   "extends": "@yooco/react-iui.dev-config.tsconfig-base/tsconfig-base.json",
-  "include": ["**/*", "**/*.json"],
-  "compilerOptions": {
-    "allowUmdGlobalAccess": true,
-  }
+  "include": ["**/*", "**/*.json"]
 }

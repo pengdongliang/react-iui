@@ -8,7 +8,6 @@ import { StoreContext } from './store-context'
 export const useStore = () => useContext(StoreContext)
 
 export interface UseSelectorType {
-  // (selector: (state: StateType) => StateType[keyof StateType]): StateType[keyof StateType]
   <TState = StateType, Selected = unknown>(selector: (state: TState & StateType) => Selected): Selected
 }
 
@@ -17,16 +16,16 @@ export const useSelector: UseSelectorType = (selector) => {
   const store = useStore()
 
   const selectedStateRef = useRef(null)
-  selectedStateRef.current = selector(store.getState() as any)
+  selectedStateRef.current = selector(store?.getState?.() as any)
 
   const checkForUpdates = useCallback(() => {
-    const newState = selector(store.getState() as any)
+    const newState = selector(store?.getState?.() as any)
     if (newState !== selectedStateRef.current) forceRender()
   }, [store, selector])
 
   useEffect(() => {
-    const subscription = store.subscribe(checkForUpdates)
-    return () => subscription()
+    const subscription = store?.subscribe?.(checkForUpdates)
+    return () => subscription?.()
   }, [store, checkForUpdates])
 
   return selectedStateRef.current

@@ -9,6 +9,18 @@
  */
 
 {
+    "admin-ui/button": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/admin-ui/button",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
     "admin-ui/input": {
         "scope": "yooco.react-iui",
         "version": "0.0.8",
@@ -122,6 +134,18 @@
         "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-layout-effect-with-target"
+    },
+    "hooks/use-permission": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/hooks/use-permission",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
     },
     "hooks/use-remove-input-spaces": {
         "scope": "yooco.react-iui",

@@ -18,7 +18,7 @@ export type StoreProviderProps<TData = Record<string, any>> = {
 }
 
 /**
- * store上下文配置
+ * 全局数据管理
  */
 export const StoreProvider = <TData,>(props: StoreProviderProps<TData>) => {
   const { children, initState, customReducer } = props
