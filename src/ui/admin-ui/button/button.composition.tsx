@@ -28,6 +28,29 @@ export const BasicButton = () => {
         </Button>
       </Space>
       <Space>
+        <Button color="red" type="link">
+          红色
+        </Button>
+        <Button color="orange" type="link">
+          橙色
+        </Button>
+        <Button color="yellow" type="link">
+          黄色
+        </Button>
+        <Button color="green" type="link">
+          绿色
+        </Button>
+        <Button color="cyan" type="link">
+          青色
+        </Button>
+        <Button color="blue" type="link">
+          蓝色
+        </Button>
+        <Button color="purple" type="link">
+          紫色
+        </Button>
+      </Space>
+      <Space>
         <Button color="red">红色</Button>
         <Button color="orange">橙色</Button>
         <Button color="yellow">黄色</Button>
@@ -39,6 +62,7 @@ export const BasicButton = () => {
       <Space>
         <Button>默认按钮</Button>
         <Button danger>危险按钮</Button>
+        <Button type="dashed">虚线按钮</Button>
         <Button type="link">链接按钮</Button>
       </Space>
       <Button block>整行按钮</Button>
