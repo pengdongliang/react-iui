@@ -1,10 +1,9 @@
 import type { StyleProviderProps } from '@ant-design/cssinjs'
+import { Theme } from '@emotion/react'
 import type { AppProps } from 'antd'
 import type { ConfigProviderProps } from 'antd/es/config-provider'
 import React from 'react'
 import type { ResolvedIntlConfig } from 'react-intl'
-
-import type { BaseThemeProps } from './types'
 
 // export interface RequestConfigType {
 //   /** useRequest请求响应后的操作 */
@@ -29,7 +28,7 @@ export type ConfigContextType = {
   /** cssinjs配置 */
   cssinjsConfig?: StyleProviderProps
   /** 主题配置 */
-  theme?: BaseThemeProps
+  theme?: Theme
   /** 主题类型, 默认为merge, merge=合并每一层, replace=替换, replaceAntd=仅替换antdTheme */
   themeConfigMode?: 'merge' | 'replace' | 'replaceAntd'
   /** 网络请求配置 */

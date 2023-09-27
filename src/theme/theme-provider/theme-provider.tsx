@@ -1,5 +1,6 @@
 import { legacyLogicalPropertiesTransformer, StyleProvider } from '@ant-design/cssinjs'
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
+import { Theme } from '@emotion/react/dist/emotion-react.cjs'
 import type { ConfigProviderProps } from '@yooco/react-iui.context.config'
 import { useConfigContext } from '@yooco/react-iui.context.config'
 import { baseTheme } from '@yooco/react-iui.theme.base-theme'
@@ -28,7 +29,7 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
     ...rest,
   }
 
-  const finalTheme = useMemo(() => {
+  const finalTheme = useMemo<Theme>(() => {
     if (theme) {
       switch (themeConfigMode) {
         case 'merge':

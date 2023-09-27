@@ -1,8 +1,18 @@
 import { Space } from 'antd'
+import { useState } from 'react'
 
 import { Button } from './button'
 
 export const BasicButton = () => {
+  const [loading, setLoading] = useState(false)
+
+  const changeLoading = () => {
+    setLoading((v) => !v)
+    setTimeout(() => {
+      setLoading((v) => !v)
+    }, 2000)
+  }
+
   return (
     <Space direction="vertical">
       <Space>
@@ -28,9 +38,7 @@ export const BasicButton = () => {
         </Button>
       </Space>
       <Space>
-        <Button color="red" type="link">
-          红色
-        </Button>
+        <Button color="red">红色</Button>
         <Button color="orange" type="link">
           橙色
         </Button>
@@ -51,7 +59,9 @@ export const BasicButton = () => {
         </Button>
       </Space>
       <Space>
-        <Button color="red">红色</Button>
+        <Button color="red" loading={loading} onClick={changeLoading}>
+          红色
+        </Button>
         <Button color="orange">橙色</Button>
         <Button color="yellow">黄色</Button>
         <Button color="green">绿色</Button>

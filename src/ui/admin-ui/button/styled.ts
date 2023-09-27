@@ -6,7 +6,6 @@ import { EntityButtonItemType, TextButtonItemType } from './config'
 
 export const StyledButton = styled(Button)<{
   config: EntityButtonItemType<string> & TextButtonItemType<string>
-  theme: { namespace: string }
 }>(({ theme, config }) => {
   if (!config) return css``
 
@@ -14,7 +13,8 @@ export const StyledButton = styled(Button)<{
   const { background, border, color, hoverBackground, activeBackground, hoverColor, activeColor } = config
 
   return css`
-    &:not(.${namespace}-btn-link) {
+    &:not(.${namespace}-btn-link),
+    &:not(.${namespace}-btn-text) {
       &:not(:disabled) {
         background-color: ${background};
         border-color: ${border} !important;
@@ -31,7 +31,8 @@ export const StyledButton = styled(Button)<{
         }
       }
     }
-    &.${namespace}-btn-link {
+
+    &.${namespace}-btn-link, &.${namespace}-btn-text {
       &:not(:disabled) {
         color: ${color};
 

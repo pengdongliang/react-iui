@@ -48,7 +48,7 @@ export const usePermission = (...props: UsePermissionProps) => {
         }, [])
         flag = !!statusList?.filter(Boolean)?.length
       } else if (typeof permission === 'string') {
-        flag = handlePermission(permission)
+        flag = !!handlePermission(permission)
       } else {
         flag = true
       }

@@ -1,10 +1,12 @@
 import { createMounter } from '@teambit/react.mounter'
-import type { AppContainerProps } from '@yooco/react-iui.container.app-container'
-import { AppContainer } from '@yooco/react-iui.container.app-container'
 import React from 'react'
 
-export const MyReactProvider = ({ children }: { children: AppContainerProps['children'] }) => {
-  return <AppContainer>{children}</AppContainer>
+// export const MyReactProvider = ({ children }: { children: AppContainerProps['children'] }) => {
+//   return <AppContainer>{children}</AppContainer>
+// }
+
+export const MyReactProvider = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>
 }
 
 /**

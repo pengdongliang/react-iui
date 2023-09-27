@@ -1,4 +1,4 @@
-import type { BaseThemeProps } from '@yooco/react-iui.context.config'
+import { Theme as BaseThemeProps } from '@emotion/react'
 import { theme } from 'antd'
 import type { AliasToken } from 'antd/es/theme/interface'
 import merge from 'lodash/merge'
