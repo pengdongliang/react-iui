@@ -1,3 +1,6 @@
 export default {
-  'global.test': 'test',
+  test: 'test',
+  query: 'query',
+  reset: 'reset',
+  totalNumberOfPagination: 'A total of {total}',
 }

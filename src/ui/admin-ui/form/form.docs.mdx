@@ -1,0 +1,32 @@
+---
+description: 'Form'
+labels: ['admin-ui']
+---
+
+### 功能
+
+- 表单常用功能
+
+### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+| ---------- | ------- | --------- | ------ |
+| ... | antd Form props | `FormProps` | - |
+
+### 示例
+
+import { Input } from 'antd'
+import { Form } from './index'
+
+```tsx live
+
+<Form>
+    <Form.Item label="姓名" name="name" required>
+        <Input placeholder="请输入姓名" />
+    </Form.Item>
+</Form>
+```
+
+### 变更日志
+
+1. 初始化

@@ -6,7 +6,7 @@ import { useLocale } from './use-locale'
 
 const DisplayLanguage = () => {
   const { formatMessage } = useLocale()
-  return <h3>{formatMessage({ id: 'global.test' })}</h3>
+  return <h3>{formatMessage({ id: 'test' })}</h3>
 }
 
 export const BasicUsage = () => {

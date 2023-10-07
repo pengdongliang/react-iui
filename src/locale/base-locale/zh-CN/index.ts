@@ -1,3 +1,6 @@
 export default {
-  'global.test': '测试',
+  test: '测试',
+  query: '查询',
+  reset: '重置',
+  totalNumberOfPagination: '共 {total} 条',
 }

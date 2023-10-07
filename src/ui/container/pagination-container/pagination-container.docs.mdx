@@ -1,0 +1,33 @@
+---
+description: '普通分页容器'
+---
+
+### 功能
+
+- 普通分页容器
+
+### Props
+
+| 参数       | 说明       | 类型         | 默认值 |
+|----------|----------|------------|-----|
+| children | children | `Children` | -   |
+
+### 示例
+
+```tsx
+import { PaginationContainer } from '@yooco/react-iui.container.pagination-container';
+
+<PaginationContainer request={async () => ({ total: 99, list: [{a, b, ...}] })}>
+    {(listData, loading) => {
+      return (
+        <div>
+          listData: {listData?.length}, loading: {loading?.toString()}
+        </div>
+      )
+    }}
+</PaginationContainer>
+```
+
+### 变更日志
+
+1. 初始化

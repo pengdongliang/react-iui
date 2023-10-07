@@ -1,0 +1,81 @@
+---
+description: '搜索表单'
+labels: ['admin-ui', 'form', 'search']
+---
+
+### 功能
+
+- 用于搜索列表数据
+
+### Props
+
+| 参数                | 说明                       | 类型              | 默认值 |
+| ------------------- | -------------------------- | ----------------- | ------ |
+| initParams           | 初始参数     | `Record<string, any>`       | -      |
+| onSubmit           | 搜索的回调     | `() => void`       | -      |
+| onReset           | 重置的回调     | `() => void`       | -      |
+| formOptions           | 表格使用的参数     | `FormOptionsType`       | -      |
+| disabled           | 禁用表单     | `boolean`       | -      |
+| className           | css类     | `string`       | -      |
+
+### FormOptionsType
+
+| 参数                | 说明                       | 类型              | 默认值 |
+| ------------------- | -------------------------- | ----------------- | ------ |
+| formProps           | 表单 `Form` 的 `props`     | `FormProps`       | -      |
+| formItemOptions     | 表单 `Form.Item` 配置      | `IFormItemType[]` | -      |
+| formItemAppendNodes | 按钮组, 追加到表单按钮后面 | `React.ReactNode` | -      |
+| formItemRowNodes    | 表单追加一行元素           | `React.ReactNode` | -      |
+| showSearch          | 是否显示查询按钮           | `boolean`         | `true` |
+| searchText          | 查询文本                   | `string`          | `查询` |
+| searchProps         | 查询按钮props              | `ButtonProps`     | -      |
+| showReset           | 是否显示查询按钮           | `boolean`         | `true` |
+| resetText           | 是否显示查询按钮           | `string`          | `重置` |
+| resetProps          | 重置按钮props              | `ButtonProps`     | -      |
+
+### FormItemType
+
+| 参数                | 说明                       | 类型              | 默认值 |
+| ------------------- | -------------------------- | ----------------- | ------ |
+| name           | 表单Form.Item的name | `string`       | - |
+| formItemProps  | 表单Form.Item的props | `FormItemProps` | - |
+| itemName  | 表单元素名称 | `string` | - |
+| itemProps  | 表单元素的props | `string` | - |
+| optionProps  | 表单元素option的props | `optionProps` | - |
+| itemNode  | 自定义元素 | `React.ReactNode` | - |
+
+### 示例
+
+```tsx
+import { Input } from 'antd'
+import { SearchForm } from '@yooco/react-iui.admin-ui.search-form';
+
+<SearchForm
+    formOptions={{
+      formItemOptions: [
+        {
+          name: 'name',
+          itemNode: <Input placeholder="自定义表单Item" />,
+        },
+        {
+          name: 'age',
+          itemName: 'input',
+          itemProps: { placeholder: '内置表单Input' },
+        },
+        {
+          name: 'gender',
+          itemName: 'select',
+          itemProps: {
+            placeholder: '内置表单Select',
+            options: [
+              { label: '男', value: 1 },
+              { label: '女', value: 2 },
+              { label: '未知', value: 0 },
+            ],
+            showSearch: true,
+            optionFilterProp: 'label',
+          },
+        },
+      ],
+    }} />
+```

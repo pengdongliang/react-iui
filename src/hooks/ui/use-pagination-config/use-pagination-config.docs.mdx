@@ -1,0 +1,30 @@
+---
+description: '处理分页配置'
+labels: ['hook', 'pagination']
+---
+
+### 功能
+
+- 处理分页配置
+
+### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| initPaginationConfig | 初始化分页配置 | `TableProps<TData>['pagination']` | - |
+| paginationProps | 分页配置 | `TableProps<TData>['pagination']` | `{ current: 1,pageSize: 20,total: 0,pageSizeOptions: [10, 20, 50, 100, 200, 500] }` |
+
+
+### 示例
+
+```tsx
+import {usePaginationConfig} from './use-pagination-config'
+
+const {paginationVisible} = usePaginationConfig({
+      initPaginationConfig: false,
+    })
+```
+
+### 变更日志
+
+1. 初始化

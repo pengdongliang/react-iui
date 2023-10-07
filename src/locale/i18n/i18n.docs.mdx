@@ -1,0 +1,27 @@
+---
+description: '通过组件方式使用国际化'
+labels: ['locale']
+---
+
+### 功能
+
+- 通过组件方式使用国际化
+
+### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| id | 消息的唯一, 稳定的标识符 | `string` | - |
+| defaultMessage | 默认消息（可能是英文） | `string` | - |
+| description | 为译者提供有关如何在 UI 中使用它的上下文 | `string` | - |
+
+### 示例
+
+import { I18n } from './i18n'
+import { LocaleProvider } from '@yooco/react-iui.locale.context'
+
+```tsx live
+<LocaleProvider>
+  <I18n id="test" defaultMessage="默认文本" description="测试" />
+</LocaleProvider>
+```
