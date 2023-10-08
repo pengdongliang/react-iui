@@ -22,7 +22,7 @@ export interface LocaleConfigType extends Partial<Omit<ResolvedIntlConfig, 'loca
   storageKey?: string
 }
 
-export type ConfigContextType = {
+export interface ConfigContextType {
   /** antd配置 */
   antdConfig?: AntdConfigType
   /** cssinjs配置 */

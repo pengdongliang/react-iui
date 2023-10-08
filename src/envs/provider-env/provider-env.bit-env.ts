@@ -36,7 +36,7 @@ export class ProviderEnv extends ReactEnv implements DependenciesEnv {
 
   protected eslintExtensions = ['.ts', '.tsx', '.js', '.jsx', '.mjs']
 
-  protected prettierConfigPath = require.resolve('@yooco/react-iui.dev-config.prettier-config-base')
+  protected prettierConfigPath = require.resolve('@yooco/react-iui.dev-config.prettier-config')
 
   protected prettierExtensions = ['.js', '.jsx', '.ts', '.tsx']
 

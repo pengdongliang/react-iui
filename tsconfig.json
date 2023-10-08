@@ -1,5 +1,5 @@
 {
-  "extends": "@yooco/react-iui.dev-config.tsconfig-base/tsconfig-base.json",
+  "extends": "@yooco/react-iui.dev-config.ts-config/tsconfig-base.json",
   "paths": {
     "@/*": [
       "src/*"

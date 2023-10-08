@@ -11,31 +11,31 @@
 {
     "admin-ui/button": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/button"
     },
     "admin-ui/form": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/form"
     },
     "admin-ui/input": {
         "scope": "yooco.react-iui",
-        "version": "7c126594d3a5fb5aee35a69c23a0d0802a931784",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/input"
     },
     "admin-ui/search-form": {
         "scope": "yooco.react-iui",
-        "version": "ca591722521aac6192972bfb5b55aa858b381738",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/search-form"
     },
     "aspect/provider": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/aspect/provider"
     },
@@ -53,163 +53,181 @@
     },
     "container/app-container": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/container/app-container"
     },
     "container/full-screen-container": {
         "scope": "yooco.react-iui",
-        "version": "2f68e96bccc5fcac0d81ad7104efe24d2deab57d",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "src/ui/container/full-screen-container"
     },
     "container/main-content-container": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/container/main-content-container"
     },
     "container/pagination-container": {
         "scope": "yooco.react-iui",
-        "version": "a0d1fb50561fa5dfbd8602fe4319ead47f1e8618",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/ui/container/pagination-container"
     },
     "context/antd-config": {
         "scope": "yooco.react-iui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/context/antd-config"
     },
     "context/config": {
         "scope": "yooco.react-iui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/context/config"
     },
     "context/store": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/context/store"
     },
-    "dev-config/eslint-config-base": {
-        "scope": "yooco.react-iui",
-        "version": "0.0.2",
+    "dev-config/eslint-config": {
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
-        "rootDir": "src/dev-config/eslint-config-base"
+        "rootDir": "src/dev-config/eslint-config",
+        "config": {
+            "teambit.envs/envs": {
+                "env": "teambit.envs/env"
+            },
+            "teambit.envs/env": {}
+        }
     },
-    "dev-config/prettier-config-base": {
-        "scope": "yooco.react-iui",
-        "version": "0.0.1",
+    "dev-config/prettier-config": {
+        "scope": "",
+        "version": "",
         "mainFile": "index.ts",
-        "rootDir": "src/dev-config/prettier-config-base"
+        "rootDir": "src/dev-config/prettier-config",
+        "config": {
+            "teambit.envs/envs": {
+                "env": "teambit.envs/env"
+            },
+            "teambit.envs/env": {}
+        }
     },
-    "dev-config/tsconfig-base": {
-        "scope": "yooco.react-iui",
-        "version": "0.0.2",
+    "dev-config/ts-config": {
+        "scope": "",
+        "version": "",
         "mainFile": "tsconfig-base.json",
-        "rootDir": "src/dev-config/tsconfig-base"
+        "rootDir": "src/dev-config/ts-config",
+        "config": {
+            "teambit.envs/envs": {
+                "env": "teambit.envs/env"
+            },
+            "teambit.envs/env": {}
+        }
     },
     "envs/admin-env": {
         "scope": "yooco.react-iui",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "src/envs/admin-env"
     },
     "envs/container-env": {
         "scope": "yooco.react-iui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "src/envs/container-env"
     },
     "envs/provider-env": {
         "scope": "yooco.react-iui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/envs/provider-env"
     },
     "hooks/use-content-page-height": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-content-page-height"
     },
     "hooks/use-cookie": {
         "scope": "yooco.react-iui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-cookie"
     },
     "hooks/use-dom-rect": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-dom-rect"
     },
     "hooks/use-effect-with-target": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-effect-with-target"
     },
     "hooks/use-layout-effect-with-target": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-layout-effect-with-target"
     },
     "hooks/use-pagination-config": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/ui/use-pagination-config"
     },
     "hooks/use-permission": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/use-permission"
     },
     "hooks/use-remove-input-spaces": {
         "scope": "yooco.react-iui",
-        "version": "0.0.10",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "src/hooks/ui/input/use-remove-input-spaces"
     },
     "locale/base-locale": {
         "scope": "yooco.react-iui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/locale/base-locale"
     },
     "locale/context": {
         "scope": "yooco.react-iui",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "src/locale/context"
     },
     "locale/i18n": {
         "scope": "yooco.react-iui",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "src/locale/i18n"
     },
     "theme/base-theme": {
         "scope": "yooco.react-iui",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/theme/base-theme"
     },
     "theme/theme-provider": {
         "scope": "yooco.react-iui",
-        "version": "0.0.7",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "src/theme/theme-provider"
     },
     "toolbox/utils": {
         "scope": "yooco.react-iui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "src/toolbox/utils"
     },
