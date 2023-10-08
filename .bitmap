@@ -37,13 +37,23 @@
         "scope": "yooco.react-iui",
         "version": "0.0.5",
         "mainFile": "index.ts",
-        "rootDir": "src/aspect/provider"
+        "rootDir": "src/aspect/provider",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true
+            }
+        }
     },
     "assets/types": {
         "scope": "yooco.react-iui",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "src/assets/types"
+        "rootDir": "src/assets/types",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true
+            }
+        }
     },
     "config/web-config": {
         "scope": "yooco.react-iui",
@@ -91,7 +101,13 @@
         "scope": "yooco.react-iui",
         "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "src/context/store"
+        "rootDir": "src/context/store",
+        "config": {
+            "yooco.react-iui/envs/provider-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/provider-env"
+            }
+        }
     },
     "dev-config/eslint-config": {
         "scope": "",
@@ -123,10 +139,10 @@
         "mainFile": "tsconfig-base.json",
         "rootDir": "src/dev-config/ts-config",
         "config": {
+            "teambit.envs/env": {},
             "teambit.envs/envs": {
                 "env": "teambit.envs/env"
-            },
-            "teambit.envs/env": {}
+            }
         }
     },
     "envs/admin-env": {

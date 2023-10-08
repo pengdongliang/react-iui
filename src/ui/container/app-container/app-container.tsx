@@ -6,7 +6,7 @@ import { LocaleProvider } from '@yooco/react-iui.locale.context'
 import { ThemeProvider } from '@yooco/react-iui.theme.theme-provider'
 import type { ReactNode } from 'react'
 
-export type AppContainerProps = {
+export interface AppContainerProps {
   children?: ReactNode
 }
 

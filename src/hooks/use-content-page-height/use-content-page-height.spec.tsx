@@ -1,6 +1,5 @@
 import { waitFor } from '@testing-library/dom'
-import { render } from '@testing-library/react'
-import { renderHook } from '@testing-library/react-hooks'
+import { render, renderHook } from '@testing-library/react'
 import webConfig from '@yooco/react-iui.config.web-config'
 
 import { useContentPageHeight } from './use-content-page-height'

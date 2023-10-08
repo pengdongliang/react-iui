@@ -1,6 +1,5 @@
 import { waitFor } from '@testing-library/dom'
-import { render } from '@testing-library/react'
-import { renderHook } from '@testing-library/react-hooks'
+import { render, renderHook } from '@testing-library/react'
 import { isBrowser } from '@yooco/react-iui.toolbox.utils'
 
 import { useDomRect } from './use-dom-rect'

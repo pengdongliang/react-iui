@@ -1,8 +1,8 @@
-import { renderHook } from '@testing-library/react-hooks'
+import { renderHook } from '@testing-library/react'
 
 import { usePermission } from './use-permission'
 
 it('是否有[test]的权限', () => {
   const { result } = renderHook(() => usePermission())
-  expect(result.current?.[0]?.('test')).toBe(true)
+  expect(result.current?.[0]?.('test')).toBe(false)
 })

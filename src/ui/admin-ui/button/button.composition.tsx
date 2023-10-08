@@ -1,4 +1,4 @@
-import { Space } from 'antd'
+import { DatePicker, Space } from 'antd'
 import { useState } from 'react'
 
 import { Button } from './button'
@@ -15,6 +15,7 @@ export const BasicButton = () => {
 
   return (
     <Space direction="vertical">
+      <DatePicker />
       <Space>
         <Button
           color="cde"
