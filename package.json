@@ -57,7 +57,9 @@
     "lodash": "^4.17.21",
     "react-intl": "^6.2.5",
     "nookies": "^2.5.2",
-    "resize-observer-polyfill": "^1.5.1"
+    "resize-observer-polyfill": "^1.5.1",
+    "react-activation": "^0.12.4",
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@ant-design/icons": "^5.1.4",

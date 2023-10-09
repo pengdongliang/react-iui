@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import styled, { StyledComponent } from '@emotion/styled'
+import styled, { type StyledComponent } from '@emotion/styled'
 
 const Styled: StyledComponent<any> = styled.div(({ theme }) => {
   const { namespace } = theme

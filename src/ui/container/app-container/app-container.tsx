@@ -15,14 +15,18 @@ export interface AppContainerProps {
  */
 export function AppContainer({ children }: AppContainerProps) {
   return (
-    <ConfigProvider locale={webConfig.defaultLocale}>
-      <LocaleProvider>
-        <ThemeProvider>
-          <AntdConfigProvider>
-            <StoreProvider initState={{ permissionList: ['test'] }}>{children}</StoreProvider>
-          </AntdConfigProvider>
-        </ThemeProvider>
-      </LocaleProvider>
-    </ConfigProvider>
+    <StoreProvider initState={{ permissionList: ['test'] }}>
+      <ConfigProvider locale={webConfig.defaultLocale}>
+        <LocaleProvider>
+          <ThemeProvider>
+            <AntdConfigProvider>
+              <div id={webConfig.mainContentElementId} style={{ width: '100%', height: '200px' }}>
+                {children}
+              </div>
+            </AntdConfigProvider>
+          </ThemeProvider>
+        </LocaleProvider>
+      </ConfigProvider>
+    </StoreProvider>
   )
 }

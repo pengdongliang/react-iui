@@ -1,0 +1,30 @@
+---
+description: '全屏容器'
+labels: ['container']
+---
+
+### 功能
+
+- 全屏容器, 用于包裹内容区域
+
+### Props
+
+| 参数       | 说明       | 类型         | 默认值 |
+|----------|----------|------------|-----|
+| children | children | `ReactNode` | -   |
+| loading | loading | `boolean` | -   |
+| fullScreenWhenMountEntering | 首次进入时是否全屏 | `boolean` | `true`   |
+| fullScreenWhenCacheEntering | 缓存进入时是否全屏 | `boolean` | `true`   |
+| isMap | 是否内容区域为地图 | `boolean` | -   |
+
+### 示例
+
+```tsx
+import { FullScreenContainer } from '@yooco/react-iui.container.full-screen-container';
+
+<FullScreenContainer>hello world!</FullScreenContainer>
+```
+
+### 变更日志
+
+1. 初始化

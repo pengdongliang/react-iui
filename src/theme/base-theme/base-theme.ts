@@ -10,7 +10,7 @@ export const antdDefaultToken: AliasToken = getDesignToken()
  * 基础主题token, antd + emotion
  */
 export const baseTheme: BaseThemeProps = {
-  namespace: 'ocloud',
+  namespace: 'ant',
   breakPoint: {
     xxs: 320,
     xs: 480,
