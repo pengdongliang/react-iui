@@ -37,6 +37,8 @@ export interface ConfigContextType {
   locale?: string
   /** 国际化配置 */
   localeConfig?: LocaleConfigType
+  /** iconfont地址 */
+  scriptUrl?: string | string[]
 }
 
 export const ConfigContext = React.createContext<ConfigContextType>({})

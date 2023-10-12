@@ -1,0 +1,38 @@
+---
+description: '自定义 font 图标'
+labels: ['admin-ui']
+---
+
+### 功能
+
+- 自定义 font 图标
+
+### Props
+
+| 参数 | 说明 | 类型  | 默认值 |
+| ---------- | ----- | -----| ------ |
+| scriptUrl | iconfont地址 | `string` &#124; `string[]` | - |
+| extraCommonProps | 额外的props | `Record<string, unknown>` | - |
+| type | 额外的props | `Record<string, unknown>` | - |
+| className | 设置图标的样式名 | `string` | - |
+| rotate | 图标旋转角度（IE9 无效） | `boolean` | `false` |
+| spin | 是否有旋转动画 | `number` | - |
+| style | 设置图标的样式，例如 `fontSize` 和 `color` | `number` | - |
+| twoToneColor | 仅适用双色图标。设置双色图标的主要颜色 | `string (十六进制颜色)` | - |
+
+### 示例
+
+import { IconFont } from './icon-font'
+
+```tsx live
+// 直接使用
+<IconFont type="icon-morentouxiang" scriptUrl={['//at.alicdn.com/t/c/font_3338444_bgrox6gyeae.js']} />
+// 全局配置scriptUrl
+<ConfigProvider scriptUrl={['//at.alicdn.com/t/c/font_3338444_bgrox6gyeae.js']}>
+  <IconFont type="icon-morentouxiang" />
+</ConfigProvider>
+```
+
+### 变更日志
+
+1. 初始化

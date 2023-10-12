@@ -21,6 +21,18 @@
         "mainFile": "index.ts",
         "rootDir": "src/ui/admin-ui/form"
     },
+    "admin-ui/icon-font": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "src/ui/admin-ui/icon-font",
+        "config": {
+            "yooco.react-iui/envs/admin-env": {},
+            "teambit.envs/envs": {
+                "env": "yooco.react-iui/envs/admin-env"
+            }
+        }
+    },
     "admin-ui/input": {
         "scope": "yooco.react-iui",
         "version": "0.0.13",
