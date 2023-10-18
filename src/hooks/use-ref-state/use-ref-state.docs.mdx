@@ -1,0 +1,40 @@
+---
+description: '使用时不需要考虑组件是否卸载和异步更新的问题'
+labels: ['hook']
+---
+
+### 功能
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| initialState | 初始值 | `S` &#124; `(() => S)` | - |
+| blockInUnmounted | 卸载时阻止更新 | `boolean` | `true` |
+
+
+### 示例
+
+import { useRefState } from "./use-ref-state"
+
+```tsx
+const [refState, setRefState] = useRefState(false)
+const [state, setState] = useRefState(false)
+
+const handleClick = () => {
+  setRefState(!refState)
+  setState(!state)
+  console.log('refState', refState)
+  console.log('state', state)
+}
+
+return (
+  <div>
+    <button onClick={handleClick}>点击</button>
+    <div>refState: {refState ? "true" : "false"}</div>
+    <div>state: {state ? "true" : "false"}</div>
+  </div>
+)
+```
+
+### 变更日志
+
+1. 初始化

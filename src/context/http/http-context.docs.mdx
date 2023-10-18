@@ -1,0 +1,68 @@
+---
+description: '网络请求上下文配置'
+labels: ['HttpProvider']
+---
+
+### 功能
+
+- 为组件提供统一的网络请求全局化配置
+
+### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| children | children | `ReactNode` | - |
+| ...HttpContextType | 上下文值 | `HttpContextType` | - |
+
+### HttpContextType
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| url | 基础请求地址 | `string` | - |
+| options | 请求配置 | `RequestOptions` | - |
+| httpTool | 请求工具, 默认use-http | `fetch` &#124; `axios` &#124; `use-http` | - |
+
+### RequestOptions
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| ...RequestConfig | 请求options | `string` | - |
+| interceptors | 请求拦截器 | `FetchInterceptors & AxiosInterceptors` | - |
+
+### RequestConfig
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| ... | fetch, axios的options | `FetchRequestConfig` &#124; `AxiosRequestConfig<P>` | - |
+| ...ExtraRequestConfig | 请求拦截器 | `FetchInterceptors & AxiosInterceptors` | - |
+
+### ExtraRequestConfig<P = any>
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| url | 请求地址 | `string` | - |
+| method | 请求方式 | `'get'` &#124; `'post'` &#124; `'put'` &#124; `'delete'`<br/> &#124; `'patch'` &#124; `'head'` &#124; `'options'` &#124; `'connect'`<br/> &#124; `'trace'` &#124; `HTTPMethod` | `get` |
+| params | 请求url参数 | `string` &#124; `object` | - |
+| body | 请求body | `P` &#124; `BodyInit` &#124; `object` | - |
+| filterRequestValue | 过滤请求参数值 | `true` &#124; `(key: string, value: any) => any` | `undefined和""` |
+
+### Hooks
+
+| 方法 | 说明 | 参数类型 | 返回类型 |
+| --- | --- | --- | --- |
+| useHttpContext | 获取网络请求上下文 | - | `HttpContextType` |
+| useHttpTool | 获取网络请求工具 | - |   |
+| useHttp | 获取网络请求 | `RequestOptions` |   |
+| useHttpOptions | 请求options处理 | `RequestOptions` |   |
+
+### 示例
+
+import { HttpProvider } from './http-context-provider'
+
+```tsx live
+<HttpProvider />
+```
+
+### 变更日志
+
+1. 初始化

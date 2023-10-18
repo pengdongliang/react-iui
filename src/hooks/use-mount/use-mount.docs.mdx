@@ -1,0 +1,26 @@
+---
+description: '初始化Effect'
+labels: ['hook']
+---
+
+### 功能
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| fn | 执行的方法 | `() => void` | - |
+
+
+### 示例
+
+import { useMount } from "./use-mount"
+
+```tsx
+const mounted = useMount(()=> {
+  console.log('mounted')
+})
+console.log('mounted', mounted)
+```
+
+### 变更日志
+
+1. 初始化
