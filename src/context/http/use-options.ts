@@ -1,10 +1,9 @@
 import webConfig from '@yooco/react-iui.config.web-config'
+import type { HttpContextType, RequestOptions } from '@yooco/react-iui.context.config'
 import { useCookie } from '@yooco/react-iui.hooks.use-cookie'
 import { message } from 'antd'
 import { useMemo } from 'react'
 import { CachePolicies } from 'use-http'
-
-import type { HttpContextType, RequestOptions } from './http-context'
 
 export interface UseHttpOptionsProps {
   /** 基础地址 */
@@ -37,14 +36,12 @@ export const useHttpOptions = (props: UseHttpOptionsProps) => {
         request: (config: Record<string, any>) => {
           const { adapter } = config
           let options = adapter === 'xhr' ? config : config.options
-          const token: string = cookie.getItem('access_token')
           const locale: string = cookie.getItem('locale_code') || webConfig.defaultLocale
 
           options = {
             ...options,
             headers: {
               Accept: 'application/json',
-              Authorization: token ? `Bearer ${token}` : 'Basic b2xpZ2h0X2FkbWluOm9saWdodF9hZG1pbg==',
               'Accept-Language': locale,
               'Content-Type': 'application/json',
               'X-Requested-With': 'XMLHttpRequest',

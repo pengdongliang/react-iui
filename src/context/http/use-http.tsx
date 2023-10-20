@@ -1,8 +1,9 @@
+import type { HttpContextType, RequestOptions } from '@yooco/react-iui.context.config'
 import { useCallback, useContext, useEffect, useRef } from 'react'
 import useFetch from 'use-http'
 
 import { createAxios } from './create-axios'
-import { HttpContext, type HttpContextType, RequestOptions } from './http-context'
+import { HttpContext } from './http-context'
 
 /**
  * 获取网络请求上下文

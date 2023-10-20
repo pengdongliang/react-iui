@@ -1,6 +1,5 @@
+import { type HttpContextType } from '@yooco/react-iui.context.config'
 import axios, { type CreateAxiosDefaults } from 'axios'
-
-import { type HttpContextType } from './http-context'
 
 /**
  * 创建axios

@@ -1,5 +1,4 @@
-export type { AntdConfigType } from './config-context'
 export type { ConfigProviderProps } from './config-context-provider'
 export { ConfigProvider } from './config-context-provider'
-export type { BaseThemeProps } from './types'
+export * from './types'
 export { useConfigContext } from './use-config'

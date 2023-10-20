@@ -3,6 +3,7 @@ import React, { useMemo } from 'react'
 
 import type { ConfigContextType } from './config-context'
 import { ConfigContext } from './config-context'
+import type { BaseThemeProps } from './types'
 
 export interface ConfigProviderProps extends ConfigContextType {
   /** children */
@@ -19,7 +20,7 @@ export const ConfigProvider = (props: ConfigProviderProps) => {
     () => ({
       ...rest,
       theme,
-      antdConfig: { theme: theme?.antdTheme, ...antdConfig },
+      antdConfig: { theme: (theme as BaseThemeProps)?.antdTheme, ...antdConfig },
       locale: locale ?? webConfig.defaultLocale,
     }),
     [antdConfig, locale, rest, theme]

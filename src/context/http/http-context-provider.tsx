@@ -1,8 +1,9 @@
+import { type FetchRequestConfig, type HttpContextType } from '@yooco/react-iui.context.config'
 import React, { useMemo } from 'react'
 import { Provider } from 'use-http'
 import useSSR from 'use-ssr'
 
-import { type FetchRequestConfig, HttpContext, type HttpContextType } from './http-context'
+import { HttpContext } from './http-context'
 import { useHttpOptions } from './use-options'
 
 export interface HttpProviderProps extends HttpContextType {
@@ -14,7 +15,7 @@ export interface HttpProviderProps extends HttpContextType {
  * 网络请求上下文
  */
 export const HttpProvider = (props: HttpProviderProps) => {
-  const { children, httpTool = 'axios', url, options, ...rest } = props
+  const { children, httpTool = 'use-http', url, options, ...rest } = props
   const isUseHttp = httpTool === 'use-http'
 
   const { isBrowser } = useSSR()
