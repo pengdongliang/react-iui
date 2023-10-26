@@ -1,14 +1,16 @@
 {
   "extends": "@yooco/react-iui.dev-config.ts-config/tsconfig-base.json",
-  "paths": {
-    "@/*": [
-      "src/*"
-    ],
-    "~/*": [
-      "*"
-    ]
-  },
   "baseUrl": ".",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "~/*": [
+        "*"
+      ]
+    }
+  },
   "include": [
     "**/*",
     "**/*.json"
